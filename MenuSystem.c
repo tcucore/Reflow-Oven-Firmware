@@ -10,13 +10,18 @@
 #include "Abstractions.h"
 
 
+
+
 //initialize buffers for holding Menus.
 char homeScreen[80] =  {"----------------------------------------        MODE         [Reflow] Exposure  "};
-char reflowScreen[80] ={"----------------------------------------       REFLOW       [Setup]Status Home  "};
+char reflowScreen[80] ={"----------------------------------------       REFLOW       [Setup]  Cal   Home "};
 char exposureScreen[80] = {"      EXPOSURE          Time: [5:00]    --------------------   Home     Start   "};
 char reflowStatusScreen[80] = {"   Reflow  Status    Temp  Target  Next      Time: 1:20      000C   000C   000C "};
 char reflowSetupScreen[80] = {"Soak      Reflow    Rmp 3 C/s Rmp 3 C/s Tmp 120 C Tmp 220 C Cool 3 C/s   [Dwell]"};
 char reflowDwellScreen[80] = {"       DWELL           120s     120s       Soak    Reflow      Back    [Start]  "};
+char calibrateScreen[80] = {"----------------------------------------      CALIBRATE        Oven    [Probes] "};
+char calibrateOvenScreen[80] = {"OVEN"};
+char calibrateProbeScreen[80] = {"Put Probe In IceBath V-junction: 000uV        Probe 1         [Back]    Next    "};
 	
 //working variables
 char edit = '0'; //used to keep track of if a value is being changed
@@ -33,6 +38,16 @@ int nextTemp = 0; //holds the next temperature
 int targetTemp = 0; //holds the current target temperature
 int exposureMinutes = 5; //holds number of minutes to expose a board
 int exposureSeconds = 0; //holds the number of seconds to expose a board
+int probeOneTemp = 0;  // holds current temperature for probe 1
+int probeTwoTemp = 0;  //holds current temperature for probe 2
+int probeThreeTemp = 0;  //holds current temperature for probe 3
+int probeFourTemp = 0;  //holds current temperature for probe 4
+int probeFiveTemp = 0;  //holds current temperature for probe 5
+int probeOneCal = 0;  //holds calibration point for 0C for probe 1
+int probeTwoCal = 0;  //holds calibration point for 0C for probe 2
+int probeThreeCal = 0;  //holds calibration point for 0C for probe 3
+int probeFourCal = 0;  //holds calibration point for 0C for probe 4
+int probeFiveCal = 0;  //holds calibration point for 0C for probe 5
 
 extern char currentMenu;  //references the current menu variable that keeps track of which menu the user is in
 
@@ -77,6 +92,21 @@ void DrawMenu(char menu)
 		case REFLOW_DWELL: //this is the reflow dwell menu
 		currentMenu = REFLOW_DWELL; //set current menu to reflow dwell
 		SendMessage(LCD_MODULE, DATA, reflowDwellScreen, sizeof(reflowDwellScreen)); //draw reflow dwell menu
+		break;
+		
+		case REFLOW_CALIBRATE:
+		currentMenu = REFLOW_CALIBRATE;
+		SendMessage(LCD_MODULE, DATA, calibrateScreen, sizeof(calibrateScreen)); //draw calibration options screen
+		break;
+		
+		case CALIBRATE_REFLOW:
+		currentMenu = CALIBRATE_REFLOW;
+		SendMessage(LCD_MODULE, DATA, calibrateOvenScreen, sizeof(calibrateOvenScreen));
+		break;
+		
+		case CALIBRATE_PROBES:
+		currentMenu = CALIBRATE_PROBES;
+		SendMessage(LCD_MODULE, DATA, calibrateProbeScreen, sizeof(calibrateProbeScreen));
 		break;
 	}
 }
@@ -167,13 +197,13 @@ void ReflowMenu(char action)
 		}
 		else
 		{
-			if(reflowScreen[73] == ']') //if status is selected
+			if(reflowScreen[72] == ']') //if cal is selected
 			{
-				DrawMenu(REFLOW_STATUS); //move to reflow status menu
+				DrawMenu(REFLOW_CALIBRATE); //move to reflow status menu
 			}
 			else
 			{
-				if(reflowScreen[78] == ']') //if home is selected
+				if(reflowScreen[79] == ']') //if home is selected
 				{
 					DrawMenu(HOME); //move to home menu
 				}
@@ -186,24 +216,24 @@ void ReflowMenu(char action)
 		{
 			reflowScreen[66] = ' ';
 			reflowScreen[60] = ' ';
-			reflowScreen[78] = ']';
-			reflowScreen[73] = '[';
+			reflowScreen[79] = ']';
+			reflowScreen[74] = '[';
 		}
 		else
 		{
-			if(reflowScreen[78] == ']') //if home is selected change selection to status
+			if(reflowScreen[79] == ']') //if home is selected change selection to status
 			{
-				reflowScreen[78] = ' ';
-				reflowScreen[73] = ' ';
-				reflowScreen[73] = ']';
-				reflowScreen[66] = '[';
+				reflowScreen[79] = ' ';
+				reflowScreen[74] = ' ';
+				reflowScreen[72] = ']';
+				reflowScreen[68] = '[';
 			}
 			else
 			{
-				if(reflowScreen[73] == ']') //if home is selected change selection to setup
+				if(reflowScreen[72] == ']') //if home is selected change selection to setup
 				{
-					reflowScreen[73] = ' ';
-					reflowScreen[66] = ' ';
+					reflowScreen[72] = ' ';
+					reflowScreen[68] = ' ';
 					reflowScreen[66] = ']';
 					reflowScreen[60] = '[';
 				}
@@ -217,24 +247,24 @@ void ReflowMenu(char action)
 		{
 			reflowScreen[66] = ' ';
 			reflowScreen[60] = ' ';
-			reflowScreen[73] = ']';
-			reflowScreen[66] = '[';
+			reflowScreen[72] = ']';
+			reflowScreen[68] = '[';
 		}
 		else
 		{
-			if(reflowScreen[73] == ']') //if status is selected change selection to home
+			if(reflowScreen[72] == ']') //if status is selected change selection to home
 			{
-				reflowScreen[73] = ' ';
-				reflowScreen[66] = ' ';
-				reflowScreen[78] = ']';
-				reflowScreen[73] = '[';
+				reflowScreen[72] = ' ';
+				reflowScreen[68] = ' ';
+				reflowScreen[79] = ']';
+				reflowScreen[74] = '[';
 			}
 			else
 			{
-				if(reflowScreen[78] == ']') //if home is selected change selection to setup
+				if(reflowScreen[79] == ']') //if home is selected change selection to setup
 				{
-					reflowScreen[78] = ' ';
-					reflowScreen[73] = ' ';
+					reflowScreen[79] = ' ';
+					reflowScreen[74] = ' ';
 					reflowScreen[66] = ']';
 					reflowScreen[60] = '[';
 				}
@@ -801,7 +831,8 @@ void ReflowDwellMenu(char action)
 			case 'A': //if rotary encoder button is pressed
 			if(reflowDwellScreen[77] == ']') //if start is selected
 			{
-				//todo write function to start reflow process
+				DrawMenu(REFLOW_STATUS);
+				//todo write function to start reflow process.
 			}
 			else
 			{
@@ -1011,6 +1042,220 @@ void ReflowStatusMenu(char action)
 		
 		case 'R':
 		//this will probably stay empty
+		break;
+	}
+}
+
+
+/***********************************************************************************
+Functiuon Name: ReflowCalibrateMenu()
+Description:  This function presents two calibration options to the user
+Accepts: char
+returns: nothing
+***********************************************************************************/
+void ReflowCalibrateMenu(char action)
+{
+	switch(action)
+	{
+		case 'A':
+		if(calibrateScreen[78] == ']')
+		{
+			DrawMenu(CALIBRATE_PROBES);
+		}
+		else
+		{
+			if(calibrateScreen[67] == ']')
+			{
+				DrawMenu(CALIBRATE_REFLOW);
+			}
+		}
+		break;
+		
+		case 'L':
+		if(calibrateScreen[78] == ']')
+		{
+			calibrateScreen[78] = ' ';
+			calibrateScreen[71] = ' ';
+			calibrateScreen[67] = ']';
+			calibrateScreen[62] = '[';
+		}
+		else
+		{
+			if(calibrateScreen[67] == ']')
+			{
+				calibrateScreen[67] = ' ';
+				calibrateScreen[62] = ' ';
+				calibrateScreen[78] = ']';
+				calibrateScreen[71] = '[';
+			}
+		}
+		DrawMenu(REFLOW_CALIBRATE);
+		break;
+		
+		case 'R':
+		if(calibrateScreen[78] == ']')
+		{
+			calibrateScreen[78] = ' ';
+			calibrateScreen[71] = ' ';
+			calibrateScreen[67] = ']';
+			calibrateScreen[62] = '[';
+		}
+		else
+		{
+			if(calibrateScreen[67] == ']')
+			{
+				calibrateScreen[67] = ' ';
+				calibrateScreen[62] = ' ';
+				calibrateScreen[78] = ']';
+				calibrateScreen[71] = '[';
+			}
+		}
+		DrawMenu(REFLOW_CALIBRATE);
+		break;
+	}
+}
+
+
+/***********************************************************************************
+Functiuon Name: CalibrateProbesMenu()
+Description:  This function runs the probe calibration screen
+Accepts: char
+returns: nothing
+***********************************************************************************/
+void CalibrateProbesMenu(char action)
+{
+	switch(action)
+	{
+		case 'A':
+		if(calibrateProbeScreen[76] == ']')
+		{
+			switch(calibrateProbeScreen[52])
+			{
+				case '1':
+				calibrateProbeScreen[52] = '2';
+				//todo assign adc value to probe 1 0C for algorithm use later.
+				DrawMenu(CALIBRATE_PROBES);
+				break;
+
+				case '2':
+				calibrateProbeScreen[52] = '3';
+				//todo assign adc value to probe 2 0C for algorithm use later.
+				DrawMenu(CALIBRATE_PROBES);
+				break;
+
+				case '3':
+				calibrateProbeScreen[52] = '4';
+				//todo assign adc value to probe 3 0C for algorithm use later.
+				DrawMenu(CALIBRATE_PROBES);
+				break;
+
+				case '4':
+				calibrateProbeScreen[52] = '5';
+				//todo assign adc value to probe 4 0C for algorithm use later.
+				DrawMenu(CALIBRATE_PROBES);
+				break;
+
+				case '5':
+				//todo assign adc value to probe 5 0C for algorithm use later
+				DrawMenu(REFLOW_SETUP);
+				break;
+			}
+		}
+		else
+		{
+			if(calibrateProbeScreen[67] == ']')
+			{
+				switch(calibrateProbeScreen[52])
+				{
+					case '5':
+					calibrateProbeScreen[52] = '4';
+					DrawMenu(CALIBRATE_PROBES);
+					break;
+
+					case '4':
+					calibrateProbeScreen[52] = '3';
+					DrawMenu(CALIBRATE_PROBES);
+					break;
+
+					case '3':
+					calibrateProbeScreen[52] = '2';
+					DrawMenu(CALIBRATE_PROBES);
+					break;
+
+					case '2':
+					calibrateProbeScreen[52] = '1';
+					DrawMenu(CALIBRATE_PROBES);
+					break;
+
+					case '1':
+					DrawMenu(REFLOW_CALIBRATE);
+					break;
+				}
+			}
+		}
+		break;
+		
+		case 'L':
+		if(calibrateProbeScreen[76] == ']')
+		{
+			calibrateProbeScreen[76] = ' ';
+			calibrateProbeScreen[71] = ' ';
+			calibrateProbeScreen[67] = ']';
+			calibrateProbeScreen[62] = '[';
+		}
+		else
+		{
+			if(calibrateProbeScreen[67] == ']')
+			{
+				calibrateProbeScreen[67] = ' ';
+				calibrateProbeScreen[62] = ' ';
+				calibrateProbeScreen[76] = ']';
+				calibrateProbeScreen[71] = '[';
+			}
+		}
+		DrawMenu(CALIBRATE_PROBES);
+		break;
+		
+		case 'R':
+		if(calibrateProbeScreen[76] == ']')
+		{
+			calibrateProbeScreen[76] = ' ';
+			calibrateProbeScreen[71] = ' ';
+			calibrateProbeScreen[67] = ']';
+			calibrateProbeScreen[62] = '[';
+		}
+		else
+		{
+			if(calibrateProbeScreen[67] == ']')
+			{
+				calibrateProbeScreen[67] = ' ';
+				calibrateProbeScreen[62] = ' ';
+				calibrateProbeScreen[76] = ']';
+				calibrateProbeScreen[71] = '[';
+			}
+		}
+		DrawMenu(CALIBRATE_PROBES);
+		break;
+	}
+}
+
+/***********************************************************************************
+Functiuon Name: CalibrateOvenMenu()
+Description:  This function runs the oven learning page
+Accepts: char
+returns: nothing
+***********************************************************************************/
+void CalibrateOvenMenu(char action)
+{
+	switch(action)
+	{
+		case 'A':
+		break;
+		
+		case 'L':
+		break;
+		
+		case 'R':
 		break;
 	}
 }

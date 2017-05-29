@@ -17,6 +17,9 @@
 #define REFLOW_STATUS '5'
 #define REFLOW_SETUP '6'
 #define REFLOW_DWELL '7'
+#define REFLOW_CALIBRATE '8'
+#define CALIBRATE_PROBES '9'
+#define CALIBRATE_REFLOW 'B'
 
 
  //LDC Module CONTROL BITS

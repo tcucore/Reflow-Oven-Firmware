@@ -103,6 +103,18 @@ void InputAction(char action)
 		case REFLOW_DWELL:
 		ReflowDwellMenu(action);
 		break;
+		
+		case REFLOW_CALIBRATE:
+		ReflowCalibrateMenu(action);
+		break;
+		
+		case CALIBRATE_PROBES:
+		CalibrateProbesMenu(action);
+		break;
+		
+		case CALIBRATE_REFLOW:
+		CalibrateOvenMenu(action);
+		break;
 	}
 	HomeCursor();
 }

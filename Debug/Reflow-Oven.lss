@@ -1,0 +1,4540 @@
+
+Reflow-Oven.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         000002f2  00800100  00001ba4  00001c38  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00001ba4  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000000c  008003f2  008003f2  00001f2a  2**0
+                  ALLOC
+  3 .comment      0000005c  00000000  00000000  00001f2a  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00001f88  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000170  00000000  00000000  00001fc8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001d71  00000000  00000000  00002138  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000c17  00000000  00000000  00003ea9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00001592  00000000  00000000  00004ac0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000004fc  00000000  00000000  00006054  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000804  00000000  00000000  00006550  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00001483  00000000  00000000  00006d54  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000110  00000000  00000000  000081d7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__ctors_end>
+       4:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+       8:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+       c:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      10:	0c 94 ff 00 	jmp	0x1fe	; 0x1fe <__vector_4>
+      14:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      18:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      1c:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      20:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      24:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      28:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      2c:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      30:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      34:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      38:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      3c:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      40:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      44:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      48:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      4c:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      50:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      54:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      58:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      5c:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      60:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      64:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      68:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      6c:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      70:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      74:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      78:	0c 94 81 00 	jmp	0x102	; 0x102 <__bad_interrupt>
+      7c:	b4 00       	.word	0x00b4	; ????
+      7e:	ba 00       	.word	0x00ba	; ????
+      80:	b7 00       	.word	0x00b7	; ????
+      82:	ce 00       	.word	0x00ce	; ????
+      84:	ce 00       	.word	0x00ce	; ????
+      86:	c0 00       	.word	0x00c0	; ????
+      88:	bd 00       	.word	0x00bd	; ????
+      8a:	c3 00       	.word	0x00c3	; ????
+      8c:	c6 00       	.word	0x00c6	; ????
+      8e:	c9 00       	.word	0x00c9	; ????
+      90:	ce 00       	.word	0x00ce	; ????
+      92:	ce 00       	.word	0x00ce	; ????
+      94:	ce 00       	.word	0x00ce	; ????
+      96:	ce 00       	.word	0x00ce	; ????
+      98:	ce 00       	.word	0x00ce	; ????
+      9a:	ce 00       	.word	0x00ce	; ????
+      9c:	ce 00       	.word	0x00ce	; ????
+      9e:	ce 00       	.word	0x00ce	; ????
+      a0:	cc 00       	.word	0x00cc	; ????
+      a2:	b2 01       	movw	r22, r4
+      a4:	c8 01       	movw	r24, r16
+      a6:	bd 01       	movw	r22, r26
+      a8:	14 02       	muls	r17, r20
+      aa:	14 02       	muls	r17, r20
+      ac:	d3 01       	movw	r26, r6
+      ae:	de 01       	movw	r26, r28
+      b0:	e9 01       	movw	r28, r18
+      b2:	f4 01       	movw	r30, r8
+      b4:	0a 02       	muls	r16, r26
+      b6:	14 02       	muls	r17, r20
+      b8:	14 02       	muls	r17, r20
+      ba:	14 02       	muls	r17, r20
+      bc:	14 02       	muls	r17, r20
+      be:	14 02       	muls	r17, r20
+      c0:	14 02       	muls	r17, r20
+      c2:	14 02       	muls	r17, r20
+      c4:	14 02       	muls	r17, r20
+      c6:	ff 01       	movw	r30, r30
+
+000000c8 <__ctors_end>:
+      c8:	11 24       	eor	r1, r1
+      ca:	1f be       	out	0x3f, r1	; 63
+      cc:	cf ef       	ldi	r28, 0xFF	; 255
+      ce:	d4 e0       	ldi	r29, 0x04	; 4
+      d0:	de bf       	out	0x3e, r29	; 62
+      d2:	cd bf       	out	0x3d, r28	; 61
+
+000000d4 <__do_copy_data>:
+      d4:	13 e0       	ldi	r17, 0x03	; 3
+      d6:	a0 e0       	ldi	r26, 0x00	; 0
+      d8:	b1 e0       	ldi	r27, 0x01	; 1
+      da:	e4 ea       	ldi	r30, 0xA4	; 164
+      dc:	fb e1       	ldi	r31, 0x1B	; 27
+      de:	02 c0       	rjmp	.+4      	; 0xe4 <__do_copy_data+0x10>
+      e0:	05 90       	lpm	r0, Z+
+      e2:	0d 92       	st	X+, r0
+      e4:	a2 3f       	cpi	r26, 0xF2	; 242
+      e6:	b1 07       	cpc	r27, r17
+      e8:	d9 f7       	brne	.-10     	; 0xe0 <__do_copy_data+0xc>
+
+000000ea <__do_clear_bss>:
+      ea:	23 e0       	ldi	r18, 0x03	; 3
+      ec:	a2 ef       	ldi	r26, 0xF2	; 242
+      ee:	b3 e0       	ldi	r27, 0x03	; 3
+      f0:	01 c0       	rjmp	.+2      	; 0xf4 <.do_clear_bss_start>
+
+000000f2 <.do_clear_bss_loop>:
+      f2:	1d 92       	st	X+, r1
+
+000000f4 <.do_clear_bss_start>:
+      f4:	ae 3f       	cpi	r26, 0xFE	; 254
+      f6:	b2 07       	cpc	r27, r18
+      f8:	e1 f7       	brne	.-8      	; 0xf2 <.do_clear_bss_loop>
+      fa:	0e 94 a4 01 	call	0x348	; 0x348 <main>
+      fe:	0c 94 d0 0d 	jmp	0x1ba0	; 0x1ba0 <_exit>
+
+00000102 <__bad_interrupt>:
+     102:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000106 <TWI_Start>:
+	  TWCR = (1<<TWINT)|(1<<TWEN); //clear TWI interrupt and ensure TWI is enabled
+	  while ((TWCR & (1<<TWINT)) == 0) //wait for transmission to complete
+	  {
+		  //do nothing
+	  }
+  }
+     106:	84 ea       	ldi	r24, 0xA4	; 164
+     108:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+     10c:	ec eb       	ldi	r30, 0xBC	; 188
+     10e:	f0 e0       	ldi	r31, 0x00	; 0
+     110:	80 81       	ld	r24, Z
+     112:	88 23       	and	r24, r24
+     114:	ec f7       	brge	.-6      	; 0x110 <TWI_Start+0xa>
+     116:	08 95       	ret
+
+00000118 <TWI_Stop>:
+     118:	84 e9       	ldi	r24, 0x94	; 148
+     11a:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+     11e:	08 95       	ret
+
+00000120 <TWI_Write>:
+     120:	88 0f       	add	r24, r24
+     122:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7e00bb>
+     126:	84 e8       	ldi	r24, 0x84	; 132
+     128:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+     12c:	ec eb       	ldi	r30, 0xBC	; 188
+     12e:	f0 e0       	ldi	r31, 0x00	; 0
+     130:	80 81       	ld	r24, Z
+     132:	88 23       	and	r24, r24
+     134:	ec f7       	brge	.-6      	; 0x130 <TWI_Write+0x10>
+     136:	08 95       	ret
+
+00000138 <TWI_Data>:
+  
+  //sends data
+   void TWI_Data(unsigned char data)
+   {
+		TWDR = (data); // load data to be sent
+     138:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7e00bb>
+		TWCR = (1<<TWINT)|(1<<TWEN); //clear TWI interrupt and ensure TWI is enabled
+     13c:	84 e8       	ldi	r24, 0x84	; 132
+     13e:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+		while ((TWCR & (1<<TWINT)) == 0) //wait for flag to indicate transmission is complete
+     142:	ec eb       	ldi	r30, 0xBC	; 188
+     144:	f0 e0       	ldi	r31, 0x00	; 0
+     146:	80 81       	ld	r24, Z
+     148:	88 23       	and	r24, r24
+     14a:	ec f7       	brge	.-6      	; 0x146 <TWI_Data+0xe>
+		{
+			//do nothing
+		}   
+   }
+     14c:	08 95       	ret
+
+0000014e <InputAction>:
+	}	
+}
+
+void InputAction(char action)
+{
+	switch(currentMenu)
+     14e:	e0 91 fa 03 	lds	r30, 0x03FA	; 0x8003fa <currentMenu>
+     152:	4e 2f       	mov	r20, r30
+     154:	50 e0       	ldi	r21, 0x00	; 0
+     156:	fa 01       	movw	r30, r20
+     158:	f0 97       	sbiw	r30, 0x30	; 48
+     15a:	e3 31       	cpi	r30, 0x13	; 19
+     15c:	f1 05       	cpc	r31, r1
+     15e:	f0 f4       	brcc	.+60     	; 0x19c <InputAction+0x4e>
+     160:	e2 5c       	subi	r30, 0xC2	; 194
+     162:	ff 4f       	sbci	r31, 0xFF	; 255
+     164:	0c 94 e0 0a 	jmp	0x15c0	; 0x15c0 <__tablejump2__>
+	{
+		case HOME:
+		HomeMenu(action);
+     168:	0e 94 15 02 	call	0x42a	; 0x42a <HomeMenu>
+		break;
+     16c:	17 c0       	rjmp	.+46     	; 0x19c <InputAction+0x4e>
+		
+		case REFLOW:
+		ReflowMenu(action);
+     16e:	0e 94 73 02 	call	0x4e6	; 0x4e6 <ReflowMenu>
+		break;
+     172:	14 c0       	rjmp	.+40     	; 0x19c <InputAction+0x4e>
+		
+		case EXPOSURE:
+		ExposureMenu(action);
+     174:	0e 94 fa 02 	call	0x5f4	; 0x5f4 <ExposureMenu>
+		break;
+     178:	11 c0       	rjmp	.+34     	; 0x19c <InputAction+0x4e>
+		
+		case REFLOW_SETUP:
+		ReflowSetupMenu(action);
+     17a:	0e 94 29 04 	call	0x852	; 0x852 <ReflowSetupMenu>
+		break;
+     17e:	0e c0       	rjmp	.+28     	; 0x19c <InputAction+0x4e>
+		
+		case REFLOW_STATUS:
+		ReflowStatusMenu(action);
+     180:	0e 94 89 09 	call	0x1312	; 0x1312 <ReflowStatusMenu>
+		break;
+     184:	0b c0       	rjmp	.+22     	; 0x19c <InputAction+0x4e>
+		
+		case REFLOW_DWELL:
+		ReflowDwellMenu(action);
+     186:	0e 94 0d 08 	call	0x101a	; 0x101a <ReflowDwellMenu>
+		break;
+     18a:	08 c0       	rjmp	.+16     	; 0x19c <InputAction+0x4e>
+		
+		case REFLOW_CALIBRATE:
+		ReflowCalibrateMenu(action);
+     18c:	0e 94 8f 09 	call	0x131e	; 0x131e <ReflowCalibrateMenu>
+		break;
+     190:	05 c0       	rjmp	.+10     	; 0x19c <InputAction+0x4e>
+		
+		case CALIBRATE_PROBES:
+		CalibrateProbesMenu(action);
+     192:	0e 94 ed 09 	call	0x13da	; 0x13da <CalibrateProbesMenu>
+		break;
+     196:	02 c0       	rjmp	.+4      	; 0x19c <InputAction+0x4e>
+		
+		case CALIBRATE_REFLOW:
+		CalibrateOvenMenu(action);
+     198:	0e 94 a3 0a 	call	0x1546	; 0x1546 <CalibrateOvenMenu>
+		break;
+	}
+	HomeCursor();
+     19c:	0e 94 2f 01 	call	0x25e	; 0x25e <HomeCursor>
+     1a0:	08 95       	ret
+
+000001a2 <CheckDirection>:
+
+
+//determines the direction of rotation and calls the appropriate function.
+void CheckDirection(void)
+{
+	switch(transitionState)  //switches on last known transition state
+     1a2:	80 91 f7 03 	lds	r24, 0x03F7	; 0x8003f7 <transitionState>
+     1a6:	82 30       	cpi	r24, 0x02	; 2
+     1a8:	19 f0       	breq	.+6      	; 0x1b0 <CheckDirection+0xe>
+     1aa:	84 30       	cpi	r24, 0x04	; 4
+     1ac:	69 f0       	breq	.+26     	; 0x1c8 <CheckDirection+0x26>
+     1ae:	08 95       	ret
+	{
+		case 0x02:
+			if (lastState == 0x06) //determines direction using last known resting state
+     1b0:	80 91 f6 03 	lds	r24, 0x03F6	; 0x8003f6 <lastState>
+     1b4:	86 30       	cpi	r24, 0x06	; 6
+     1b6:	21 f4       	brne	.+8      	; 0x1c0 <CheckDirection+0x1e>
+			{
+				InputAction('L');
+     1b8:	8c e4       	ldi	r24, 0x4C	; 76
+     1ba:	0e 94 a7 00 	call	0x14e	; 0x14e <InputAction>
+     1be:	08 95       	ret
+			}
+			else
+			{
+				InputAction('R');
+     1c0:	82 e5       	ldi	r24, 0x52	; 82
+     1c2:	0e 94 a7 00 	call	0x14e	; 0x14e <InputAction>
+     1c6:	08 95       	ret
+			}
+		break;
+
+		case 0x04:  
+			if(lastState == 0x00)  //direction using last known resting state
+     1c8:	80 91 f6 03 	lds	r24, 0x03F6	; 0x8003f6 <lastState>
+     1cc:	81 11       	cpse	r24, r1
+     1ce:	04 c0       	rjmp	.+8      	; 0x1d8 <CheckDirection+0x36>
+			{
+				InputAction('L');
+     1d0:	8c e4       	ldi	r24, 0x4C	; 76
+     1d2:	0e 94 a7 00 	call	0x14e	; 0x14e <InputAction>
+     1d6:	08 95       	ret
+			}
+			else
+			{
+				InputAction('R');
+     1d8:	82 e5       	ldi	r24, 0x52	; 82
+     1da:	0e 94 a7 00 	call	0x14e	; 0x14e <InputAction>
+     1de:	08 95       	ret
+
+000001e0 <CheckButton>:
+}
+
+
+void CheckButton(void)
+{
+	while(!(PINA & 0x01))
+     1e0:	00 99       	sbic	0x00, 0	; 0
+     1e2:	05 c0       	rjmp	.+10     	; 0x1ee <CheckButton+0xe>
+	{
+		isPressed = 1;  //make note the button is pressed
+     1e4:	81 e0       	ldi	r24, 0x01	; 1
+     1e6:	80 93 f4 03 	sts	0x03F4, r24	; 0x8003f4 <isPressed>
+}
+
+
+void CheckButton(void)
+{
+	while(!(PINA & 0x01))
+     1ea:	00 9b       	sbis	0x00, 0	; 0
+     1ec:	fc cf       	rjmp	.-8      	; 0x1e6 <CheckButton+0x6>
+	{
+		isPressed = 1;  //make note the button is pressed
+	}
+		
+	//this resolves a stacking interrupt issue
+	if(isPressed == 1)
+     1ee:	80 91 f4 03 	lds	r24, 0x03F4	; 0x8003f4 <isPressed>
+     1f2:	81 30       	cpi	r24, 0x01	; 1
+     1f4:	19 f4       	brne	.+6      	; 0x1fc <CheckButton+0x1c>
+	{
+		InputAction('A');
+     1f6:	81 e4       	ldi	r24, 0x41	; 65
+     1f8:	0e 94 a7 00 	call	0x14e	; 0x14e <InputAction>
+     1fc:	08 95       	ret
+
+000001fe <__vector_4>:
+
+
+
+//Handles A user pressing the accept button
+ISR(PCINT0_vect)
+{
+     1fe:	1f 92       	push	r1
+     200:	0f 92       	push	r0
+     202:	0f b6       	in	r0, 0x3f	; 63
+     204:	0f 92       	push	r0
+     206:	11 24       	eor	r1, r1
+     208:	2f 93       	push	r18
+     20a:	3f 93       	push	r19
+     20c:	4f 93       	push	r20
+     20e:	5f 93       	push	r21
+     210:	6f 93       	push	r22
+     212:	7f 93       	push	r23
+     214:	8f 93       	push	r24
+     216:	9f 93       	push	r25
+     218:	af 93       	push	r26
+     21a:	bf 93       	push	r27
+     21c:	ef 93       	push	r30
+     21e:	ff 93       	push	r31
+	transitionState = (PINA & 0x06);  //mask PORTA to get the transition state
+     220:	80 b1       	in	r24, 0x00	; 0
+     222:	86 70       	andi	r24, 0x06	; 6
+     224:	80 93 f7 03 	sts	0x03F7, r24	; 0x8003f7 <transitionState>
+	CheckButton();	//Checks for the accept button being pressed
+     228:	0e 94 f0 00 	call	0x1e0	; 0x1e0 <CheckButton>
+	isPressed = 0;	//Make not of return to resting state
+     22c:	10 92 f4 03 	sts	0x03F4, r1	; 0x8003f4 <isPressed>
+	CheckDirection();  //Checks direction of rotation
+     230:	0e 94 d1 00 	call	0x1a2	; 0x1a2 <CheckDirection>
+	lastState = PINA & 0x06;  //save the last stable state
+     234:	80 b1       	in	r24, 0x00	; 0
+     236:	86 70       	andi	r24, 0x06	; 6
+     238:	80 93 f6 03 	sts	0x03F6, r24	; 0x8003f6 <lastState>
+}
+     23c:	ff 91       	pop	r31
+     23e:	ef 91       	pop	r30
+     240:	bf 91       	pop	r27
+     242:	af 91       	pop	r26
+     244:	9f 91       	pop	r25
+     246:	8f 91       	pop	r24
+     248:	7f 91       	pop	r23
+     24a:	6f 91       	pop	r22
+     24c:	5f 91       	pop	r21
+     24e:	4f 91       	pop	r20
+     250:	3f 91       	pop	r19
+     252:	2f 91       	pop	r18
+     254:	0f 90       	pop	r0
+     256:	0f be       	out	0x3f, r0	; 63
+     258:	0f 90       	pop	r0
+     25a:	1f 90       	pop	r1
+     25c:	18 95       	reti
+
+0000025e <HomeCursor>:
+}
+
+
+void HomeCursor()
+{
+	TWI_Start();
+     25e:	0e 94 83 00 	call	0x106	; 0x106 <TWI_Start>
+	TWI_Write(LCD_MODULE);
+     262:	8f e3       	ldi	r24, 0x3F	; 63
+     264:	0e 94 90 00 	call	0x120	; 0x120 <TWI_Write>
+unsigned char BuildPacket(unsigned char RS, unsigned char EN, unsigned char RW, unsigned char currentData, unsigned char nibble)
+{
+	switch(nibble)
+	{
+		case UPPER:
+		packet = (((currentData & 0xF0)) | EN<<ENABLE | RW<<READ_WRITE | RS<<REGISTER_SELECT);
+     268:	84 e0       	ldi	r24, 0x04	; 4
+     26a:	80 93 f8 03 	sts	0x03F8, r24	; 0x8003f8 <packet>
+		
+		case LOWER:
+		packet = (((currentData & 0x0F)<<4) | EN<<ENABLE | RW<<READ_WRITE | RS<<REGISTER_SELECT);
+		break;
+	}
+	return packet;
+     26e:	80 91 f8 03 	lds	r24, 0x03F8	; 0x8003f8 <packet>
+
+void HomeCursor()
+{
+	TWI_Start();
+	TWI_Write(LCD_MODULE);
+	TWI_Data(BuildPacket(COMMAND, LCD_ENABLE, WRITE, RETURN_HOME, UPPER));
+     272:	0e 94 9c 00 	call	0x138	; 0x138 <TWI_Data>
+unsigned char BuildPacket(unsigned char RS, unsigned char EN, unsigned char RW, unsigned char currentData, unsigned char nibble)
+{
+	switch(nibble)
+	{
+		case UPPER:
+		packet = (((currentData & 0xF0)) | EN<<ENABLE | RW<<READ_WRITE | RS<<REGISTER_SELECT);
+     276:	10 92 f8 03 	sts	0x03F8, r1	; 0x8003f8 <packet>
+		
+		case LOWER:
+		packet = (((currentData & 0x0F)<<4) | EN<<ENABLE | RW<<READ_WRITE | RS<<REGISTER_SELECT);
+		break;
+	}
+	return packet;
+     27a:	80 91 f8 03 	lds	r24, 0x03F8	; 0x8003f8 <packet>
+void HomeCursor()
+{
+	TWI_Start();
+	TWI_Write(LCD_MODULE);
+	TWI_Data(BuildPacket(COMMAND, LCD_ENABLE, WRITE, RETURN_HOME, UPPER));
+	TWI_Data(BuildPacket(COMMAND, LCD_DISABLE, WRITE, RETURN_HOME, UPPER));
+     27e:	0e 94 9c 00 	call	0x138	; 0x138 <TWI_Data>
+		case UPPER:
+		packet = (((currentData & 0xF0)) | EN<<ENABLE | RW<<READ_WRITE | RS<<REGISTER_SELECT);
+		break;
+		
+		case LOWER:
+		packet = (((currentData & 0x0F)<<4) | EN<<ENABLE | RW<<READ_WRITE | RS<<REGISTER_SELECT);
+     282:	84 e2       	ldi	r24, 0x24	; 36
+     284:	80 93 f8 03 	sts	0x03F8, r24	; 0x8003f8 <packet>
+		break;
+	}
+	return packet;
+     288:	80 91 f8 03 	lds	r24, 0x03F8	; 0x8003f8 <packet>
+{
+	TWI_Start();
+	TWI_Write(LCD_MODULE);
+	TWI_Data(BuildPacket(COMMAND, LCD_ENABLE, WRITE, RETURN_HOME, UPPER));
+	TWI_Data(BuildPacket(COMMAND, LCD_DISABLE, WRITE, RETURN_HOME, UPPER));
+	TWI_Data(BuildPacket(COMMAND, LCD_ENABLE, WRITE, RETURN_HOME, LOWER));
+     28c:	0e 94 9c 00 	call	0x138	; 0x138 <TWI_Data>
+		case UPPER:
+		packet = (((currentData & 0xF0)) | EN<<ENABLE | RW<<READ_WRITE | RS<<REGISTER_SELECT);
+		break;
+		
+		case LOWER:
+		packet = (((currentData & 0x0F)<<4) | EN<<ENABLE | RW<<READ_WRITE | RS<<REGISTER_SELECT);
+     290:	80 e2       	ldi	r24, 0x20	; 32
+     292:	80 93 f8 03 	sts	0x03F8, r24	; 0x8003f8 <packet>
+		break;
+	}
+	return packet;
+     296:	80 91 f8 03 	lds	r24, 0x03F8	; 0x8003f8 <packet>
+	TWI_Start();
+	TWI_Write(LCD_MODULE);
+	TWI_Data(BuildPacket(COMMAND, LCD_ENABLE, WRITE, RETURN_HOME, UPPER));
+	TWI_Data(BuildPacket(COMMAND, LCD_DISABLE, WRITE, RETURN_HOME, UPPER));
+	TWI_Data(BuildPacket(COMMAND, LCD_ENABLE, WRITE, RETURN_HOME, LOWER));
+	TWI_Data(BuildPacket(COMMAND, LCD_DISABLE, WRITE, RETURN_HOME, LOWER));
+     29a:	0e 94 9c 00 	call	0x138	; 0x138 <TWI_Data>
+	TWI_Stop();
+     29e:	0e 94 8c 00 	call	0x118	; 0x118 <TWI_Stop>
+     2a2:	08 95       	ret
+
+000002a4 <SendMessage>:
+
+
+
+
+void SendMessage(unsigned char address, unsigned char RS, char* data, unsigned char length)
+{
+     2a4:	ef 92       	push	r14
+     2a6:	ff 92       	push	r15
+     2a8:	0f 93       	push	r16
+     2aa:	1f 93       	push	r17
+     2ac:	cf 93       	push	r28
+     2ae:	df 93       	push	r29
+     2b0:	18 2f       	mov	r17, r24
+     2b2:	f6 2e       	mov	r15, r22
+     2b4:	ea 01       	movw	r28, r20
+     2b6:	02 2f       	mov	r16, r18
+	HomeCursor();
+     2b8:	0e 94 2f 01 	call	0x25e	; 0x25e <HomeCursor>
+	unsigned char index = 0;
+	TWI_Start();  //send start condition to I2C bus
+     2bc:	0e 94 83 00 	call	0x106	; 0x106 <TWI_Start>
+	TWI_Write(address);  //Ping address and wait for ACK
+     2c0:	81 2f       	mov	r24, r17
+     2c2:	0e 94 90 00 	call	0x120	; 0x120 <TWI_Write>
+	while(index < length)
+     2c6:	00 23       	and	r16, r16
+     2c8:	b1 f1       	breq	.+108    	; 0x336 <SendMessage+0x92>
+     2ca:	01 50       	subi	r16, 0x01	; 1
+     2cc:	10 e0       	ldi	r17, 0x00	; 0
+     2ce:	0f 5f       	subi	r16, 0xFF	; 255
+     2d0:	1f 4f       	sbci	r17, 0xFF	; 255
+     2d2:	0c 0f       	add	r16, r28
+     2d4:	1d 1f       	adc	r17, r29
+     2d6:	2f 2d       	mov	r18, r15
+     2d8:	24 60       	ori	r18, 0x04	; 4
+     2da:	e2 2e       	mov	r14, r18
+unsigned char BuildPacket(unsigned char RS, unsigned char EN, unsigned char RW, unsigned char currentData, unsigned char nibble)
+{
+	switch(nibble)
+	{
+		case UPPER:
+		packet = (((currentData & 0xF0)) | EN<<ENABLE | RW<<READ_WRITE | RS<<REGISTER_SELECT);
+     2dc:	88 81       	ld	r24, Y
+     2de:	80 7f       	andi	r24, 0xF0	; 240
+     2e0:	8e 29       	or	r24, r14
+     2e2:	80 93 f8 03 	sts	0x03F8, r24	; 0x8003f8 <packet>
+		
+		case LOWER:
+		packet = (((currentData & 0x0F)<<4) | EN<<ENABLE | RW<<READ_WRITE | RS<<REGISTER_SELECT);
+		break;
+	}
+	return packet;
+     2e6:	80 91 f8 03 	lds	r24, 0x03F8	; 0x8003f8 <packet>
+	unsigned char index = 0;
+	TWI_Start();  //send start condition to I2C bus
+	TWI_Write(address);  //Ping address and wait for ACK
+	while(index < length)
+	{
+		TWI_Data(BuildPacket(RS, LCD_ENABLE, WRITE, *data, UPPER));  //stage upper nibble
+     2ea:	0e 94 9c 00 	call	0x138	; 0x138 <TWI_Data>
+unsigned char BuildPacket(unsigned char RS, unsigned char EN, unsigned char RW, unsigned char currentData, unsigned char nibble)
+{
+	switch(nibble)
+	{
+		case UPPER:
+		packet = (((currentData & 0xF0)) | EN<<ENABLE | RW<<READ_WRITE | RS<<REGISTER_SELECT);
+     2ee:	88 81       	ld	r24, Y
+     2f0:	80 7f       	andi	r24, 0xF0	; 240
+     2f2:	8f 29       	or	r24, r15
+     2f4:	80 93 f8 03 	sts	0x03F8, r24	; 0x8003f8 <packet>
+		
+		case LOWER:
+		packet = (((currentData & 0x0F)<<4) | EN<<ENABLE | RW<<READ_WRITE | RS<<REGISTER_SELECT);
+		break;
+	}
+	return packet;
+     2f8:	80 91 f8 03 	lds	r24, 0x03F8	; 0x8003f8 <packet>
+	TWI_Start();  //send start condition to I2C bus
+	TWI_Write(address);  //Ping address and wait for ACK
+	while(index < length)
+	{
+		TWI_Data(BuildPacket(RS, LCD_ENABLE, WRITE, *data, UPPER));  //stage upper nibble
+		TWI_Data(BuildPacket(RS, LCD_DISABLE, WRITE, *data, UPPER)); //latch upper nibble
+     2fc:	0e 94 9c 00 	call	0x138	; 0x138 <TWI_Data>
+		case UPPER:
+		packet = (((currentData & 0xF0)) | EN<<ENABLE | RW<<READ_WRITE | RS<<REGISTER_SELECT);
+		break;
+		
+		case LOWER:
+		packet = (((currentData & 0x0F)<<4) | EN<<ENABLE | RW<<READ_WRITE | RS<<REGISTER_SELECT);
+     300:	88 81       	ld	r24, Y
+     302:	20 e1       	ldi	r18, 0x10	; 16
+     304:	82 9f       	mul	r24, r18
+     306:	c0 01       	movw	r24, r0
+     308:	11 24       	eor	r1, r1
+     30a:	8e 29       	or	r24, r14
+     30c:	80 93 f8 03 	sts	0x03F8, r24	; 0x8003f8 <packet>
+		break;
+	}
+	return packet;
+     310:	80 91 f8 03 	lds	r24, 0x03F8	; 0x8003f8 <packet>
+	TWI_Write(address);  //Ping address and wait for ACK
+	while(index < length)
+	{
+		TWI_Data(BuildPacket(RS, LCD_ENABLE, WRITE, *data, UPPER));  //stage upper nibble
+		TWI_Data(BuildPacket(RS, LCD_DISABLE, WRITE, *data, UPPER)); //latch upper nibble
+		TWI_Data(BuildPacket(RS, LCD_ENABLE, WRITE, *data, LOWER)); //stage lower nibble
+     314:	0e 94 9c 00 	call	0x138	; 0x138 <TWI_Data>
+		case UPPER:
+		packet = (((currentData & 0xF0)) | EN<<ENABLE | RW<<READ_WRITE | RS<<REGISTER_SELECT);
+		break;
+		
+		case LOWER:
+		packet = (((currentData & 0x0F)<<4) | EN<<ENABLE | RW<<READ_WRITE | RS<<REGISTER_SELECT);
+     318:	89 91       	ld	r24, Y+
+     31a:	20 e1       	ldi	r18, 0x10	; 16
+     31c:	82 9f       	mul	r24, r18
+     31e:	c0 01       	movw	r24, r0
+     320:	11 24       	eor	r1, r1
+     322:	8f 29       	or	r24, r15
+     324:	80 93 f8 03 	sts	0x03F8, r24	; 0x8003f8 <packet>
+		break;
+	}
+	return packet;
+     328:	80 91 f8 03 	lds	r24, 0x03F8	; 0x8003f8 <packet>
+	while(index < length)
+	{
+		TWI_Data(BuildPacket(RS, LCD_ENABLE, WRITE, *data, UPPER));  //stage upper nibble
+		TWI_Data(BuildPacket(RS, LCD_DISABLE, WRITE, *data, UPPER)); //latch upper nibble
+		TWI_Data(BuildPacket(RS, LCD_ENABLE, WRITE, *data, LOWER)); //stage lower nibble
+		TWI_Data(BuildPacket(RS, LCD_DISABLE, WRITE, *data, LOWER)); //latch lower nibble
+     32c:	0e 94 9c 00 	call	0x138	; 0x138 <TWI_Data>
+{
+	HomeCursor();
+	unsigned char index = 0;
+	TWI_Start();  //send start condition to I2C bus
+	TWI_Write(address);  //Ping address and wait for ACK
+	while(index < length)
+     330:	c0 17       	cp	r28, r16
+     332:	d1 07       	cpc	r29, r17
+     334:	99 f6       	brne	.-90     	; 0x2dc <SendMessage+0x38>
+		TWI_Data(BuildPacket(RS, LCD_ENABLE, WRITE, *data, LOWER)); //stage lower nibble
+		TWI_Data(BuildPacket(RS, LCD_DISABLE, WRITE, *data, LOWER)); //latch lower nibble
+		data++;  //increment array to next character
+		index++;  //increment index
+	}
+	TWI_Stop();  //send stop condition to I2C bus
+     336:	0e 94 8c 00 	call	0x118	; 0x118 <TWI_Stop>
+}
+     33a:	df 91       	pop	r29
+     33c:	cf 91       	pop	r28
+     33e:	1f 91       	pop	r17
+     340:	0f 91       	pop	r16
+     342:	ff 90       	pop	r15
+     344:	ef 90       	pop	r14
+     346:	08 95       	ret
+
+00000348 <main>:
+#include "Protos.h"
+#include "Abstractions.h"
+
+int main(void)
+{
+	InitializeDevice();  //Runs all Setup Routine
+     348:	0e 94 cf 0a 	call	0x159e	; 0x159e <InitializeDevice>
+     34c:	ff cf       	rjmp	.-2      	; 0x34c <main+0x4>
+
+0000034e <DrawMenu>:
+Accepts: char
+returns: nothing
+***********************************************************************************/
+void DrawMenu(char menu)
+{
+	switch(menu)
+     34e:	90 e0       	ldi	r25, 0x00	; 0
+     350:	fc 01       	movw	r30, r24
+     352:	f0 97       	sbiw	r30, 0x30	; 48
+     354:	e3 31       	cpi	r30, 0x13	; 19
+     356:	f1 05       	cpc	r31, r1
+     358:	08 f0       	brcs	.+2      	; 0x35c <DrawMenu+0xe>
+     35a:	66 c0       	rjmp	.+204    	; 0x428 <__LOCK_REGION_LENGTH__+0x28>
+     35c:	ef 5a       	subi	r30, 0xAF	; 175
+     35e:	ff 4f       	sbci	r31, 0xFF	; 255
+     360:	0c 94 e0 0a 	jmp	0x15c0	; 0x15c0 <__tablejump2__>
+	{
+		case HOME: //this is the screen the device loads first
+		currentMenu = HOME;   //set current menu to home
+     364:	80 e3       	ldi	r24, 0x30	; 48
+     366:	80 93 fa 03 	sts	0x03FA, r24	; 0x8003fa <currentMenu>
+		SendMessage(LCD_MODULE, DATA, homeScreen, sizeof(homeScreen));  //Draw current menu  
+     36a:	20 e5       	ldi	r18, 0x50	; 80
+     36c:	41 e9       	ldi	r20, 0x91	; 145
+     36e:	53 e0       	ldi	r21, 0x03	; 3
+     370:	61 e0       	ldi	r22, 0x01	; 1
+     372:	8f e3       	ldi	r24, 0x3F	; 63
+     374:	0e 94 52 01 	call	0x2a4	; 0x2a4 <SendMessage>
+		break;
+     378:	08 95       	ret
+		
+		case REFLOW: //this is the reflow menu
+		currentMenu = REFLOW; //set current menu to reflow
+     37a:	82 e3       	ldi	r24, 0x32	; 50
+     37c:	80 93 fa 03 	sts	0x03FA, r24	; 0x8003fa <currentMenu>
+		SendMessage(LCD_MODULE, DATA, reflowScreen, sizeof(reflowScreen)); //Draw reflow menu
+     380:	20 e5       	ldi	r18, 0x50	; 80
+     382:	41 e4       	ldi	r20, 0x41	; 65
+     384:	53 e0       	ldi	r21, 0x03	; 3
+     386:	61 e0       	ldi	r22, 0x01	; 1
+     388:	8f e3       	ldi	r24, 0x3F	; 63
+     38a:	0e 94 52 01 	call	0x2a4	; 0x2a4 <SendMessage>
+		break;
+     38e:	08 95       	ret
+		
+		case EXPOSURE: //this is the exposure menu
+		currentMenu = EXPOSURE; //Set current menu to exposure
+     390:	81 e3       	ldi	r24, 0x31	; 49
+     392:	80 93 fa 03 	sts	0x03FA, r24	; 0x8003fa <currentMenu>
+		SendMessage(LCD_MODULE, DATA, exposureScreen, sizeof(exposureScreen)); //draw exposure menu
+     396:	20 e5       	ldi	r18, 0x50	; 80
+     398:	41 ef       	ldi	r20, 0xF1	; 241
+     39a:	52 e0       	ldi	r21, 0x02	; 2
+     39c:	61 e0       	ldi	r22, 0x01	; 1
+     39e:	8f e3       	ldi	r24, 0x3F	; 63
+     3a0:	0e 94 52 01 	call	0x2a4	; 0x2a4 <SendMessage>
+		break;
+     3a4:	08 95       	ret
+		
+		case REFLOW_STATUS:  //this is the reflow status screen
+		currentMenu = REFLOW_STATUS; //set current menu to reflow status
+     3a6:	85 e3       	ldi	r24, 0x35	; 53
+     3a8:	80 93 fa 03 	sts	0x03FA, r24	; 0x8003fa <currentMenu>
+		SendMessage(LCD_MODULE, DATA, reflowStatusScreen, sizeof(reflowStatusScreen)); //draw reflow status menu
+     3ac:	20 e5       	ldi	r18, 0x50	; 80
+     3ae:	41 ea       	ldi	r20, 0xA1	; 161
+     3b0:	52 e0       	ldi	r21, 0x02	; 2
+     3b2:	61 e0       	ldi	r22, 0x01	; 1
+     3b4:	8f e3       	ldi	r24, 0x3F	; 63
+     3b6:	0e 94 52 01 	call	0x2a4	; 0x2a4 <SendMessage>
+		break;
+     3ba:	08 95       	ret
+		
+		case REFLOW_SETUP:  //this is the reflow setup screen.  This is a series of screens
+		currentMenu = REFLOW_SETUP; //set current menu the reflow setup
+     3bc:	86 e3       	ldi	r24, 0x36	; 54
+     3be:	80 93 fa 03 	sts	0x03FA, r24	; 0x8003fa <currentMenu>
+		SendMessage(LCD_MODULE, DATA, reflowSetupScreen, sizeof(reflowSetupScreen)); //draw reflow setup menu
+     3c2:	20 e5       	ldi	r18, 0x50	; 80
+     3c4:	41 e5       	ldi	r20, 0x51	; 81
+     3c6:	52 e0       	ldi	r21, 0x02	; 2
+     3c8:	61 e0       	ldi	r22, 0x01	; 1
+     3ca:	8f e3       	ldi	r24, 0x3F	; 63
+     3cc:	0e 94 52 01 	call	0x2a4	; 0x2a4 <SendMessage>
+		break;
+     3d0:	08 95       	ret
+		
+		case REFLOW_DWELL: //this is the reflow dwell menu
+		currentMenu = REFLOW_DWELL; //set current menu to reflow dwell
+     3d2:	87 e3       	ldi	r24, 0x37	; 55
+     3d4:	80 93 fa 03 	sts	0x03FA, r24	; 0x8003fa <currentMenu>
+		SendMessage(LCD_MODULE, DATA, reflowDwellScreen, sizeof(reflowDwellScreen)); //draw reflow dwell menu
+     3d8:	20 e5       	ldi	r18, 0x50	; 80
+     3da:	41 e0       	ldi	r20, 0x01	; 1
+     3dc:	52 e0       	ldi	r21, 0x02	; 2
+     3de:	61 e0       	ldi	r22, 0x01	; 1
+     3e0:	8f e3       	ldi	r24, 0x3F	; 63
+     3e2:	0e 94 52 01 	call	0x2a4	; 0x2a4 <SendMessage>
+		break;
+     3e6:	08 95       	ret
+		
+		case REFLOW_CALIBRATE:
+		currentMenu = REFLOW_CALIBRATE;
+     3e8:	88 e3       	ldi	r24, 0x38	; 56
+     3ea:	80 93 fa 03 	sts	0x03FA, r24	; 0x8003fa <currentMenu>
+		SendMessage(LCD_MODULE, DATA, calibrateScreen, sizeof(calibrateScreen)); //draw calibration options screen
+     3ee:	20 e5       	ldi	r18, 0x50	; 80
+     3f0:	41 eb       	ldi	r20, 0xB1	; 177
+     3f2:	51 e0       	ldi	r21, 0x01	; 1
+     3f4:	61 e0       	ldi	r22, 0x01	; 1
+     3f6:	8f e3       	ldi	r24, 0x3F	; 63
+     3f8:	0e 94 52 01 	call	0x2a4	; 0x2a4 <SendMessage>
+		break;
+     3fc:	08 95       	ret
+		
+		case CALIBRATE_REFLOW:
+		currentMenu = CALIBRATE_REFLOW;
+     3fe:	82 e4       	ldi	r24, 0x42	; 66
+     400:	80 93 fa 03 	sts	0x03FA, r24	; 0x8003fa <currentMenu>
+		SendMessage(LCD_MODULE, DATA, calibrateOvenScreen, sizeof(calibrateOvenScreen));
+     404:	20 e5       	ldi	r18, 0x50	; 80
+     406:	41 e6       	ldi	r20, 0x61	; 97
+     408:	51 e0       	ldi	r21, 0x01	; 1
+     40a:	61 e0       	ldi	r22, 0x01	; 1
+     40c:	8f e3       	ldi	r24, 0x3F	; 63
+     40e:	0e 94 52 01 	call	0x2a4	; 0x2a4 <SendMessage>
+		break;
+     412:	08 95       	ret
+		
+		case CALIBRATE_PROBES:
+		currentMenu = CALIBRATE_PROBES;
+     414:	89 e3       	ldi	r24, 0x39	; 57
+     416:	80 93 fa 03 	sts	0x03FA, r24	; 0x8003fa <currentMenu>
+		SendMessage(LCD_MODULE, DATA, calibrateProbeScreen, sizeof(calibrateProbeScreen));
+     41a:	20 e5       	ldi	r18, 0x50	; 80
+     41c:	41 e1       	ldi	r20, 0x11	; 17
+     41e:	51 e0       	ldi	r21, 0x01	; 1
+     420:	61 e0       	ldi	r22, 0x01	; 1
+     422:	8f e3       	ldi	r24, 0x3F	; 63
+     424:	0e 94 52 01 	call	0x2a4	; 0x2a4 <SendMessage>
+     428:	08 95       	ret
+
+0000042a <HomeMenu>:
+Accepts: char
+returns: nothing
+***********************************************************************************/
+void HomeMenu(char action)
+{
+	switch(action) //determine what input action was received
+     42a:	8c 34       	cpi	r24, 0x4C	; 76
+     42c:	b1 f0       	breq	.+44     	; 0x45a <HomeMenu+0x30>
+     42e:	82 35       	cpi	r24, 0x52	; 82
+     430:	b9 f1       	breq	.+110    	; 0x4a0 <HomeMenu+0x76>
+     432:	81 34       	cpi	r24, 0x41	; 65
+     434:	09 f0       	breq	.+2      	; 0x438 <HomeMenu+0xe>
+     436:	56 c0       	rjmp	.+172    	; 0x4e4 <HomeMenu+0xba>
+	{
+		case 'A':  //if rotary encoder button was pressed
+		if(homeScreen[78] == ']') //if exposure is selected
+     438:	80 91 df 03 	lds	r24, 0x03DF	; 0x8003df <homeScreen+0x4e>
+     43c:	8d 35       	cpi	r24, 0x5D	; 93
+     43e:	21 f4       	brne	.+8      	; 0x448 <HomeMenu+0x1e>
+		{
+			DrawMenu(EXPOSURE); //move to exposure menu
+     440:	81 e3       	ldi	r24, 0x31	; 49
+     442:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     446:	08 95       	ret
+		}
+		else
+		{
+			if(homeScreen[68] == ']') //if reflow is selected
+     448:	80 91 d5 03 	lds	r24, 0x03D5	; 0x8003d5 <homeScreen+0x44>
+     44c:	8d 35       	cpi	r24, 0x5D	; 93
+     44e:	09 f0       	breq	.+2      	; 0x452 <HomeMenu+0x28>
+     450:	49 c0       	rjmp	.+146    	; 0x4e4 <HomeMenu+0xba>
+			{
+				DrawMenu(REFLOW); //move to reflow screen
+     452:	82 e3       	ldi	r24, 0x32	; 50
+     454:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     458:	08 95       	ret
+			}
+		}
+		break;
+		
+		case 'L': //if rotary encoder is rotated lect (CCW)
+		if(homeScreen[68] == ']') //if reflow is selected change selection to exposure
+     45a:	80 91 d5 03 	lds	r24, 0x03D5	; 0x8003d5 <homeScreen+0x44>
+     45e:	8d 35       	cpi	r24, 0x5D	; 93
+     460:	61 f4       	brne	.+24     	; 0x47a <HomeMenu+0x50>
+		{
+			homeScreen[68] = ' ';
+     462:	80 e2       	ldi	r24, 0x20	; 32
+     464:	80 93 d5 03 	sts	0x03D5, r24	; 0x8003d5 <homeScreen+0x44>
+			homeScreen[61] = ' ';
+     468:	80 93 ce 03 	sts	0x03CE, r24	; 0x8003ce <homeScreen+0x3d>
+			homeScreen[78] = ']';
+     46c:	8d e5       	ldi	r24, 0x5D	; 93
+     46e:	80 93 df 03 	sts	0x03DF, r24	; 0x8003df <homeScreen+0x4e>
+			homeScreen[69] = '[';
+     472:	8b e5       	ldi	r24, 0x5B	; 91
+     474:	80 93 d6 03 	sts	0x03D6, r24	; 0x8003d6 <homeScreen+0x45>
+     478:	0f c0       	rjmp	.+30     	; 0x498 <HomeMenu+0x6e>
+		}
+		else
+		{
+			if(homeScreen[78] == ']') //if exposure is selected change selection to reflow
+     47a:	80 91 df 03 	lds	r24, 0x03DF	; 0x8003df <homeScreen+0x4e>
+     47e:	8d 35       	cpi	r24, 0x5D	; 93
+     480:	59 f4       	brne	.+22     	; 0x498 <HomeMenu+0x6e>
+			{
+				homeScreen[78] = ' ';
+     482:	80 e2       	ldi	r24, 0x20	; 32
+     484:	80 93 df 03 	sts	0x03DF, r24	; 0x8003df <homeScreen+0x4e>
+				homeScreen[69] = ' ';
+     488:	80 93 d6 03 	sts	0x03D6, r24	; 0x8003d6 <homeScreen+0x45>
+				homeScreen[68] = ']';
+     48c:	8d e5       	ldi	r24, 0x5D	; 93
+     48e:	80 93 d5 03 	sts	0x03D5, r24	; 0x8003d5 <homeScreen+0x44>
+				homeScreen[61] = '[';
+     492:	8b e5       	ldi	r24, 0x5B	; 91
+     494:	80 93 ce 03 	sts	0x03CE, r24	; 0x8003ce <homeScreen+0x3d>
+			}
+		}
+		DrawMenu(HOME);  //redraw home menu
+     498:	80 e3       	ldi	r24, 0x30	; 48
+     49a:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+		break;
+     49e:	08 95       	ret
+		
+		case 'R': //if rotary encoder is rotated right (CW)
+		if(homeScreen[68] == ']') //if reflow is selected change selection to exposure
+     4a0:	80 91 d5 03 	lds	r24, 0x03D5	; 0x8003d5 <homeScreen+0x44>
+     4a4:	8d 35       	cpi	r24, 0x5D	; 93
+     4a6:	61 f4       	brne	.+24     	; 0x4c0 <HomeMenu+0x96>
+		{
+			homeScreen[68] = ' ';
+     4a8:	80 e2       	ldi	r24, 0x20	; 32
+     4aa:	80 93 d5 03 	sts	0x03D5, r24	; 0x8003d5 <homeScreen+0x44>
+			homeScreen[61] = ' ';
+     4ae:	80 93 ce 03 	sts	0x03CE, r24	; 0x8003ce <homeScreen+0x3d>
+			homeScreen[78] = ']';
+     4b2:	8d e5       	ldi	r24, 0x5D	; 93
+     4b4:	80 93 df 03 	sts	0x03DF, r24	; 0x8003df <homeScreen+0x4e>
+			homeScreen[69] = '[';
+     4b8:	8b e5       	ldi	r24, 0x5B	; 91
+     4ba:	80 93 d6 03 	sts	0x03D6, r24	; 0x8003d6 <homeScreen+0x45>
+     4be:	0f c0       	rjmp	.+30     	; 0x4de <HomeMenu+0xb4>
+		}
+		else
+		{
+			if(homeScreen[78] == ']') //if exposure is selected change selection to reflow
+     4c0:	80 91 df 03 	lds	r24, 0x03DF	; 0x8003df <homeScreen+0x4e>
+     4c4:	8d 35       	cpi	r24, 0x5D	; 93
+     4c6:	59 f4       	brne	.+22     	; 0x4de <HomeMenu+0xb4>
+			{
+				homeScreen[78] = ' ';
+     4c8:	80 e2       	ldi	r24, 0x20	; 32
+     4ca:	80 93 df 03 	sts	0x03DF, r24	; 0x8003df <homeScreen+0x4e>
+				homeScreen[69] = ' ';
+     4ce:	80 93 d6 03 	sts	0x03D6, r24	; 0x8003d6 <homeScreen+0x45>
+				homeScreen[68] = ']';
+     4d2:	8d e5       	ldi	r24, 0x5D	; 93
+     4d4:	80 93 d5 03 	sts	0x03D5, r24	; 0x8003d5 <homeScreen+0x44>
+				homeScreen[61] = '[';
+     4d8:	8b e5       	ldi	r24, 0x5B	; 91
+     4da:	80 93 ce 03 	sts	0x03CE, r24	; 0x8003ce <homeScreen+0x3d>
+			}
+		}
+		DrawMenu(HOME); //reflow home menu
+     4de:	80 e3       	ldi	r24, 0x30	; 48
+     4e0:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     4e4:	08 95       	ret
+
+000004e6 <ReflowMenu>:
+Accepts: char
+returns: nothing
+***********************************************************************************/
+void ReflowMenu(char action) 
+{
+	switch(action) //determine what input action was recieved
+     4e6:	8c 34       	cpi	r24, 0x4C	; 76
+     4e8:	f9 f0       	breq	.+62     	; 0x528 <__stack+0x29>
+     4ea:	82 35       	cpi	r24, 0x52	; 82
+     4ec:	09 f4       	brne	.+2      	; 0x4f0 <ReflowMenu+0xa>
+     4ee:	4f c0       	rjmp	.+158    	; 0x58e <__stack+0x8f>
+     4f0:	81 34       	cpi	r24, 0x41	; 65
+     4f2:	09 f0       	breq	.+2      	; 0x4f6 <ReflowMenu+0x10>
+     4f4:	7e c0       	rjmp	.+252    	; 0x5f2 <__stack+0xf3>
+	{
+		case 'A': //if rotary encoder button was pressed
+		if(reflowScreen[66] == ']') //if setup is selected
+     4f6:	80 91 83 03 	lds	r24, 0x0383	; 0x800383 <reflowScreen+0x42>
+     4fa:	8d 35       	cpi	r24, 0x5D	; 93
+     4fc:	21 f4       	brne	.+8      	; 0x506 <__stack+0x7>
+		{
+			DrawMenu(REFLOW_SETUP); // move to reflow setup menu
+     4fe:	86 e3       	ldi	r24, 0x36	; 54
+     500:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     504:	08 95       	ret
+		}
+		else
+		{
+			if(reflowScreen[72] == ']') //if cal is selected
+     506:	80 91 89 03 	lds	r24, 0x0389	; 0x800389 <reflowScreen+0x48>
+     50a:	8d 35       	cpi	r24, 0x5D	; 93
+     50c:	21 f4       	brne	.+8      	; 0x516 <__stack+0x17>
+			{
+				DrawMenu(REFLOW_CALIBRATE); //move to reflow status menu
+     50e:	88 e3       	ldi	r24, 0x38	; 56
+     510:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     514:	08 95       	ret
+			}
+			else
+			{
+				if(reflowScreen[79] == ']') //if home is selected
+     516:	80 91 90 03 	lds	r24, 0x0390	; 0x800390 <reflowScreen+0x4f>
+     51a:	8d 35       	cpi	r24, 0x5D	; 93
+     51c:	09 f0       	breq	.+2      	; 0x520 <__stack+0x21>
+     51e:	69 c0       	rjmp	.+210    	; 0x5f2 <__stack+0xf3>
+				{
+					DrawMenu(HOME); //move to home menu
+     520:	80 e3       	ldi	r24, 0x30	; 48
+     522:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     526:	08 95       	ret
+			}
+		}
+		break;
+			
+		case 'L': //if rotart encoder is rotated lect (CCW)
+		if(reflowScreen[66] == ']') //if setup is selected change selection to home
+     528:	80 91 83 03 	lds	r24, 0x0383	; 0x800383 <reflowScreen+0x42>
+     52c:	8d 35       	cpi	r24, 0x5D	; 93
+     52e:	61 f4       	brne	.+24     	; 0x548 <__stack+0x49>
+		{
+			reflowScreen[66] = ' ';
+     530:	80 e2       	ldi	r24, 0x20	; 32
+     532:	80 93 83 03 	sts	0x0383, r24	; 0x800383 <reflowScreen+0x42>
+			reflowScreen[60] = ' ';
+     536:	80 93 7d 03 	sts	0x037D, r24	; 0x80037d <reflowScreen+0x3c>
+			reflowScreen[79] = ']';
+     53a:	8d e5       	ldi	r24, 0x5D	; 93
+     53c:	80 93 90 03 	sts	0x0390, r24	; 0x800390 <reflowScreen+0x4f>
+			reflowScreen[74] = '[';
+     540:	8b e5       	ldi	r24, 0x5B	; 91
+     542:	80 93 8b 03 	sts	0x038B, r24	; 0x80038b <reflowScreen+0x4a>
+     546:	1f c0       	rjmp	.+62     	; 0x586 <__stack+0x87>
+		}
+		else
+		{
+			if(reflowScreen[79] == ']') //if home is selected change selection to status
+     548:	80 91 90 03 	lds	r24, 0x0390	; 0x800390 <reflowScreen+0x4f>
+     54c:	8d 35       	cpi	r24, 0x5D	; 93
+     54e:	61 f4       	brne	.+24     	; 0x568 <__stack+0x69>
+			{
+				reflowScreen[79] = ' ';
+     550:	80 e2       	ldi	r24, 0x20	; 32
+     552:	80 93 90 03 	sts	0x0390, r24	; 0x800390 <reflowScreen+0x4f>
+				reflowScreen[74] = ' ';
+     556:	80 93 8b 03 	sts	0x038B, r24	; 0x80038b <reflowScreen+0x4a>
+				reflowScreen[72] = ']';
+     55a:	8d e5       	ldi	r24, 0x5D	; 93
+     55c:	80 93 89 03 	sts	0x0389, r24	; 0x800389 <reflowScreen+0x48>
+				reflowScreen[68] = '[';
+     560:	8b e5       	ldi	r24, 0x5B	; 91
+     562:	80 93 85 03 	sts	0x0385, r24	; 0x800385 <reflowScreen+0x44>
+     566:	0f c0       	rjmp	.+30     	; 0x586 <__stack+0x87>
+			}
+			else
+			{
+				if(reflowScreen[72] == ']') //if home is selected change selection to setup
+     568:	80 91 89 03 	lds	r24, 0x0389	; 0x800389 <reflowScreen+0x48>
+     56c:	8d 35       	cpi	r24, 0x5D	; 93
+     56e:	59 f4       	brne	.+22     	; 0x586 <__stack+0x87>
+				{
+					reflowScreen[72] = ' ';
+     570:	80 e2       	ldi	r24, 0x20	; 32
+     572:	80 93 89 03 	sts	0x0389, r24	; 0x800389 <reflowScreen+0x48>
+					reflowScreen[68] = ' ';
+     576:	80 93 85 03 	sts	0x0385, r24	; 0x800385 <reflowScreen+0x44>
+					reflowScreen[66] = ']';
+     57a:	8d e5       	ldi	r24, 0x5D	; 93
+     57c:	80 93 83 03 	sts	0x0383, r24	; 0x800383 <reflowScreen+0x42>
+					reflowScreen[60] = '[';
+     580:	8b e5       	ldi	r24, 0x5B	; 91
+     582:	80 93 7d 03 	sts	0x037D, r24	; 0x80037d <reflowScreen+0x3c>
+				}
+			}
+		}
+		DrawMenu(REFLOW); //redraw reflow menu
+     586:	82 e3       	ldi	r24, 0x32	; 50
+     588:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+		break;
+     58c:	08 95       	ret
+			
+		case 'R': //if rotary encoder is turned right (CW)
+		if(reflowScreen[66] == ']') //if setup is selected change selection to status
+     58e:	80 91 83 03 	lds	r24, 0x0383	; 0x800383 <reflowScreen+0x42>
+     592:	8d 35       	cpi	r24, 0x5D	; 93
+     594:	61 f4       	brne	.+24     	; 0x5ae <__stack+0xaf>
+		{
+			reflowScreen[66] = ' ';
+     596:	80 e2       	ldi	r24, 0x20	; 32
+     598:	80 93 83 03 	sts	0x0383, r24	; 0x800383 <reflowScreen+0x42>
+			reflowScreen[60] = ' ';
+     59c:	80 93 7d 03 	sts	0x037D, r24	; 0x80037d <reflowScreen+0x3c>
+			reflowScreen[72] = ']';
+     5a0:	8d e5       	ldi	r24, 0x5D	; 93
+     5a2:	80 93 89 03 	sts	0x0389, r24	; 0x800389 <reflowScreen+0x48>
+			reflowScreen[68] = '[';
+     5a6:	8b e5       	ldi	r24, 0x5B	; 91
+     5a8:	80 93 85 03 	sts	0x0385, r24	; 0x800385 <reflowScreen+0x44>
+     5ac:	1f c0       	rjmp	.+62     	; 0x5ec <__stack+0xed>
+		}
+		else
+		{
+			if(reflowScreen[72] == ']') //if status is selected change selection to home
+     5ae:	80 91 89 03 	lds	r24, 0x0389	; 0x800389 <reflowScreen+0x48>
+     5b2:	8d 35       	cpi	r24, 0x5D	; 93
+     5b4:	61 f4       	brne	.+24     	; 0x5ce <__stack+0xcf>
+			{
+				reflowScreen[72] = ' ';
+     5b6:	80 e2       	ldi	r24, 0x20	; 32
+     5b8:	80 93 89 03 	sts	0x0389, r24	; 0x800389 <reflowScreen+0x48>
+				reflowScreen[68] = ' ';
+     5bc:	80 93 85 03 	sts	0x0385, r24	; 0x800385 <reflowScreen+0x44>
+				reflowScreen[79] = ']';
+     5c0:	8d e5       	ldi	r24, 0x5D	; 93
+     5c2:	80 93 90 03 	sts	0x0390, r24	; 0x800390 <reflowScreen+0x4f>
+				reflowScreen[74] = '[';
+     5c6:	8b e5       	ldi	r24, 0x5B	; 91
+     5c8:	80 93 8b 03 	sts	0x038B, r24	; 0x80038b <reflowScreen+0x4a>
+     5cc:	0f c0       	rjmp	.+30     	; 0x5ec <__stack+0xed>
+			}
+			else
+			{
+				if(reflowScreen[79] == ']') //if home is selected change selection to setup
+     5ce:	80 91 90 03 	lds	r24, 0x0390	; 0x800390 <reflowScreen+0x4f>
+     5d2:	8d 35       	cpi	r24, 0x5D	; 93
+     5d4:	59 f4       	brne	.+22     	; 0x5ec <__stack+0xed>
+				{
+					reflowScreen[79] = ' ';
+     5d6:	80 e2       	ldi	r24, 0x20	; 32
+     5d8:	80 93 90 03 	sts	0x0390, r24	; 0x800390 <reflowScreen+0x4f>
+					reflowScreen[74] = ' ';
+     5dc:	80 93 8b 03 	sts	0x038B, r24	; 0x80038b <reflowScreen+0x4a>
+					reflowScreen[66] = ']';
+     5e0:	8d e5       	ldi	r24, 0x5D	; 93
+     5e2:	80 93 83 03 	sts	0x0383, r24	; 0x800383 <reflowScreen+0x42>
+					reflowScreen[60] = '[';
+     5e6:	8b e5       	ldi	r24, 0x5B	; 91
+     5e8:	80 93 7d 03 	sts	0x037D, r24	; 0x80037d <reflowScreen+0x3c>
+				}
+			}
+		}
+		DrawMenu(REFLOW); //redraw reflow menu
+     5ec:	82 e3       	ldi	r24, 0x32	; 50
+     5ee:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     5f2:	08 95       	ret
+
+000005f4 <ExposureMenu>:
+Description:  This function determine what action should be taken when on ExposureMenu
+Accepts: char
+returns: nothing
+***********************************************************************************/
+void ExposureMenu(char action)
+{
+     5f4:	cf 93       	push	r28
+     5f6:	df 93       	push	r29
+	switch(edit) //check edit status
+     5f8:	90 91 10 01 	lds	r25, 0x0110	; 0x800110 <edit>
+     5fc:	90 33       	cpi	r25, 0x30	; 48
+     5fe:	21 f0       	breq	.+8      	; 0x608 <ExposureMenu+0x14>
+     600:	91 33       	cpi	r25, 0x31	; 49
+     602:	09 f4       	brne	.+2      	; 0x606 <ExposureMenu+0x12>
+     604:	83 c0       	rjmp	.+262    	; 0x70c <ExposureMenu+0x118>
+     606:	22 c1       	rjmp	.+580    	; 0x84c <ExposureMenu+0x258>
+	{
+		case '0': //if not editing
+		switch(action) //check input action
+     608:	8c 34       	cpi	r24, 0x4C	; 76
+     60a:	e1 f0       	breq	.+56     	; 0x644 <ExposureMenu+0x50>
+     60c:	82 35       	cpi	r24, 0x52	; 82
+     60e:	09 f4       	brne	.+2      	; 0x612 <ExposureMenu+0x1e>
+     610:	4b c0       	rjmp	.+150    	; 0x6a8 <ExposureMenu+0xb4>
+     612:	81 34       	cpi	r24, 0x41	; 65
+     614:	09 f0       	breq	.+2      	; 0x618 <ExposureMenu+0x24>
+     616:	1a c1       	rjmp	.+564    	; 0x84c <ExposureMenu+0x258>
+		{
+			case 'A': //if rotary encoder button is pressed
+			if(exposureScreen[67] == ']')  //if home is selected
+     618:	80 91 34 03 	lds	r24, 0x0334	; 0x800334 <exposureScreen+0x43>
+     61c:	8d 35       	cpi	r24, 0x5D	; 93
+     61e:	21 f4       	brne	.+8      	; 0x628 <ExposureMenu+0x34>
+			{
+				DrawMenu(HOME); //move to home menu
+     620:	80 e3       	ldi	r24, 0x30	; 48
+     622:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     626:	12 c1       	rjmp	.+548    	; 0x84c <ExposureMenu+0x258>
+			}
+			else
+			{
+				if(exposureScreen[77] == ']') //if start is selected
+     628:	80 91 3e 03 	lds	r24, 0x033E	; 0x80033e <exposureScreen+0x4d>
+     62c:	8d 35       	cpi	r24, 0x5D	; 93
+     62e:	09 f4       	brne	.+2      	; 0x632 <ExposureMenu+0x3e>
+     630:	0d c1       	rjmp	.+538    	; 0x84c <ExposureMenu+0x258>
+				{
+					//todo write function to start exposure cycle.
+				}
+				else 
+				{
+					if(exposureScreen[35] == ']') //if time is selected
+     632:	80 91 14 03 	lds	r24, 0x0314	; 0x800314 <exposureScreen+0x23>
+     636:	8d 35       	cpi	r24, 0x5D	; 93
+     638:	09 f0       	breq	.+2      	; 0x63c <ExposureMenu+0x48>
+     63a:	08 c1       	rjmp	.+528    	; 0x84c <ExposureMenu+0x258>
+					{
+						edit = '1'; //enter edit mode
+     63c:	81 e3       	ldi	r24, 0x31	; 49
+     63e:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <edit>
+     642:	04 c1       	rjmp	.+520    	; 0x84c <ExposureMenu+0x258>
+				}
+			}
+			break;
+			
+			case 'L': //if rotary encoder is rotated left (CCW)
+			if(exposureScreen[77] == ']') //if start is selected change selection to home
+     644:	80 91 3e 03 	lds	r24, 0x033E	; 0x80033e <exposureScreen+0x4d>
+     648:	8d 35       	cpi	r24, 0x5D	; 93
+     64a:	61 f4       	brne	.+24     	; 0x664 <ExposureMenu+0x70>
+			{
+				exposureScreen[77] = ' ';
+     64c:	80 e2       	ldi	r24, 0x20	; 32
+     64e:	80 93 3e 03 	sts	0x033E, r24	; 0x80033e <exposureScreen+0x4d>
+				exposureScreen[71] = ' ';
+     652:	80 93 38 03 	sts	0x0338, r24	; 0x800338 <exposureScreen+0x47>
+				exposureScreen[67] = ']';
+     656:	8d e5       	ldi	r24, 0x5D	; 93
+     658:	80 93 34 03 	sts	0x0334, r24	; 0x800334 <exposureScreen+0x43>
+				exposureScreen[62] = '[';
+     65c:	8b e5       	ldi	r24, 0x5B	; 91
+     65e:	80 93 2f 03 	sts	0x032F, r24	; 0x80032f <exposureScreen+0x3e>
+     662:	1e c0       	rjmp	.+60     	; 0x6a0 <ExposureMenu+0xac>
+			}
+			else
+			{
+				if(exposureScreen[67] == ']') //if home is selected change selection to time
+     664:	80 91 34 03 	lds	r24, 0x0334	; 0x800334 <exposureScreen+0x43>
+     668:	8d 35       	cpi	r24, 0x5D	; 93
+     66a:	59 f4       	brne	.+22     	; 0x682 <ExposureMenu+0x8e>
+				{
+					exposureScreen[67] = ' ';
+     66c:	e1 ef       	ldi	r30, 0xF1	; 241
+     66e:	f2 e0       	ldi	r31, 0x02	; 2
+     670:	80 e2       	ldi	r24, 0x20	; 32
+     672:	80 93 34 03 	sts	0x0334, r24	; 0x800334 <exposureScreen+0x43>
+					exposureScreen[62] = ' ';
+     676:	86 af       	std	Z+62, r24	; 0x3e
+					exposureScreen[35] = ']';
+     678:	8d e5       	ldi	r24, 0x5D	; 93
+     67a:	83 a3       	std	Z+35, r24	; 0x23
+					exposureScreen[30] = '[';
+     67c:	8b e5       	ldi	r24, 0x5B	; 91
+     67e:	86 8f       	std	Z+30, r24	; 0x1e
+     680:	0f c0       	rjmp	.+30     	; 0x6a0 <ExposureMenu+0xac>
+				}
+				else
+				{
+					if(exposureScreen[35] == ']') //if time is selected change selection to start
+     682:	80 91 14 03 	lds	r24, 0x0314	; 0x800314 <exposureScreen+0x23>
+     686:	8d 35       	cpi	r24, 0x5D	; 93
+     688:	59 f4       	brne	.+22     	; 0x6a0 <ExposureMenu+0xac>
+					{
+						exposureScreen[35] = ' ';
+     68a:	e1 ef       	ldi	r30, 0xF1	; 241
+     68c:	f2 e0       	ldi	r31, 0x02	; 2
+     68e:	80 e2       	ldi	r24, 0x20	; 32
+     690:	83 a3       	std	Z+35, r24	; 0x23
+						exposureScreen[30] = ' ';
+     692:	86 8f       	std	Z+30, r24	; 0x1e
+						exposureScreen[77] = ']';
+     694:	8d e5       	ldi	r24, 0x5D	; 93
+     696:	80 93 3e 03 	sts	0x033E, r24	; 0x80033e <exposureScreen+0x4d>
+						exposureScreen[71] = '[';
+     69a:	8b e5       	ldi	r24, 0x5B	; 91
+     69c:	80 93 38 03 	sts	0x0338, r24	; 0x800338 <exposureScreen+0x47>
+					}
+				}
+			}
+			DrawMenu(EXPOSURE); //redraw exposure menu
+     6a0:	81 e3       	ldi	r24, 0x31	; 49
+     6a2:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+			break;
+     6a6:	d2 c0       	rjmp	.+420    	; 0x84c <ExposureMenu+0x258>
+			
+			case 'R': //if rotary encoder is rotated right (CW)
+			if(exposureScreen[67] == ']') //if home is selected change selection to start
+     6a8:	80 91 34 03 	lds	r24, 0x0334	; 0x800334 <exposureScreen+0x43>
+     6ac:	8d 35       	cpi	r24, 0x5D	; 93
+     6ae:	61 f4       	brne	.+24     	; 0x6c8 <ExposureMenu+0xd4>
+			{
+				exposureScreen[67] = ' ';
+     6b0:	80 e2       	ldi	r24, 0x20	; 32
+     6b2:	80 93 34 03 	sts	0x0334, r24	; 0x800334 <exposureScreen+0x43>
+				exposureScreen[62] = ' ';
+     6b6:	80 93 2f 03 	sts	0x032F, r24	; 0x80032f <exposureScreen+0x3e>
+				exposureScreen[77] = ']';
+     6ba:	8d e5       	ldi	r24, 0x5D	; 93
+     6bc:	80 93 3e 03 	sts	0x033E, r24	; 0x80033e <exposureScreen+0x4d>
+				exposureScreen[71] = '[';
+     6c0:	8b e5       	ldi	r24, 0x5B	; 91
+     6c2:	80 93 38 03 	sts	0x0338, r24	; 0x800338 <exposureScreen+0x47>
+     6c6:	1e c0       	rjmp	.+60     	; 0x704 <ExposureMenu+0x110>
+			}
+			else
+			{
+				if(exposureScreen[35] == ']') //if time is selected change selection to home
+     6c8:	80 91 14 03 	lds	r24, 0x0314	; 0x800314 <exposureScreen+0x23>
+     6cc:	8d 35       	cpi	r24, 0x5D	; 93
+     6ce:	59 f4       	brne	.+22     	; 0x6e6 <ExposureMenu+0xf2>
+				{
+					exposureScreen[35] = ' ';
+     6d0:	e1 ef       	ldi	r30, 0xF1	; 241
+     6d2:	f2 e0       	ldi	r31, 0x02	; 2
+     6d4:	80 e2       	ldi	r24, 0x20	; 32
+     6d6:	83 a3       	std	Z+35, r24	; 0x23
+					exposureScreen[30] = ' ';
+     6d8:	86 8f       	std	Z+30, r24	; 0x1e
+					exposureScreen[67] = ']';
+     6da:	8d e5       	ldi	r24, 0x5D	; 93
+     6dc:	80 93 34 03 	sts	0x0334, r24	; 0x800334 <exposureScreen+0x43>
+					exposureScreen[62] = '[';
+     6e0:	8b e5       	ldi	r24, 0x5B	; 91
+     6e2:	86 af       	std	Z+62, r24	; 0x3e
+     6e4:	0f c0       	rjmp	.+30     	; 0x704 <ExposureMenu+0x110>
+				}
+				else
+				{
+					if(exposureScreen[77] == ']') //if start is selected change selection to time
+     6e6:	80 91 3e 03 	lds	r24, 0x033E	; 0x80033e <exposureScreen+0x4d>
+     6ea:	8d 35       	cpi	r24, 0x5D	; 93
+     6ec:	59 f4       	brne	.+22     	; 0x704 <ExposureMenu+0x110>
+					{
+						exposureScreen[77] = ' ';
+     6ee:	e1 ef       	ldi	r30, 0xF1	; 241
+     6f0:	f2 e0       	ldi	r31, 0x02	; 2
+     6f2:	80 e2       	ldi	r24, 0x20	; 32
+     6f4:	80 93 3e 03 	sts	0x033E, r24	; 0x80033e <exposureScreen+0x4d>
+						exposureScreen[71] = ' ';
+     6f8:	80 93 38 03 	sts	0x0338, r24	; 0x800338 <exposureScreen+0x47>
+						exposureScreen[35] = ']';
+     6fc:	8d e5       	ldi	r24, 0x5D	; 93
+     6fe:	83 a3       	std	Z+35, r24	; 0x23
+						exposureScreen[30] = '[';
+     700:	8b e5       	ldi	r24, 0x5B	; 91
+     702:	86 8f       	std	Z+30, r24	; 0x1e
+					}
+				}
+			}
+			DrawMenu(EXPOSURE);  //redraw exposure menu
+     704:	81 e3       	ldi	r24, 0x31	; 49
+     706:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+			break;
+     70a:	a0 c0       	rjmp	.+320    	; 0x84c <ExposureMenu+0x258>
+		}
+		break;
+		
+		case '1': //if in edit mode
+		switch(action)
+     70c:	8c 34       	cpi	r24, 0x4C	; 76
+     70e:	51 f0       	breq	.+20     	; 0x724 <ExposureMenu+0x130>
+     710:	82 35       	cpi	r24, 0x52	; 82
+     712:	09 f4       	brne	.+2      	; 0x716 <ExposureMenu+0x122>
+     714:	52 c0       	rjmp	.+164    	; 0x7ba <ExposureMenu+0x1c6>
+     716:	81 34       	cpi	r24, 0x41	; 65
+     718:	09 f0       	breq	.+2      	; 0x71c <ExposureMenu+0x128>
+     71a:	98 c0       	rjmp	.+304    	; 0x84c <ExposureMenu+0x258>
+		{
+			case 'A': // if rotary encoder button is pressed
+			edit = '0'; //exit edit mode
+     71c:	80 e3       	ldi	r24, 0x30	; 48
+     71e:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <edit>
+			break;
+     722:	94 c0       	rjmp	.+296    	; 0x84c <ExposureMenu+0x258>
+			
+			case 'L': //if rotary encoder is rotated left (CCW)
+			if(exposureScreen[35] == ']') //if time is selected
+     724:	80 91 14 03 	lds	r24, 0x0314	; 0x800314 <exposureScreen+0x23>
+     728:	8d 35       	cpi	r24, 0x5D	; 93
+     72a:	d9 f4       	brne	.+54     	; 0x762 <ExposureMenu+0x16e>
+			{
+				if(exposureSeconds == 0) //if seconds = 0
+     72c:	80 91 f2 03 	lds	r24, 0x03F2	; 0x8003f2 <__data_end>
+     730:	90 91 f3 03 	lds	r25, 0x03F3	; 0x8003f3 <__data_end+0x1>
+     734:	00 97       	sbiw	r24, 0x00	; 0
+     736:	81 f4       	brne	.+32     	; 0x758 <ExposureMenu+0x164>
+				{
+					exposureMinutes--; //decrement minutes
+     738:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+     73c:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
+     740:	01 97       	sbiw	r24, 0x01	; 1
+     742:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__data_start+0x1>
+     746:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+					exposureSeconds = 59; //set seconds to 59
+     74a:	8b e3       	ldi	r24, 0x3B	; 59
+     74c:	90 e0       	ldi	r25, 0x00	; 0
+     74e:	90 93 f3 03 	sts	0x03F3, r25	; 0x8003f3 <__data_end+0x1>
+     752:	80 93 f2 03 	sts	0x03F2, r24	; 0x8003f2 <__data_end>
+     756:	05 c0       	rjmp	.+10     	; 0x762 <ExposureMenu+0x16e>
+				}
+				else
+				{
+					exposureSeconds--; //decrement seconds
+     758:	01 97       	sbiw	r24, 0x01	; 1
+     75a:	90 93 f3 03 	sts	0x03F3, r25	; 0x8003f3 <__data_end+0x1>
+     75e:	80 93 f2 03 	sts	0x03F2, r24	; 0x8003f2 <__data_end>
+				}
+			}
+			sprintf(intBuffer, "%d:%.2d", exposureMinutes, exposureSeconds);  //build a short string to hold current time
+     762:	80 91 f3 03 	lds	r24, 0x03F3	; 0x8003f3 <__data_end+0x1>
+     766:	8f 93       	push	r24
+     768:	80 91 f2 03 	lds	r24, 0x03F2	; 0x8003f2 <__data_end>
+     76c:	8f 93       	push	r24
+     76e:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <__data_start+0x1>
+     772:	8f 93       	push	r24
+     774:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+     778:	8f 93       	push	r24
+     77a:	86 ee       	ldi	r24, 0xE6	; 230
+     77c:	93 e0       	ldi	r25, 0x03	; 3
+     77e:	9f 93       	push	r25
+     780:	8f 93       	push	r24
+     782:	cb ef       	ldi	r28, 0xFB	; 251
+     784:	d3 e0       	ldi	r29, 0x03	; 3
+     786:	df 93       	push	r29
+     788:	cf 93       	push	r28
+     78a:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+			//replace last time with current time
+			exposureScreen[31] = intBuffer[0];
+     78e:	e1 ef       	ldi	r30, 0xF1	; 241
+     790:	f2 e0       	ldi	r31, 0x02	; 2
+     792:	88 81       	ld	r24, Y
+     794:	87 8f       	std	Z+31, r24	; 0x1f
+			exposureScreen[32] = intBuffer[1];
+     796:	89 81       	ldd	r24, Y+1	; 0x01
+     798:	80 a3       	std	Z+32, r24	; 0x20
+			exposureScreen[33] = intBuffer[2];
+     79a:	8a 81       	ldd	r24, Y+2	; 0x02
+     79c:	81 a3       	std	Z+33, r24	; 0x21
+			exposureScreen[34] = intBuffer[3];
+     79e:	8b 81       	ldd	r24, Y+3	; 0x03
+     7a0:	82 a3       	std	Z+34, r24	; 0x22
+			DrawMenu(EXPOSURE); //redraw exposure menu
+     7a2:	81 e3       	ldi	r24, 0x31	; 49
+     7a4:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+			break;
+     7a8:	8d b7       	in	r24, 0x3d	; 61
+     7aa:	9e b7       	in	r25, 0x3e	; 62
+     7ac:	08 96       	adiw	r24, 0x08	; 8
+     7ae:	0f b6       	in	r0, 0x3f	; 63
+     7b0:	f8 94       	cli
+     7b2:	9e bf       	out	0x3e, r25	; 62
+     7b4:	0f be       	out	0x3f, r0	; 63
+     7b6:	8d bf       	out	0x3d, r24	; 61
+     7b8:	49 c0       	rjmp	.+146    	; 0x84c <ExposureMenu+0x258>
+			
+			case 'R': //if rotary encoder is rotated right (CW)
+			if(exposureScreen[35] == ']') //if time is selected
+     7ba:	80 91 14 03 	lds	r24, 0x0314	; 0x800314 <exposureScreen+0x23>
+     7be:	8d 35       	cpi	r24, 0x5D	; 93
+     7c0:	d1 f4       	brne	.+52     	; 0x7f6 <ExposureMenu+0x202>
+			{
+				if(exposureSeconds == 59) // if seconds = 59
+     7c2:	80 91 f2 03 	lds	r24, 0x03F2	; 0x8003f2 <__data_end>
+     7c6:	90 91 f3 03 	lds	r25, 0x03F3	; 0x8003f3 <__data_end+0x1>
+     7ca:	8b 33       	cpi	r24, 0x3B	; 59
+     7cc:	91 05       	cpc	r25, r1
+     7ce:	71 f4       	brne	.+28     	; 0x7ec <ExposureMenu+0x1f8>
+				{
+					exposureMinutes++; //increment minutes
+     7d0:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+     7d4:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
+     7d8:	01 96       	adiw	r24, 0x01	; 1
+     7da:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__data_start+0x1>
+     7de:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+					exposureSeconds = 0; //reset seconds to 0
+     7e2:	10 92 f3 03 	sts	0x03F3, r1	; 0x8003f3 <__data_end+0x1>
+     7e6:	10 92 f2 03 	sts	0x03F2, r1	; 0x8003f2 <__data_end>
+     7ea:	05 c0       	rjmp	.+10     	; 0x7f6 <ExposureMenu+0x202>
+				}
+				else
+				{
+					exposureSeconds++; //increment seconds
+     7ec:	01 96       	adiw	r24, 0x01	; 1
+     7ee:	90 93 f3 03 	sts	0x03F3, r25	; 0x8003f3 <__data_end+0x1>
+     7f2:	80 93 f2 03 	sts	0x03F2, r24	; 0x8003f2 <__data_end>
+				}
+			}
+			sprintf(intBuffer, "%d:%.2d", exposureMinutes, exposureSeconds); //build short string to hold current time
+     7f6:	80 91 f3 03 	lds	r24, 0x03F3	; 0x8003f3 <__data_end+0x1>
+     7fa:	8f 93       	push	r24
+     7fc:	80 91 f2 03 	lds	r24, 0x03F2	; 0x8003f2 <__data_end>
+     800:	8f 93       	push	r24
+     802:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <__data_start+0x1>
+     806:	8f 93       	push	r24
+     808:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+     80c:	8f 93       	push	r24
+     80e:	86 ee       	ldi	r24, 0xE6	; 230
+     810:	93 e0       	ldi	r25, 0x03	; 3
+     812:	9f 93       	push	r25
+     814:	8f 93       	push	r24
+     816:	cb ef       	ldi	r28, 0xFB	; 251
+     818:	d3 e0       	ldi	r29, 0x03	; 3
+     81a:	df 93       	push	r29
+     81c:	cf 93       	push	r28
+     81e:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+			//replace lst itme with current time
+			exposureScreen[31] = intBuffer[0];
+     822:	e1 ef       	ldi	r30, 0xF1	; 241
+     824:	f2 e0       	ldi	r31, 0x02	; 2
+     826:	88 81       	ld	r24, Y
+     828:	87 8f       	std	Z+31, r24	; 0x1f
+			exposureScreen[32] = intBuffer[1];
+     82a:	89 81       	ldd	r24, Y+1	; 0x01
+     82c:	80 a3       	std	Z+32, r24	; 0x20
+			exposureScreen[33] = intBuffer[2];
+     82e:	8a 81       	ldd	r24, Y+2	; 0x02
+     830:	81 a3       	std	Z+33, r24	; 0x21
+			exposureScreen[34] = intBuffer[3];
+     832:	8b 81       	ldd	r24, Y+3	; 0x03
+     834:	82 a3       	std	Z+34, r24	; 0x22
+			DrawMenu(EXPOSURE); //redraw exposure menu
+     836:	81 e3       	ldi	r24, 0x31	; 49
+     838:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+			break;
+     83c:	8d b7       	in	r24, 0x3d	; 61
+     83e:	9e b7       	in	r25, 0x3e	; 62
+     840:	08 96       	adiw	r24, 0x08	; 8
+     842:	0f b6       	in	r0, 0x3f	; 63
+     844:	f8 94       	cli
+     846:	9e bf       	out	0x3e, r25	; 62
+     848:	0f be       	out	0x3f, r0	; 63
+     84a:	8d bf       	out	0x3d, r24	; 61
+		}
+		break;
+	}
+}
+     84c:	df 91       	pop	r29
+     84e:	cf 91       	pop	r28
+     850:	08 95       	ret
+
+00000852 <ReflowSetupMenu>:
+Description:  This function determine what action should be taken when on ReflowSetupMenu
+Accepts: char
+returns: nothing
+***********************************************************************************/
+void ReflowSetupMenu(char action)
+{
+     852:	cf 93       	push	r28
+     854:	df 93       	push	r29
+	switch(edit) //check if in edit mode
+     856:	90 91 10 01 	lds	r25, 0x0110	; 0x800110 <edit>
+     85a:	90 33       	cpi	r25, 0x30	; 48
+     85c:	21 f0       	breq	.+8      	; 0x866 <ReflowSetupMenu+0x14>
+     85e:	91 33       	cpi	r25, 0x31	; 49
+     860:	09 f4       	brne	.+2      	; 0x864 <ReflowSetupMenu+0x12>
+     862:	cf c0       	rjmp	.+414    	; 0xa02 <ReflowSetupMenu+0x1b0>
+     864:	d7 c3       	rjmp	.+1966   	; 0x1014 <ReflowSetupMenu+0x7c2>
+	{
+		case '0': //if not in exit mode
+		switch(action)
+     866:	8c 34       	cpi	r24, 0x4C	; 76
+     868:	91 f0       	breq	.+36     	; 0x88e <ReflowSetupMenu+0x3c>
+     86a:	82 35       	cpi	r24, 0x52	; 82
+     86c:	09 f4       	brne	.+2      	; 0x870 <ReflowSetupMenu+0x1e>
+     86e:	6c c0       	rjmp	.+216    	; 0x948 <ReflowSetupMenu+0xf6>
+     870:	81 34       	cpi	r24, 0x41	; 65
+     872:	09 f0       	breq	.+2      	; 0x876 <ReflowSetupMenu+0x24>
+     874:	cf c3       	rjmp	.+1950   	; 0x1014 <ReflowSetupMenu+0x7c2>
+		{
+			case 'A': //if rotary encoder button is pressed
+			if(reflowSetupScreen[79] == ']') //if dwell is selected
+     876:	80 91 a0 02 	lds	r24, 0x02A0	; 0x8002a0 <reflowSetupScreen+0x4f>
+     87a:	8d 35       	cpi	r24, 0x5D	; 93
+     87c:	21 f4       	brne	.+8      	; 0x886 <ReflowSetupMenu+0x34>
+			{
+				DrawMenu(REFLOW_DWELL); //move to dwell menu
+     87e:	87 e3       	ldi	r24, 0x37	; 55
+     880:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     884:	c7 c3       	rjmp	.+1934   	; 0x1014 <ReflowSetupMenu+0x7c2>
+				
+			}
+			else
+			{
+				edit = '1'; //enter edit mode
+     886:	81 e3       	ldi	r24, 0x31	; 49
+     888:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <edit>
+     88c:	c3 c3       	rjmp	.+1926   	; 0x1014 <ReflowSetupMenu+0x7c2>
+			}
+			break;
+			
+			case 'L':  //if rotary encoder is rotated lect (CCW)
+			if (reflowSetupScreen[79] == ']') //if dwell is selected change selection to ramp down
+     88e:	80 91 a0 02 	lds	r24, 0x02A0	; 0x8002a0 <reflowSetupScreen+0x4f>
+     892:	8d 35       	cpi	r24, 0x5D	; 93
+     894:	61 f4       	brne	.+24     	; 0x8ae <ReflowSetupMenu+0x5c>
+			{
+				reflowSetupScreen[79] = ' ';
+     896:	80 e2       	ldi	r24, 0x20	; 32
+     898:	80 93 a0 02 	sts	0x02A0, r24	; 0x8002a0 <reflowSetupScreen+0x4f>
+				reflowSetupScreen[73] = ' ';
+     89c:	80 93 9a 02 	sts	0x029A, r24	; 0x80029a <reflowSetupScreen+0x49>
+				reflowSetupScreen[66] = ']';
+     8a0:	8d e5       	ldi	r24, 0x5D	; 93
+     8a2:	80 93 93 02 	sts	0x0293, r24	; 0x800293 <reflowSetupScreen+0x42>
+				reflowSetupScreen[64] = '[';
+     8a6:	8b e5       	ldi	r24, 0x5B	; 91
+     8a8:	80 93 91 02 	sts	0x0291, r24	; 0x800291 <reflowSetupScreen+0x40>
+     8ac:	49 c0       	rjmp	.+146    	; 0x940 <ReflowSetupMenu+0xee>
+			}
+			else
+			{
+				if (reflowSetupScreen[66] == ']') // if ramp down is selected change selection to reflow ramp
+     8ae:	80 91 93 02 	lds	r24, 0x0293	; 0x800293 <reflowSetupScreen+0x42>
+     8b2:	8d 35       	cpi	r24, 0x5D	; 93
+     8b4:	61 f4       	brne	.+24     	; 0x8ce <ReflowSetupMenu+0x7c>
+				{
+					reflowSetupScreen[66] = ' ';
+     8b6:	e1 e5       	ldi	r30, 0x51	; 81
+     8b8:	f2 e0       	ldi	r31, 0x02	; 2
+     8ba:	80 e2       	ldi	r24, 0x20	; 32
+     8bc:	80 93 93 02 	sts	0x0293, r24	; 0x800293 <reflowSetupScreen+0x42>
+					reflowSetupScreen[64] = ' ';
+     8c0:	80 93 91 02 	sts	0x0291, r24	; 0x800291 <reflowSetupScreen+0x40>
+					reflowSetupScreen[35] = ']';
+     8c4:	8d e5       	ldi	r24, 0x5D	; 93
+     8c6:	83 a3       	std	Z+35, r24	; 0x23
+					reflowSetupScreen[33] = '[';
+     8c8:	8b e5       	ldi	r24, 0x5B	; 91
+     8ca:	81 a3       	std	Z+33, r24	; 0x21
+     8cc:	39 c0       	rjmp	.+114    	; 0x940 <ReflowSetupMenu+0xee>
+				}
+				else
+				{
+					if (reflowSetupScreen[35] == ']') //if reflow ramp is selected change selection to soak ramp
+     8ce:	80 91 74 02 	lds	r24, 0x0274	; 0x800274 <reflowSetupScreen+0x23>
+     8d2:	8d 35       	cpi	r24, 0x5D	; 93
+     8d4:	51 f4       	brne	.+20     	; 0x8ea <ReflowSetupMenu+0x98>
+					{
+						reflowSetupScreen[35] = ' ';
+     8d6:	e1 e5       	ldi	r30, 0x51	; 81
+     8d8:	f2 e0       	ldi	r31, 0x02	; 2
+     8da:	80 e2       	ldi	r24, 0x20	; 32
+     8dc:	83 a3       	std	Z+35, r24	; 0x23
+						reflowSetupScreen[33] = ' ';
+     8de:	81 a3       	std	Z+33, r24	; 0x21
+						reflowSetupScreen[25] = ']';
+     8e0:	8d e5       	ldi	r24, 0x5D	; 93
+     8e2:	81 8f       	std	Z+25, r24	; 0x19
+						reflowSetupScreen[23] = '[';
+     8e4:	8b e5       	ldi	r24, 0x5B	; 91
+     8e6:	87 8b       	std	Z+23, r24	; 0x17
+     8e8:	2b c0       	rjmp	.+86     	; 0x940 <ReflowSetupMenu+0xee>
+					}
+					else
+					{
+						if (reflowSetupScreen[25] == ']') // if soak ramp is selected change selection to reflow temp
+     8ea:	80 91 6a 02 	lds	r24, 0x026A	; 0x80026a <reflowSetupScreen+0x19>
+     8ee:	8d 35       	cpi	r24, 0x5D	; 93
+     8f0:	51 f4       	brne	.+20     	; 0x906 <ReflowSetupMenu+0xb4>
+						{
+							reflowSetupScreen[25] = ' ';
+     8f2:	e1 e5       	ldi	r30, 0x51	; 81
+     8f4:	f2 e0       	ldi	r31, 0x02	; 2
+     8f6:	80 e2       	ldi	r24, 0x20	; 32
+     8f8:	81 8f       	std	Z+25, r24	; 0x19
+							reflowSetupScreen[23] = ' ';
+     8fa:	87 8b       	std	Z+23, r24	; 0x17
+							reflowSetupScreen[57] = ']';
+     8fc:	8d e5       	ldi	r24, 0x5D	; 93
+     8fe:	81 af       	std	Z+57, r24	; 0x39
+							reflowSetupScreen[53] = '[';
+     900:	8b e5       	ldi	r24, 0x5B	; 91
+     902:	85 ab       	std	Z+53, r24	; 0x35
+     904:	1d c0       	rjmp	.+58     	; 0x940 <ReflowSetupMenu+0xee>
+						}
+						else
+						{
+							if (reflowSetupScreen[57] == ']') // if reflow temp is selected change selection to soak temp
+     906:	80 91 8a 02 	lds	r24, 0x028A	; 0x80028a <reflowSetupScreen+0x39>
+     90a:	8d 35       	cpi	r24, 0x5D	; 93
+     90c:	51 f4       	brne	.+20     	; 0x922 <ReflowSetupMenu+0xd0>
+							{
+								reflowSetupScreen[57] = ' ';
+     90e:	e1 e5       	ldi	r30, 0x51	; 81
+     910:	f2 e0       	ldi	r31, 0x02	; 2
+     912:	80 e2       	ldi	r24, 0x20	; 32
+     914:	81 af       	std	Z+57, r24	; 0x39
+								reflowSetupScreen[53] = ' ';
+     916:	85 ab       	std	Z+53, r24	; 0x35
+								reflowSetupScreen[47] = ']';
+     918:	8d e5       	ldi	r24, 0x5D	; 93
+     91a:	87 a7       	std	Z+47, r24	; 0x2f
+								reflowSetupScreen[43] = '[';
+     91c:	8b e5       	ldi	r24, 0x5B	; 91
+     91e:	83 a7       	std	Z+43, r24	; 0x2b
+     920:	0f c0       	rjmp	.+30     	; 0x940 <ReflowSetupMenu+0xee>
+							}
+							else
+							{
+								if(reflowSetupScreen[47] == ']') // if reflow temp is selected change selection to dwell
+     922:	80 91 80 02 	lds	r24, 0x0280	; 0x800280 <reflowSetupScreen+0x2f>
+     926:	8d 35       	cpi	r24, 0x5D	; 93
+     928:	59 f4       	brne	.+22     	; 0x940 <ReflowSetupMenu+0xee>
+								{
+									reflowSetupScreen[47] = ' ';
+     92a:	e1 e5       	ldi	r30, 0x51	; 81
+     92c:	f2 e0       	ldi	r31, 0x02	; 2
+     92e:	80 e2       	ldi	r24, 0x20	; 32
+     930:	87 a7       	std	Z+47, r24	; 0x2f
+									reflowSetupScreen[43] = ' ';
+     932:	83 a7       	std	Z+43, r24	; 0x2b
+									reflowSetupScreen[79] = ']';
+     934:	8d e5       	ldi	r24, 0x5D	; 93
+     936:	80 93 a0 02 	sts	0x02A0, r24	; 0x8002a0 <reflowSetupScreen+0x4f>
+									reflowSetupScreen[73] = '[';
+     93a:	8b e5       	ldi	r24, 0x5B	; 91
+     93c:	80 93 9a 02 	sts	0x029A, r24	; 0x80029a <reflowSetupScreen+0x49>
+							}
+						}
+					}
+				}
+			}
+			DrawMenu(REFLOW_SETUP); //redraw reflow setup menu
+     940:	86 e3       	ldi	r24, 0x36	; 54
+     942:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+			break;
+     946:	66 c3       	rjmp	.+1740   	; 0x1014 <ReflowSetupMenu+0x7c2>
+			
+			case 'R': // if rotary encoder is rotated right (CW)
+			if (reflowSetupScreen[66] == ']') //if ramp down is selected change selection to dwell
+     948:	80 91 93 02 	lds	r24, 0x0293	; 0x800293 <reflowSetupScreen+0x42>
+     94c:	8d 35       	cpi	r24, 0x5D	; 93
+     94e:	61 f4       	brne	.+24     	; 0x968 <ReflowSetupMenu+0x116>
+			{
+				reflowSetupScreen[66] = ' ';
+     950:	80 e2       	ldi	r24, 0x20	; 32
+     952:	80 93 93 02 	sts	0x0293, r24	; 0x800293 <reflowSetupScreen+0x42>
+				reflowSetupScreen[64] = ' ';
+     956:	80 93 91 02 	sts	0x0291, r24	; 0x800291 <reflowSetupScreen+0x40>
+				reflowSetupScreen[79] = ']';
+     95a:	8d e5       	ldi	r24, 0x5D	; 93
+     95c:	80 93 a0 02 	sts	0x02A0, r24	; 0x8002a0 <reflowSetupScreen+0x4f>
+				reflowSetupScreen[73] = '[';
+     960:	8b e5       	ldi	r24, 0x5B	; 91
+     962:	80 93 9a 02 	sts	0x029A, r24	; 0x80029a <reflowSetupScreen+0x49>
+     966:	49 c0       	rjmp	.+146    	; 0x9fa <ReflowSetupMenu+0x1a8>
+			}
+			else
+			{
+				if (reflowSetupScreen[35] == ']') // if relow ramp is selected change selection to ramp down
+     968:	80 91 74 02 	lds	r24, 0x0274	; 0x800274 <reflowSetupScreen+0x23>
+     96c:	8d 35       	cpi	r24, 0x5D	; 93
+     96e:	61 f4       	brne	.+24     	; 0x988 <ReflowSetupMenu+0x136>
+				{
+					reflowSetupScreen[35] = ' ';
+     970:	e1 e5       	ldi	r30, 0x51	; 81
+     972:	f2 e0       	ldi	r31, 0x02	; 2
+     974:	80 e2       	ldi	r24, 0x20	; 32
+     976:	83 a3       	std	Z+35, r24	; 0x23
+					reflowSetupScreen[33] = ' ';
+     978:	81 a3       	std	Z+33, r24	; 0x21
+					reflowSetupScreen[66] = ']';
+     97a:	8d e5       	ldi	r24, 0x5D	; 93
+     97c:	80 93 93 02 	sts	0x0293, r24	; 0x800293 <reflowSetupScreen+0x42>
+					reflowSetupScreen[64] = '[';
+     980:	8b e5       	ldi	r24, 0x5B	; 91
+     982:	80 93 91 02 	sts	0x0291, r24	; 0x800291 <reflowSetupScreen+0x40>
+     986:	39 c0       	rjmp	.+114    	; 0x9fa <ReflowSetupMenu+0x1a8>
+				}
+				else
+				{
+					if (reflowSetupScreen[25] == ']') //if soak ramp is selected change seletion to reflow ramp
+     988:	80 91 6a 02 	lds	r24, 0x026A	; 0x80026a <reflowSetupScreen+0x19>
+     98c:	8d 35       	cpi	r24, 0x5D	; 93
+     98e:	51 f4       	brne	.+20     	; 0x9a4 <ReflowSetupMenu+0x152>
+					{
+						reflowSetupScreen[25] = ' ';
+     990:	e1 e5       	ldi	r30, 0x51	; 81
+     992:	f2 e0       	ldi	r31, 0x02	; 2
+     994:	80 e2       	ldi	r24, 0x20	; 32
+     996:	81 8f       	std	Z+25, r24	; 0x19
+						reflowSetupScreen[23] = ' ';
+     998:	87 8b       	std	Z+23, r24	; 0x17
+						reflowSetupScreen[35] = ']';
+     99a:	8d e5       	ldi	r24, 0x5D	; 93
+     99c:	83 a3       	std	Z+35, r24	; 0x23
+						reflowSetupScreen[33] = '[';
+     99e:	8b e5       	ldi	r24, 0x5B	; 91
+     9a0:	81 a3       	std	Z+33, r24	; 0x21
+     9a2:	2b c0       	rjmp	.+86     	; 0x9fa <ReflowSetupMenu+0x1a8>
+					}
+					else
+					{
+						if (reflowSetupScreen[57] == ']') // if reflow temp is selected change selection to soak ramp
+     9a4:	80 91 8a 02 	lds	r24, 0x028A	; 0x80028a <reflowSetupScreen+0x39>
+     9a8:	8d 35       	cpi	r24, 0x5D	; 93
+     9aa:	51 f4       	brne	.+20     	; 0x9c0 <ReflowSetupMenu+0x16e>
+						{
+							reflowSetupScreen[57] = ' ';
+     9ac:	e1 e5       	ldi	r30, 0x51	; 81
+     9ae:	f2 e0       	ldi	r31, 0x02	; 2
+     9b0:	80 e2       	ldi	r24, 0x20	; 32
+     9b2:	81 af       	std	Z+57, r24	; 0x39
+							reflowSetupScreen[53] = ' ';
+     9b4:	85 ab       	std	Z+53, r24	; 0x35
+							reflowSetupScreen[25] = ']';
+     9b6:	8d e5       	ldi	r24, 0x5D	; 93
+     9b8:	81 8f       	std	Z+25, r24	; 0x19
+							reflowSetupScreen[23] = '[';
+     9ba:	8b e5       	ldi	r24, 0x5B	; 91
+     9bc:	87 8b       	std	Z+23, r24	; 0x17
+     9be:	1d c0       	rjmp	.+58     	; 0x9fa <ReflowSetupMenu+0x1a8>
+						}
+						else
+						{
+							if (reflowSetupScreen[47] == ']') //if soak temp is selected change selection to reflow temp
+     9c0:	80 91 80 02 	lds	r24, 0x0280	; 0x800280 <reflowSetupScreen+0x2f>
+     9c4:	8d 35       	cpi	r24, 0x5D	; 93
+     9c6:	51 f4       	brne	.+20     	; 0x9dc <ReflowSetupMenu+0x18a>
+							{
+								reflowSetupScreen[47] = ' ';
+     9c8:	e1 e5       	ldi	r30, 0x51	; 81
+     9ca:	f2 e0       	ldi	r31, 0x02	; 2
+     9cc:	80 e2       	ldi	r24, 0x20	; 32
+     9ce:	87 a7       	std	Z+47, r24	; 0x2f
+								reflowSetupScreen[43] = ' ';
+     9d0:	83 a7       	std	Z+43, r24	; 0x2b
+								reflowSetupScreen[57] = ']';
+     9d2:	8d e5       	ldi	r24, 0x5D	; 93
+     9d4:	81 af       	std	Z+57, r24	; 0x39
+								reflowSetupScreen[53] = '[';
+     9d6:	8b e5       	ldi	r24, 0x5B	; 91
+     9d8:	85 ab       	std	Z+53, r24	; 0x35
+     9da:	0f c0       	rjmp	.+30     	; 0x9fa <ReflowSetupMenu+0x1a8>
+							}
+							else
+							{
+								if(reflowSetupScreen[79] == ']') //if dwell is selected change selection to soak temp
+     9dc:	80 91 a0 02 	lds	r24, 0x02A0	; 0x8002a0 <reflowSetupScreen+0x4f>
+     9e0:	8d 35       	cpi	r24, 0x5D	; 93
+     9e2:	59 f4       	brne	.+22     	; 0x9fa <ReflowSetupMenu+0x1a8>
+								{
+									reflowSetupScreen[79] = ' ';
+     9e4:	e1 e5       	ldi	r30, 0x51	; 81
+     9e6:	f2 e0       	ldi	r31, 0x02	; 2
+     9e8:	80 e2       	ldi	r24, 0x20	; 32
+     9ea:	80 93 a0 02 	sts	0x02A0, r24	; 0x8002a0 <reflowSetupScreen+0x4f>
+									reflowSetupScreen[73] = ' ';
+     9ee:	80 93 9a 02 	sts	0x029A, r24	; 0x80029a <reflowSetupScreen+0x49>
+									reflowSetupScreen[47] = ']';
+     9f2:	8d e5       	ldi	r24, 0x5D	; 93
+     9f4:	87 a7       	std	Z+47, r24	; 0x2f
+									reflowSetupScreen[43] = '[';
+     9f6:	8b e5       	ldi	r24, 0x5B	; 91
+     9f8:	83 a7       	std	Z+43, r24	; 0x2b
+							}
+						}
+					}
+				}
+			}
+			DrawMenu(REFLOW_SETUP); // redraw reflow setup menu
+     9fa:	86 e3       	ldi	r24, 0x36	; 54
+     9fc:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+			break;
+     a00:	09 c3       	rjmp	.+1554   	; 0x1014 <ReflowSetupMenu+0x7c2>
+		}
+		break;
+		
+		case '1': //if in edit mode
+		switch(action)
+     a02:	8c 34       	cpi	r24, 0x4C	; 76
+     a04:	51 f0       	breq	.+20     	; 0xa1a <ReflowSetupMenu+0x1c8>
+     a06:	82 35       	cpi	r24, 0x52	; 82
+     a08:	09 f4       	brne	.+2      	; 0xa0c <ReflowSetupMenu+0x1ba>
+     a0a:	88 c1       	rjmp	.+784    	; 0xd1c <ReflowSetupMenu+0x4ca>
+     a0c:	81 34       	cpi	r24, 0x41	; 65
+     a0e:	09 f0       	breq	.+2      	; 0xa12 <ReflowSetupMenu+0x1c0>
+     a10:	01 c3       	rjmp	.+1538   	; 0x1014 <ReflowSetupMenu+0x7c2>
+		{
+			case 'A': // if rotary encoder button is pressed
+			edit = '0'; //exit edit mode
+     a12:	80 e3       	ldi	r24, 0x30	; 48
+     a14:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <edit>
+			break;
+     a18:	fd c2       	rjmp	.+1530   	; 0x1014 <ReflowSetupMenu+0x7c2>
+			
+			case 'L': // if rotary encoder is rotated left (CCW)
+			if(reflowSetupScreen[66] == ']') // if ramp down is selecte
+     a1a:	80 91 93 02 	lds	r24, 0x0293	; 0x800293 <reflowSetupScreen+0x42>
+     a1e:	8d 35       	cpi	r24, 0x5D	; 93
+     a20:	09 f0       	breq	.+2      	; 0xa24 <ReflowSetupMenu+0x1d2>
+     a22:	43 c0       	rjmp	.+134    	; 0xaaa <ReflowSetupMenu+0x258>
+			{
+				if(downRmp == 0) //if ramp down = 0
+     a24:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <downRmp>
+     a28:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <downRmp+0x1>
+     a2c:	00 97       	sbiw	r24, 0x00	; 0
+     a2e:	f9 f4       	brne	.+62     	; 0xa6e <ReflowSetupMenu+0x21c>
+				{
+					downRmp = 9; //reset ramp down to 9
+     a30:	89 e0       	ldi	r24, 0x09	; 9
+     a32:	90 e0       	ldi	r25, 0x00	; 0
+     a34:	90 93 07 01 	sts	0x0107, r25	; 0x800107 <downRmp+0x1>
+     a38:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <downRmp>
+					sprintf(intBuffer, "%d", downRmp); //stringify
+     a3c:	1f 92       	push	r1
+     a3e:	8f 93       	push	r24
+     a40:	8e ee       	ldi	r24, 0xEE	; 238
+     a42:	93 e0       	ldi	r25, 0x03	; 3
+     a44:	9f 93       	push	r25
+     a46:	8f 93       	push	r24
+     a48:	cb ef       	ldi	r28, 0xFB	; 251
+     a4a:	d3 e0       	ldi	r29, 0x03	; 3
+     a4c:	df 93       	push	r29
+     a4e:	cf 93       	push	r28
+     a50:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+					reflowSetupScreen[65] = intBuffer[0]; //change old ramp to new ramp
+     a54:	88 81       	ld	r24, Y
+     a56:	80 93 92 02 	sts	0x0292, r24	; 0x800292 <reflowSetupScreen+0x41>
+					DrawMenu(REFLOW_SETUP);
+     a5a:	86 e3       	ldi	r24, 0x36	; 54
+     a5c:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     a60:	0f 90       	pop	r0
+     a62:	0f 90       	pop	r0
+     a64:	0f 90       	pop	r0
+     a66:	0f 90       	pop	r0
+     a68:	0f 90       	pop	r0
+     a6a:	0f 90       	pop	r0
+     a6c:	d3 c2       	rjmp	.+1446   	; 0x1014 <ReflowSetupMenu+0x7c2>
+				}
+				else
+				{
+					downRmp--; //decrement ramp down
+     a6e:	01 97       	sbiw	r24, 0x01	; 1
+     a70:	90 93 07 01 	sts	0x0107, r25	; 0x800107 <downRmp+0x1>
+     a74:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <downRmp>
+					sprintf(intBuffer, "%d", downRmp); //stringify
+     a78:	9f 93       	push	r25
+     a7a:	8f 93       	push	r24
+     a7c:	8e ee       	ldi	r24, 0xEE	; 238
+     a7e:	93 e0       	ldi	r25, 0x03	; 3
+     a80:	9f 93       	push	r25
+     a82:	8f 93       	push	r24
+     a84:	cb ef       	ldi	r28, 0xFB	; 251
+     a86:	d3 e0       	ldi	r29, 0x03	; 3
+     a88:	df 93       	push	r29
+     a8a:	cf 93       	push	r28
+     a8c:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+					reflowSetupScreen[65] = intBuffer[0]; //replace old value with new value
+     a90:	88 81       	ld	r24, Y
+     a92:	80 93 92 02 	sts	0x0292, r24	; 0x800292 <reflowSetupScreen+0x41>
+					DrawMenu(REFLOW_SETUP);
+     a96:	86 e3       	ldi	r24, 0x36	; 54
+     a98:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     a9c:	0f 90       	pop	r0
+     a9e:	0f 90       	pop	r0
+     aa0:	0f 90       	pop	r0
+     aa2:	0f 90       	pop	r0
+     aa4:	0f 90       	pop	r0
+     aa6:	0f 90       	pop	r0
+     aa8:	b5 c2       	rjmp	.+1386   	; 0x1014 <ReflowSetupMenu+0x7c2>
+				}
+			}
+			else
+			{
+				if(reflowSetupScreen[35] == ']') // if reflow ramp is selected
+     aaa:	80 91 74 02 	lds	r24, 0x0274	; 0x800274 <reflowSetupScreen+0x23>
+     aae:	8d 35       	cpi	r24, 0x5D	; 93
+     ab0:	09 f0       	breq	.+2      	; 0xab4 <ReflowSetupMenu+0x262>
+     ab2:	43 c0       	rjmp	.+134    	; 0xb3a <ReflowSetupMenu+0x2e8>
+				{
+					if(reflowRmp == 0) //if reflow ramp = 0
+     ab4:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <reflowRmp>
+     ab8:	90 91 09 01 	lds	r25, 0x0109	; 0x800109 <reflowRmp+0x1>
+     abc:	00 97       	sbiw	r24, 0x00	; 0
+     abe:	f9 f4       	brne	.+62     	; 0xafe <ReflowSetupMenu+0x2ac>
+					{
+						reflowRmp = 9; // reset reflow ramp to 9
+     ac0:	89 e0       	ldi	r24, 0x09	; 9
+     ac2:	90 e0       	ldi	r25, 0x00	; 0
+     ac4:	90 93 09 01 	sts	0x0109, r25	; 0x800109 <reflowRmp+0x1>
+     ac8:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <reflowRmp>
+						sprintf(intBuffer, "%d", reflowRmp); //stringify
+     acc:	1f 92       	push	r1
+     ace:	8f 93       	push	r24
+     ad0:	8e ee       	ldi	r24, 0xEE	; 238
+     ad2:	93 e0       	ldi	r25, 0x03	; 3
+     ad4:	9f 93       	push	r25
+     ad6:	8f 93       	push	r24
+     ad8:	cb ef       	ldi	r28, 0xFB	; 251
+     ada:	d3 e0       	ldi	r29, 0x03	; 3
+     adc:	df 93       	push	r29
+     ade:	cf 93       	push	r28
+     ae0:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+						reflowSetupScreen[34] = intBuffer[0]; //replace old value with new one
+     ae4:	88 81       	ld	r24, Y
+     ae6:	80 93 73 02 	sts	0x0273, r24	; 0x800273 <reflowSetupScreen+0x22>
+						DrawMenu(REFLOW_SETUP);
+     aea:	86 e3       	ldi	r24, 0x36	; 54
+     aec:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     af0:	0f 90       	pop	r0
+     af2:	0f 90       	pop	r0
+     af4:	0f 90       	pop	r0
+     af6:	0f 90       	pop	r0
+     af8:	0f 90       	pop	r0
+     afa:	0f 90       	pop	r0
+     afc:	8b c2       	rjmp	.+1302   	; 0x1014 <ReflowSetupMenu+0x7c2>
+					}
+					else
+					{
+						reflowRmp--; //decrement reflow ramp
+     afe:	01 97       	sbiw	r24, 0x01	; 1
+     b00:	90 93 09 01 	sts	0x0109, r25	; 0x800109 <reflowRmp+0x1>
+     b04:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <reflowRmp>
+						sprintf(intBuffer, "%d", reflowRmp); //stringify
+     b08:	9f 93       	push	r25
+     b0a:	8f 93       	push	r24
+     b0c:	8e ee       	ldi	r24, 0xEE	; 238
+     b0e:	93 e0       	ldi	r25, 0x03	; 3
+     b10:	9f 93       	push	r25
+     b12:	8f 93       	push	r24
+     b14:	cb ef       	ldi	r28, 0xFB	; 251
+     b16:	d3 e0       	ldi	r29, 0x03	; 3
+     b18:	df 93       	push	r29
+     b1a:	cf 93       	push	r28
+     b1c:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+						reflowSetupScreen[34] = intBuffer[0]; //replace old value with new one
+     b20:	88 81       	ld	r24, Y
+     b22:	80 93 73 02 	sts	0x0273, r24	; 0x800273 <reflowSetupScreen+0x22>
+						DrawMenu(REFLOW_SETUP);
+     b26:	86 e3       	ldi	r24, 0x36	; 54
+     b28:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     b2c:	0f 90       	pop	r0
+     b2e:	0f 90       	pop	r0
+     b30:	0f 90       	pop	r0
+     b32:	0f 90       	pop	r0
+     b34:	0f 90       	pop	r0
+     b36:	0f 90       	pop	r0
+     b38:	6d c2       	rjmp	.+1242   	; 0x1014 <ReflowSetupMenu+0x7c2>
+					}
+				}
+				else
+				{
+					if(reflowSetupScreen[25] == ']') //if soak ramp is selected
+     b3a:	80 91 6a 02 	lds	r24, 0x026A	; 0x80026a <reflowSetupScreen+0x19>
+     b3e:	8d 35       	cpi	r24, 0x5D	; 93
+     b40:	09 f0       	breq	.+2      	; 0xb44 <ReflowSetupMenu+0x2f2>
+     b42:	43 c0       	rjmp	.+134    	; 0xbca <ReflowSetupMenu+0x378>
+					{
+						if(soakRmp == 0) //if soak ramp = 0
+     b44:	80 91 0a 01 	lds	r24, 0x010A	; 0x80010a <soakRmp>
+     b48:	90 91 0b 01 	lds	r25, 0x010B	; 0x80010b <soakRmp+0x1>
+     b4c:	00 97       	sbiw	r24, 0x00	; 0
+     b4e:	f9 f4       	brne	.+62     	; 0xb8e <ReflowSetupMenu+0x33c>
+						{
+							soakRmp = 9; //reset soak ramp to 9
+     b50:	89 e0       	ldi	r24, 0x09	; 9
+     b52:	90 e0       	ldi	r25, 0x00	; 0
+     b54:	90 93 0b 01 	sts	0x010B, r25	; 0x80010b <soakRmp+0x1>
+     b58:	80 93 0a 01 	sts	0x010A, r24	; 0x80010a <soakRmp>
+							sprintf(intBuffer, "%d", soakRmp); //stringify
+     b5c:	1f 92       	push	r1
+     b5e:	8f 93       	push	r24
+     b60:	8e ee       	ldi	r24, 0xEE	; 238
+     b62:	93 e0       	ldi	r25, 0x03	; 3
+     b64:	9f 93       	push	r25
+     b66:	8f 93       	push	r24
+     b68:	cb ef       	ldi	r28, 0xFB	; 251
+     b6a:	d3 e0       	ldi	r29, 0x03	; 3
+     b6c:	df 93       	push	r29
+     b6e:	cf 93       	push	r28
+     b70:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+							reflowSetupScreen[24] = intBuffer[0]; //replace old value with new one
+     b74:	88 81       	ld	r24, Y
+     b76:	80 93 69 02 	sts	0x0269, r24	; 0x800269 <reflowSetupScreen+0x18>
+							DrawMenu(REFLOW_SETUP);
+     b7a:	86 e3       	ldi	r24, 0x36	; 54
+     b7c:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     b80:	0f 90       	pop	r0
+     b82:	0f 90       	pop	r0
+     b84:	0f 90       	pop	r0
+     b86:	0f 90       	pop	r0
+     b88:	0f 90       	pop	r0
+     b8a:	0f 90       	pop	r0
+     b8c:	43 c2       	rjmp	.+1158   	; 0x1014 <ReflowSetupMenu+0x7c2>
+						}
+						else
+						{
+							soakRmp--; //decrement soakramp
+     b8e:	01 97       	sbiw	r24, 0x01	; 1
+     b90:	90 93 0b 01 	sts	0x010B, r25	; 0x80010b <soakRmp+0x1>
+     b94:	80 93 0a 01 	sts	0x010A, r24	; 0x80010a <soakRmp>
+							sprintf(intBuffer, "%d", soakRmp);//stringify
+     b98:	9f 93       	push	r25
+     b9a:	8f 93       	push	r24
+     b9c:	8e ee       	ldi	r24, 0xEE	; 238
+     b9e:	93 e0       	ldi	r25, 0x03	; 3
+     ba0:	9f 93       	push	r25
+     ba2:	8f 93       	push	r24
+     ba4:	cb ef       	ldi	r28, 0xFB	; 251
+     ba6:	d3 e0       	ldi	r29, 0x03	; 3
+     ba8:	df 93       	push	r29
+     baa:	cf 93       	push	r28
+     bac:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+							reflowSetupScreen[24] = intBuffer[0];//replace old value with new one
+     bb0:	88 81       	ld	r24, Y
+     bb2:	80 93 69 02 	sts	0x0269, r24	; 0x800269 <reflowSetupScreen+0x18>
+							DrawMenu(REFLOW_SETUP);
+     bb6:	86 e3       	ldi	r24, 0x36	; 54
+     bb8:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     bbc:	0f 90       	pop	r0
+     bbe:	0f 90       	pop	r0
+     bc0:	0f 90       	pop	r0
+     bc2:	0f 90       	pop	r0
+     bc4:	0f 90       	pop	r0
+     bc6:	0f 90       	pop	r0
+     bc8:	25 c2       	rjmp	.+1098   	; 0x1014 <ReflowSetupMenu+0x7c2>
+						}
+					}
+					else
+					{
+						if(reflowSetupScreen[57] == ']') //if reflow temp is selected
+     bca:	80 91 8a 02 	lds	r24, 0x028A	; 0x80028a <reflowSetupScreen+0x39>
+     bce:	8d 35       	cpi	r24, 0x5D	; 93
+     bd0:	09 f0       	breq	.+2      	; 0xbd4 <ReflowSetupMenu+0x382>
+     bd2:	50 c0       	rjmp	.+160    	; 0xc74 <ReflowSetupMenu+0x422>
+						{
+							if(reflowTmp == 200) //if reflow temp = 200
+     bd4:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <reflowTmp>
+     bd8:	90 91 0d 01 	lds	r25, 0x010D	; 0x80010d <reflowTmp+0x1>
+     bdc:	88 3c       	cpi	r24, 0xC8	; 200
+     bde:	91 05       	cpc	r25, r1
+     be0:	31 f5       	brne	.+76     	; 0xc2e <ReflowSetupMenu+0x3dc>
+							{
+								reflowTmp = 300; //reset reflow temp to 300
+     be2:	8c e2       	ldi	r24, 0x2C	; 44
+     be4:	91 e0       	ldi	r25, 0x01	; 1
+     be6:	90 93 0d 01 	sts	0x010D, r25	; 0x80010d <reflowTmp+0x1>
+     bea:	80 93 0c 01 	sts	0x010C, r24	; 0x80010c <reflowTmp>
+								sprintf(intBuffer, "%d", reflowTmp); //stringify
+     bee:	81 e0       	ldi	r24, 0x01	; 1
+     bf0:	8f 93       	push	r24
+     bf2:	8c e2       	ldi	r24, 0x2C	; 44
+     bf4:	8f 93       	push	r24
+     bf6:	8e ee       	ldi	r24, 0xEE	; 238
+     bf8:	93 e0       	ldi	r25, 0x03	; 3
+     bfa:	9f 93       	push	r25
+     bfc:	8f 93       	push	r24
+     bfe:	cb ef       	ldi	r28, 0xFB	; 251
+     c00:	d3 e0       	ldi	r29, 0x03	; 3
+     c02:	df 93       	push	r29
+     c04:	cf 93       	push	r28
+     c06:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+								//replace old value with new one
+								reflowSetupScreen[54] = intBuffer[0];
+     c0a:	e1 e5       	ldi	r30, 0x51	; 81
+     c0c:	f2 e0       	ldi	r31, 0x02	; 2
+     c0e:	88 81       	ld	r24, Y
+     c10:	86 ab       	std	Z+54, r24	; 0x36
+								reflowSetupScreen[55] = intBuffer[1];
+     c12:	89 81       	ldd	r24, Y+1	; 0x01
+     c14:	87 ab       	std	Z+55, r24	; 0x37
+								reflowSetupScreen[56] = intBuffer[2];
+     c16:	8a 81       	ldd	r24, Y+2	; 0x02
+     c18:	80 af       	std	Z+56, r24	; 0x38
+								DrawMenu(REFLOW_SETUP);
+     c1a:	86 e3       	ldi	r24, 0x36	; 54
+     c1c:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     c20:	0f 90       	pop	r0
+     c22:	0f 90       	pop	r0
+     c24:	0f 90       	pop	r0
+     c26:	0f 90       	pop	r0
+     c28:	0f 90       	pop	r0
+     c2a:	0f 90       	pop	r0
+     c2c:	f3 c1       	rjmp	.+998    	; 0x1014 <ReflowSetupMenu+0x7c2>
+							}
+							else
+							{
+								reflowTmp--; //decrement reflow temp
+     c2e:	01 97       	sbiw	r24, 0x01	; 1
+     c30:	90 93 0d 01 	sts	0x010D, r25	; 0x80010d <reflowTmp+0x1>
+     c34:	80 93 0c 01 	sts	0x010C, r24	; 0x80010c <reflowTmp>
+								sprintf(intBuffer, "%d", reflowTmp);//stringify
+     c38:	9f 93       	push	r25
+     c3a:	8f 93       	push	r24
+     c3c:	8e ee       	ldi	r24, 0xEE	; 238
+     c3e:	93 e0       	ldi	r25, 0x03	; 3
+     c40:	9f 93       	push	r25
+     c42:	8f 93       	push	r24
+     c44:	cb ef       	ldi	r28, 0xFB	; 251
+     c46:	d3 e0       	ldi	r29, 0x03	; 3
+     c48:	df 93       	push	r29
+     c4a:	cf 93       	push	r28
+     c4c:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+								//replace old value with new one
+								reflowSetupScreen[54] = intBuffer[0];
+     c50:	e1 e5       	ldi	r30, 0x51	; 81
+     c52:	f2 e0       	ldi	r31, 0x02	; 2
+     c54:	88 81       	ld	r24, Y
+     c56:	86 ab       	std	Z+54, r24	; 0x36
+								reflowSetupScreen[55] = intBuffer[1];
+     c58:	89 81       	ldd	r24, Y+1	; 0x01
+     c5a:	87 ab       	std	Z+55, r24	; 0x37
+								reflowSetupScreen[56] = intBuffer[2];
+     c5c:	8a 81       	ldd	r24, Y+2	; 0x02
+     c5e:	80 af       	std	Z+56, r24	; 0x38
+								DrawMenu(REFLOW_SETUP);
+     c60:	86 e3       	ldi	r24, 0x36	; 54
+     c62:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     c66:	0f 90       	pop	r0
+     c68:	0f 90       	pop	r0
+     c6a:	0f 90       	pop	r0
+     c6c:	0f 90       	pop	r0
+     c6e:	0f 90       	pop	r0
+     c70:	0f 90       	pop	r0
+     c72:	d0 c1       	rjmp	.+928    	; 0x1014 <ReflowSetupMenu+0x7c2>
+							}
+						}
+						else
+						{
+							if (reflowSetupScreen[47] == ']') //if soak temp is selected
+     c74:	80 91 80 02 	lds	r24, 0x0280	; 0x800280 <reflowSetupScreen+0x2f>
+     c78:	8d 35       	cpi	r24, 0x5D	; 93
+     c7a:	09 f0       	breq	.+2      	; 0xc7e <ReflowSetupMenu+0x42c>
+     c7c:	cb c1       	rjmp	.+918    	; 0x1014 <ReflowSetupMenu+0x7c2>
+							{
+								if(soakTmp == 100) //if soak temp = 100
+     c7e:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <soakTmp>
+     c82:	90 91 0f 01 	lds	r25, 0x010F	; 0x80010f <soakTmp+0x1>
+     c86:	84 36       	cpi	r24, 0x64	; 100
+     c88:	91 05       	cpc	r25, r1
+     c8a:	29 f5       	brne	.+74     	; 0xcd6 <ReflowSetupMenu+0x484>
+								{
+									soakTmp = 200; //reset soak temp to 200
+     c8c:	88 ec       	ldi	r24, 0xC8	; 200
+     c8e:	90 e0       	ldi	r25, 0x00	; 0
+     c90:	90 93 0f 01 	sts	0x010F, r25	; 0x80010f <soakTmp+0x1>
+     c94:	80 93 0e 01 	sts	0x010E, r24	; 0x80010e <soakTmp>
+									sprintf(intBuffer, "%d", soakTmp); //stringify
+     c98:	1f 92       	push	r1
+     c9a:	88 ec       	ldi	r24, 0xC8	; 200
+     c9c:	8f 93       	push	r24
+     c9e:	8e ee       	ldi	r24, 0xEE	; 238
+     ca0:	93 e0       	ldi	r25, 0x03	; 3
+     ca2:	9f 93       	push	r25
+     ca4:	8f 93       	push	r24
+     ca6:	cb ef       	ldi	r28, 0xFB	; 251
+     ca8:	d3 e0       	ldi	r29, 0x03	; 3
+     caa:	df 93       	push	r29
+     cac:	cf 93       	push	r28
+     cae:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+									//replace old value with new one
+									reflowSetupScreen[44] = intBuffer[0];
+     cb2:	e1 e5       	ldi	r30, 0x51	; 81
+     cb4:	f2 e0       	ldi	r31, 0x02	; 2
+     cb6:	88 81       	ld	r24, Y
+     cb8:	84 a7       	std	Z+44, r24	; 0x2c
+									reflowSetupScreen[45] = intBuffer[1];
+     cba:	89 81       	ldd	r24, Y+1	; 0x01
+     cbc:	85 a7       	std	Z+45, r24	; 0x2d
+									reflowSetupScreen[46] = intBuffer[2];
+     cbe:	8a 81       	ldd	r24, Y+2	; 0x02
+     cc0:	86 a7       	std	Z+46, r24	; 0x2e
+									DrawMenu(REFLOW_SETUP);
+     cc2:	86 e3       	ldi	r24, 0x36	; 54
+     cc4:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     cc8:	0f 90       	pop	r0
+     cca:	0f 90       	pop	r0
+     ccc:	0f 90       	pop	r0
+     cce:	0f 90       	pop	r0
+     cd0:	0f 90       	pop	r0
+     cd2:	0f 90       	pop	r0
+     cd4:	9f c1       	rjmp	.+830    	; 0x1014 <ReflowSetupMenu+0x7c2>
+								}
+								else
+								{
+									soakTmp--; //decrement soak temp
+     cd6:	01 97       	sbiw	r24, 0x01	; 1
+     cd8:	90 93 0f 01 	sts	0x010F, r25	; 0x80010f <soakTmp+0x1>
+     cdc:	80 93 0e 01 	sts	0x010E, r24	; 0x80010e <soakTmp>
+									sprintf(intBuffer, "%d", soakTmp);//stringify
+     ce0:	9f 93       	push	r25
+     ce2:	8f 93       	push	r24
+     ce4:	8e ee       	ldi	r24, 0xEE	; 238
+     ce6:	93 e0       	ldi	r25, 0x03	; 3
+     ce8:	9f 93       	push	r25
+     cea:	8f 93       	push	r24
+     cec:	cb ef       	ldi	r28, 0xFB	; 251
+     cee:	d3 e0       	ldi	r29, 0x03	; 3
+     cf0:	df 93       	push	r29
+     cf2:	cf 93       	push	r28
+     cf4:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+									//replace old value with new one
+									reflowSetupScreen[44] = intBuffer[0];
+     cf8:	e1 e5       	ldi	r30, 0x51	; 81
+     cfa:	f2 e0       	ldi	r31, 0x02	; 2
+     cfc:	88 81       	ld	r24, Y
+     cfe:	84 a7       	std	Z+44, r24	; 0x2c
+									reflowSetupScreen[45] = intBuffer[1];
+     d00:	89 81       	ldd	r24, Y+1	; 0x01
+     d02:	85 a7       	std	Z+45, r24	; 0x2d
+									reflowSetupScreen[46] = intBuffer[2];
+     d04:	8a 81       	ldd	r24, Y+2	; 0x02
+     d06:	86 a7       	std	Z+46, r24	; 0x2e
+									DrawMenu(REFLOW_SETUP);
+     d08:	86 e3       	ldi	r24, 0x36	; 54
+     d0a:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     d0e:	0f 90       	pop	r0
+     d10:	0f 90       	pop	r0
+     d12:	0f 90       	pop	r0
+     d14:	0f 90       	pop	r0
+     d16:	0f 90       	pop	r0
+     d18:	0f 90       	pop	r0
+     d1a:	7c c1       	rjmp	.+760    	; 0x1014 <ReflowSetupMenu+0x7c2>
+				}
+			}
+			break;
+			
+			case 'R': //if rotary encoder is rotated right (CW)
+			if(reflowSetupScreen[66] == ']')//if down ramp is selected
+     d1c:	80 91 93 02 	lds	r24, 0x0293	; 0x800293 <reflowSetupScreen+0x42>
+     d20:	8d 35       	cpi	r24, 0x5D	; 93
+     d22:	09 f0       	breq	.+2      	; 0xd26 <ReflowSetupMenu+0x4d4>
+     d24:	42 c0       	rjmp	.+132    	; 0xdaa <ReflowSetupMenu+0x558>
+			{
+				if(downRmp == 9) //if down ramp = 9
+     d26:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <downRmp>
+     d2a:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <downRmp+0x1>
+     d2e:	89 30       	cpi	r24, 0x09	; 9
+     d30:	91 05       	cpc	r25, r1
+     d32:	e9 f4       	brne	.+58     	; 0xd6e <ReflowSetupMenu+0x51c>
+				{
+					downRmp = 0; // reset down ramp to 0
+     d34:	10 92 07 01 	sts	0x0107, r1	; 0x800107 <downRmp+0x1>
+     d38:	10 92 06 01 	sts	0x0106, r1	; 0x800106 <downRmp>
+					sprintf(intBuffer, "%d", downRmp); //stringify
+     d3c:	1f 92       	push	r1
+     d3e:	1f 92       	push	r1
+     d40:	8e ee       	ldi	r24, 0xEE	; 238
+     d42:	93 e0       	ldi	r25, 0x03	; 3
+     d44:	9f 93       	push	r25
+     d46:	8f 93       	push	r24
+     d48:	cb ef       	ldi	r28, 0xFB	; 251
+     d4a:	d3 e0       	ldi	r29, 0x03	; 3
+     d4c:	df 93       	push	r29
+     d4e:	cf 93       	push	r28
+     d50:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+					reflowSetupScreen[65] = intBuffer[0]; //replace old value with new one
+     d54:	88 81       	ld	r24, Y
+     d56:	80 93 92 02 	sts	0x0292, r24	; 0x800292 <reflowSetupScreen+0x41>
+					DrawMenu(REFLOW_SETUP); //redraw reflow setup menu
+     d5a:	86 e3       	ldi	r24, 0x36	; 54
+     d5c:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     d60:	0f 90       	pop	r0
+     d62:	0f 90       	pop	r0
+     d64:	0f 90       	pop	r0
+     d66:	0f 90       	pop	r0
+     d68:	0f 90       	pop	r0
+     d6a:	0f 90       	pop	r0
+     d6c:	53 c1       	rjmp	.+678    	; 0x1014 <ReflowSetupMenu+0x7c2>
+				}
+				else
+				{
+					downRmp++; //decrement down ramp
+     d6e:	01 96       	adiw	r24, 0x01	; 1
+     d70:	90 93 07 01 	sts	0x0107, r25	; 0x800107 <downRmp+0x1>
+     d74:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <downRmp>
+					sprintf(intBuffer, "%d", downRmp);//stringify
+     d78:	9f 93       	push	r25
+     d7a:	8f 93       	push	r24
+     d7c:	8e ee       	ldi	r24, 0xEE	; 238
+     d7e:	93 e0       	ldi	r25, 0x03	; 3
+     d80:	9f 93       	push	r25
+     d82:	8f 93       	push	r24
+     d84:	cb ef       	ldi	r28, 0xFB	; 251
+     d86:	d3 e0       	ldi	r29, 0x03	; 3
+     d88:	df 93       	push	r29
+     d8a:	cf 93       	push	r28
+     d8c:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+					reflowSetupScreen[65] = intBuffer[0];//replace old value with new one
+     d90:	88 81       	ld	r24, Y
+     d92:	80 93 92 02 	sts	0x0292, r24	; 0x800292 <reflowSetupScreen+0x41>
+					DrawMenu(REFLOW_SETUP);//redraw reflow setup menu
+     d96:	86 e3       	ldi	r24, 0x36	; 54
+     d98:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     d9c:	0f 90       	pop	r0
+     d9e:	0f 90       	pop	r0
+     da0:	0f 90       	pop	r0
+     da2:	0f 90       	pop	r0
+     da4:	0f 90       	pop	r0
+     da6:	0f 90       	pop	r0
+     da8:	35 c1       	rjmp	.+618    	; 0x1014 <ReflowSetupMenu+0x7c2>
+				}
+			}
+			else
+			{
+				if(reflowSetupScreen[35] == ']') //if reflow ramp is selected
+     daa:	80 91 74 02 	lds	r24, 0x0274	; 0x800274 <reflowSetupScreen+0x23>
+     dae:	8d 35       	cpi	r24, 0x5D	; 93
+     db0:	09 f0       	breq	.+2      	; 0xdb4 <ReflowSetupMenu+0x562>
+     db2:	42 c0       	rjmp	.+132    	; 0xe38 <ReflowSetupMenu+0x5e6>
+				{
+					if(reflowRmp == 9) //if reflow ramp = 9
+     db4:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <reflowRmp>
+     db8:	90 91 09 01 	lds	r25, 0x0109	; 0x800109 <reflowRmp+0x1>
+     dbc:	89 30       	cpi	r24, 0x09	; 9
+     dbe:	91 05       	cpc	r25, r1
+     dc0:	e9 f4       	brne	.+58     	; 0xdfc <ReflowSetupMenu+0x5aa>
+					{
+						reflowRmp = 0;//reset reflow ramp to 0
+     dc2:	10 92 09 01 	sts	0x0109, r1	; 0x800109 <reflowRmp+0x1>
+     dc6:	10 92 08 01 	sts	0x0108, r1	; 0x800108 <reflowRmp>
+						sprintf(intBuffer, "%d", reflowRmp);//stringify
+     dca:	1f 92       	push	r1
+     dcc:	1f 92       	push	r1
+     dce:	8e ee       	ldi	r24, 0xEE	; 238
+     dd0:	93 e0       	ldi	r25, 0x03	; 3
+     dd2:	9f 93       	push	r25
+     dd4:	8f 93       	push	r24
+     dd6:	cb ef       	ldi	r28, 0xFB	; 251
+     dd8:	d3 e0       	ldi	r29, 0x03	; 3
+     dda:	df 93       	push	r29
+     ddc:	cf 93       	push	r28
+     dde:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+						reflowSetupScreen[34] = intBuffer[0];//replace old value with new one
+     de2:	88 81       	ld	r24, Y
+     de4:	80 93 73 02 	sts	0x0273, r24	; 0x800273 <reflowSetupScreen+0x22>
+						DrawMenu(REFLOW_SETUP);//redraw reflow setup menu
+     de8:	86 e3       	ldi	r24, 0x36	; 54
+     dea:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     dee:	0f 90       	pop	r0
+     df0:	0f 90       	pop	r0
+     df2:	0f 90       	pop	r0
+     df4:	0f 90       	pop	r0
+     df6:	0f 90       	pop	r0
+     df8:	0f 90       	pop	r0
+     dfa:	0c c1       	rjmp	.+536    	; 0x1014 <ReflowSetupMenu+0x7c2>
+					}
+					else
+					{
+						reflowRmp++; //increment reflow ramp
+     dfc:	01 96       	adiw	r24, 0x01	; 1
+     dfe:	90 93 09 01 	sts	0x0109, r25	; 0x800109 <reflowRmp+0x1>
+     e02:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <reflowRmp>
+						sprintf(intBuffer, "%d", reflowRmp); //stringify
+     e06:	9f 93       	push	r25
+     e08:	8f 93       	push	r24
+     e0a:	8e ee       	ldi	r24, 0xEE	; 238
+     e0c:	93 e0       	ldi	r25, 0x03	; 3
+     e0e:	9f 93       	push	r25
+     e10:	8f 93       	push	r24
+     e12:	cb ef       	ldi	r28, 0xFB	; 251
+     e14:	d3 e0       	ldi	r29, 0x03	; 3
+     e16:	df 93       	push	r29
+     e18:	cf 93       	push	r28
+     e1a:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+						reflowSetupScreen[34] = intBuffer[0];//replace old value with new one
+     e1e:	88 81       	ld	r24, Y
+     e20:	80 93 73 02 	sts	0x0273, r24	; 0x800273 <reflowSetupScreen+0x22>
+						DrawMenu(REFLOW_SETUP); //redraw reflow setup menu
+     e24:	86 e3       	ldi	r24, 0x36	; 54
+     e26:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     e2a:	0f 90       	pop	r0
+     e2c:	0f 90       	pop	r0
+     e2e:	0f 90       	pop	r0
+     e30:	0f 90       	pop	r0
+     e32:	0f 90       	pop	r0
+     e34:	0f 90       	pop	r0
+     e36:	ee c0       	rjmp	.+476    	; 0x1014 <ReflowSetupMenu+0x7c2>
+					}
+				}
+				else
+				{
+					if(reflowSetupScreen[25] == ']') // if soak ramp is selected
+     e38:	80 91 6a 02 	lds	r24, 0x026A	; 0x80026a <reflowSetupScreen+0x19>
+     e3c:	8d 35       	cpi	r24, 0x5D	; 93
+     e3e:	09 f0       	breq	.+2      	; 0xe42 <ReflowSetupMenu+0x5f0>
+     e40:	42 c0       	rjmp	.+132    	; 0xec6 <ReflowSetupMenu+0x674>
+					{
+						if(soakRmp == 9) //if soak ramp = 9
+     e42:	80 91 0a 01 	lds	r24, 0x010A	; 0x80010a <soakRmp>
+     e46:	90 91 0b 01 	lds	r25, 0x010B	; 0x80010b <soakRmp+0x1>
+     e4a:	89 30       	cpi	r24, 0x09	; 9
+     e4c:	91 05       	cpc	r25, r1
+     e4e:	e9 f4       	brne	.+58     	; 0xe8a <ReflowSetupMenu+0x638>
+						{
+							soakRmp = 0; //reset soak ramp to 0
+     e50:	10 92 0b 01 	sts	0x010B, r1	; 0x80010b <soakRmp+0x1>
+     e54:	10 92 0a 01 	sts	0x010A, r1	; 0x80010a <soakRmp>
+							sprintf(intBuffer, "%d", soakRmp);//stringify
+     e58:	1f 92       	push	r1
+     e5a:	1f 92       	push	r1
+     e5c:	8e ee       	ldi	r24, 0xEE	; 238
+     e5e:	93 e0       	ldi	r25, 0x03	; 3
+     e60:	9f 93       	push	r25
+     e62:	8f 93       	push	r24
+     e64:	cb ef       	ldi	r28, 0xFB	; 251
+     e66:	d3 e0       	ldi	r29, 0x03	; 3
+     e68:	df 93       	push	r29
+     e6a:	cf 93       	push	r28
+     e6c:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+							reflowSetupScreen[24] = intBuffer[0];//replace old value with new one
+     e70:	88 81       	ld	r24, Y
+     e72:	80 93 69 02 	sts	0x0269, r24	; 0x800269 <reflowSetupScreen+0x18>
+							DrawMenu(REFLOW_SETUP);//redraw reflow setup menu
+     e76:	86 e3       	ldi	r24, 0x36	; 54
+     e78:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     e7c:	0f 90       	pop	r0
+     e7e:	0f 90       	pop	r0
+     e80:	0f 90       	pop	r0
+     e82:	0f 90       	pop	r0
+     e84:	0f 90       	pop	r0
+     e86:	0f 90       	pop	r0
+     e88:	c5 c0       	rjmp	.+394    	; 0x1014 <ReflowSetupMenu+0x7c2>
+						}
+						else
+						{
+							soakRmp++;//increment soak ramp
+     e8a:	01 96       	adiw	r24, 0x01	; 1
+     e8c:	90 93 0b 01 	sts	0x010B, r25	; 0x80010b <soakRmp+0x1>
+     e90:	80 93 0a 01 	sts	0x010A, r24	; 0x80010a <soakRmp>
+							sprintf(intBuffer, "%d", soakRmp);//stringify
+     e94:	9f 93       	push	r25
+     e96:	8f 93       	push	r24
+     e98:	8e ee       	ldi	r24, 0xEE	; 238
+     e9a:	93 e0       	ldi	r25, 0x03	; 3
+     e9c:	9f 93       	push	r25
+     e9e:	8f 93       	push	r24
+     ea0:	cb ef       	ldi	r28, 0xFB	; 251
+     ea2:	d3 e0       	ldi	r29, 0x03	; 3
+     ea4:	df 93       	push	r29
+     ea6:	cf 93       	push	r28
+     ea8:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+							reflowSetupScreen[24] = intBuffer[0];//replace old value with new one
+     eac:	88 81       	ld	r24, Y
+     eae:	80 93 69 02 	sts	0x0269, r24	; 0x800269 <reflowSetupScreen+0x18>
+							DrawMenu(REFLOW_SETUP);//redraw reflow setup menu
+     eb2:	86 e3       	ldi	r24, 0x36	; 54
+     eb4:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     eb8:	0f 90       	pop	r0
+     eba:	0f 90       	pop	r0
+     ebc:	0f 90       	pop	r0
+     ebe:	0f 90       	pop	r0
+     ec0:	0f 90       	pop	r0
+     ec2:	0f 90       	pop	r0
+     ec4:	a7 c0       	rjmp	.+334    	; 0x1014 <ReflowSetupMenu+0x7c2>
+						}
+					}
+					else
+					{
+						if(reflowSetupScreen[57] == ']')//if reflow temp is selected
+     ec6:	80 91 8a 02 	lds	r24, 0x028A	; 0x80028a <reflowSetupScreen+0x39>
+     eca:	8d 35       	cpi	r24, 0x5D	; 93
+     ecc:	09 f0       	breq	.+2      	; 0xed0 <ReflowSetupMenu+0x67e>
+     ece:	50 c0       	rjmp	.+160    	; 0xf70 <ReflowSetupMenu+0x71e>
+						{
+							if(reflowTmp == 300) //if reflow temp = 300
+     ed0:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <reflowTmp>
+     ed4:	90 91 0d 01 	lds	r25, 0x010D	; 0x80010d <reflowTmp+0x1>
+     ed8:	8c 32       	cpi	r24, 0x2C	; 44
+     eda:	21 e0       	ldi	r18, 0x01	; 1
+     edc:	92 07       	cpc	r25, r18
+     ede:	29 f5       	brne	.+74     	; 0xf2a <ReflowSetupMenu+0x6d8>
+							{
+								reflowTmp = 200; //reset reflow temp to 200
+     ee0:	88 ec       	ldi	r24, 0xC8	; 200
+     ee2:	90 e0       	ldi	r25, 0x00	; 0
+     ee4:	90 93 0d 01 	sts	0x010D, r25	; 0x80010d <reflowTmp+0x1>
+     ee8:	80 93 0c 01 	sts	0x010C, r24	; 0x80010c <reflowTmp>
+								sprintf(intBuffer, "%d", reflowTmp);//stringify
+     eec:	1f 92       	push	r1
+     eee:	88 ec       	ldi	r24, 0xC8	; 200
+     ef0:	8f 93       	push	r24
+     ef2:	8e ee       	ldi	r24, 0xEE	; 238
+     ef4:	93 e0       	ldi	r25, 0x03	; 3
+     ef6:	9f 93       	push	r25
+     ef8:	8f 93       	push	r24
+     efa:	cb ef       	ldi	r28, 0xFB	; 251
+     efc:	d3 e0       	ldi	r29, 0x03	; 3
+     efe:	df 93       	push	r29
+     f00:	cf 93       	push	r28
+     f02:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+								//replace old value with new one
+								reflowSetupScreen[54] = intBuffer[0];
+     f06:	e1 e5       	ldi	r30, 0x51	; 81
+     f08:	f2 e0       	ldi	r31, 0x02	; 2
+     f0a:	88 81       	ld	r24, Y
+     f0c:	86 ab       	std	Z+54, r24	; 0x36
+								reflowSetupScreen[55] = intBuffer[1];
+     f0e:	89 81       	ldd	r24, Y+1	; 0x01
+     f10:	87 ab       	std	Z+55, r24	; 0x37
+								reflowSetupScreen[56] = intBuffer[2];
+     f12:	8a 81       	ldd	r24, Y+2	; 0x02
+     f14:	80 af       	std	Z+56, r24	; 0x38
+								DrawMenu(REFLOW_SETUP);//redraw reflow setup menu
+     f16:	86 e3       	ldi	r24, 0x36	; 54
+     f18:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     f1c:	0f 90       	pop	r0
+     f1e:	0f 90       	pop	r0
+     f20:	0f 90       	pop	r0
+     f22:	0f 90       	pop	r0
+     f24:	0f 90       	pop	r0
+     f26:	0f 90       	pop	r0
+     f28:	75 c0       	rjmp	.+234    	; 0x1014 <ReflowSetupMenu+0x7c2>
+							}
+							else
+							{
+								reflowTmp++;//increment reflow temp
+     f2a:	01 96       	adiw	r24, 0x01	; 1
+     f2c:	90 93 0d 01 	sts	0x010D, r25	; 0x80010d <reflowTmp+0x1>
+     f30:	80 93 0c 01 	sts	0x010C, r24	; 0x80010c <reflowTmp>
+								sprintf(intBuffer, "%d", reflowTmp);//stringify
+     f34:	9f 93       	push	r25
+     f36:	8f 93       	push	r24
+     f38:	8e ee       	ldi	r24, 0xEE	; 238
+     f3a:	93 e0       	ldi	r25, 0x03	; 3
+     f3c:	9f 93       	push	r25
+     f3e:	8f 93       	push	r24
+     f40:	cb ef       	ldi	r28, 0xFB	; 251
+     f42:	d3 e0       	ldi	r29, 0x03	; 3
+     f44:	df 93       	push	r29
+     f46:	cf 93       	push	r28
+     f48:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+								//replace old value with new one
+								reflowSetupScreen[54] = intBuffer[0];
+     f4c:	e1 e5       	ldi	r30, 0x51	; 81
+     f4e:	f2 e0       	ldi	r31, 0x02	; 2
+     f50:	88 81       	ld	r24, Y
+     f52:	86 ab       	std	Z+54, r24	; 0x36
+								reflowSetupScreen[55] = intBuffer[1];
+     f54:	89 81       	ldd	r24, Y+1	; 0x01
+     f56:	87 ab       	std	Z+55, r24	; 0x37
+								reflowSetupScreen[56] = intBuffer[2];
+     f58:	8a 81       	ldd	r24, Y+2	; 0x02
+     f5a:	80 af       	std	Z+56, r24	; 0x38
+								DrawMenu(REFLOW_SETUP);//redraw reflow setup menu
+     f5c:	86 e3       	ldi	r24, 0x36	; 54
+     f5e:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     f62:	0f 90       	pop	r0
+     f64:	0f 90       	pop	r0
+     f66:	0f 90       	pop	r0
+     f68:	0f 90       	pop	r0
+     f6a:	0f 90       	pop	r0
+     f6c:	0f 90       	pop	r0
+     f6e:	52 c0       	rjmp	.+164    	; 0x1014 <ReflowSetupMenu+0x7c2>
+							}
+						}
+						else
+						{
+							if (reflowSetupScreen[47] == ']')//if soak temp is selected
+     f70:	80 91 80 02 	lds	r24, 0x0280	; 0x800280 <reflowSetupScreen+0x2f>
+     f74:	8d 35       	cpi	r24, 0x5D	; 93
+     f76:	09 f0       	breq	.+2      	; 0xf7a <ReflowSetupMenu+0x728>
+     f78:	4d c0       	rjmp	.+154    	; 0x1014 <ReflowSetupMenu+0x7c2>
+							{
+								if(soakTmp == 200)//if soak temp = 200
+     f7a:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <soakTmp>
+     f7e:	90 91 0f 01 	lds	r25, 0x010F	; 0x80010f <soakTmp+0x1>
+     f82:	88 3c       	cpi	r24, 0xC8	; 200
+     f84:	91 05       	cpc	r25, r1
+     f86:	21 f5       	brne	.+72     	; 0xfd0 <ReflowSetupMenu+0x77e>
+								{
+									soakTmp = 100;// reset soak temp to 100
+     f88:	84 e6       	ldi	r24, 0x64	; 100
+     f8a:	90 e0       	ldi	r25, 0x00	; 0
+     f8c:	90 93 0f 01 	sts	0x010F, r25	; 0x80010f <soakTmp+0x1>
+     f90:	80 93 0e 01 	sts	0x010E, r24	; 0x80010e <soakTmp>
+									sprintf(intBuffer, "%d", soakTmp);//stringify
+     f94:	1f 92       	push	r1
+     f96:	8f 93       	push	r24
+     f98:	8e ee       	ldi	r24, 0xEE	; 238
+     f9a:	93 e0       	ldi	r25, 0x03	; 3
+     f9c:	9f 93       	push	r25
+     f9e:	8f 93       	push	r24
+     fa0:	cb ef       	ldi	r28, 0xFB	; 251
+     fa2:	d3 e0       	ldi	r29, 0x03	; 3
+     fa4:	df 93       	push	r29
+     fa6:	cf 93       	push	r28
+     fa8:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+									//replace old value with new one
+									reflowSetupScreen[44] = intBuffer[0];
+     fac:	e1 e5       	ldi	r30, 0x51	; 81
+     fae:	f2 e0       	ldi	r31, 0x02	; 2
+     fb0:	88 81       	ld	r24, Y
+     fb2:	84 a7       	std	Z+44, r24	; 0x2c
+									reflowSetupScreen[45] = intBuffer[1];
+     fb4:	89 81       	ldd	r24, Y+1	; 0x01
+     fb6:	85 a7       	std	Z+45, r24	; 0x2d
+									reflowSetupScreen[46] = intBuffer[2];
+     fb8:	8a 81       	ldd	r24, Y+2	; 0x02
+     fba:	86 a7       	std	Z+46, r24	; 0x2e
+									DrawMenu(REFLOW_SETUP);//redraw reflow setup menu
+     fbc:	86 e3       	ldi	r24, 0x36	; 54
+     fbe:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+     fc2:	0f 90       	pop	r0
+     fc4:	0f 90       	pop	r0
+     fc6:	0f 90       	pop	r0
+     fc8:	0f 90       	pop	r0
+     fca:	0f 90       	pop	r0
+     fcc:	0f 90       	pop	r0
+     fce:	22 c0       	rjmp	.+68     	; 0x1014 <ReflowSetupMenu+0x7c2>
+								}
+								else
+								{
+									soakTmp++;//increment soak temp
+     fd0:	01 96       	adiw	r24, 0x01	; 1
+     fd2:	90 93 0f 01 	sts	0x010F, r25	; 0x80010f <soakTmp+0x1>
+     fd6:	80 93 0e 01 	sts	0x010E, r24	; 0x80010e <soakTmp>
+									sprintf(intBuffer, "%d", soakTmp);//stringify
+     fda:	9f 93       	push	r25
+     fdc:	8f 93       	push	r24
+     fde:	8e ee       	ldi	r24, 0xEE	; 238
+     fe0:	93 e0       	ldi	r25, 0x03	; 3
+     fe2:	9f 93       	push	r25
+     fe4:	8f 93       	push	r24
+     fe6:	cb ef       	ldi	r28, 0xFB	; 251
+     fe8:	d3 e0       	ldi	r29, 0x03	; 3
+     fea:	df 93       	push	r29
+     fec:	cf 93       	push	r28
+     fee:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+									//replace old value with new one
+									reflowSetupScreen[44] = intBuffer[0];
+     ff2:	e1 e5       	ldi	r30, 0x51	; 81
+     ff4:	f2 e0       	ldi	r31, 0x02	; 2
+     ff6:	88 81       	ld	r24, Y
+     ff8:	84 a7       	std	Z+44, r24	; 0x2c
+									reflowSetupScreen[45] = intBuffer[1];
+     ffa:	89 81       	ldd	r24, Y+1	; 0x01
+     ffc:	85 a7       	std	Z+45, r24	; 0x2d
+									reflowSetupScreen[46] = intBuffer[2];
+     ffe:	8a 81       	ldd	r24, Y+2	; 0x02
+    1000:	86 a7       	std	Z+46, r24	; 0x2e
+									DrawMenu(REFLOW_SETUP);//redraw reflow setup menu
+    1002:	86 e3       	ldi	r24, 0x36	; 54
+    1004:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+    1008:	0f 90       	pop	r0
+    100a:	0f 90       	pop	r0
+    100c:	0f 90       	pop	r0
+    100e:	0f 90       	pop	r0
+    1010:	0f 90       	pop	r0
+    1012:	0f 90       	pop	r0
+			}
+			break;
+		}
+		break;
+	}
+}
+    1014:	df 91       	pop	r29
+    1016:	cf 91       	pop	r28
+    1018:	08 95       	ret
+
+0000101a <ReflowDwellMenu>:
+Description:  This function determine what action should be taken when on ReflowDwellMenu
+Accepts: char
+returns: nothing
+***********************************************************************************/
+void ReflowDwellMenu(char action)
+{
+    101a:	cf 93       	push	r28
+    101c:	df 93       	push	r29
+	switch(edit) //check for edit mode
+    101e:	90 91 10 01 	lds	r25, 0x0110	; 0x800110 <edit>
+    1022:	90 33       	cpi	r25, 0x30	; 48
+    1024:	21 f0       	breq	.+8      	; 0x102e <ReflowDwellMenu+0x14>
+    1026:	91 33       	cpi	r25, 0x31	; 49
+    1028:	09 f4       	brne	.+2      	; 0x102c <ReflowDwellMenu+0x12>
+    102a:	9d c0       	rjmp	.+314    	; 0x1166 <ReflowDwellMenu+0x14c>
+    102c:	6f c1       	rjmp	.+734    	; 0x130c <ReflowDwellMenu+0x2f2>
+	{
+		case '0': //if not in edit mode
+		switch(action) //check input action
+    102e:	8c 34       	cpi	r24, 0x4C	; 76
+    1030:	d1 f0       	breq	.+52     	; 0x1066 <ReflowDwellMenu+0x4c>
+    1032:	82 35       	cpi	r24, 0x52	; 82
+    1034:	09 f4       	brne	.+2      	; 0x1038 <ReflowDwellMenu+0x1e>
+    1036:	57 c0       	rjmp	.+174    	; 0x10e6 <ReflowDwellMenu+0xcc>
+    1038:	81 34       	cpi	r24, 0x41	; 65
+    103a:	09 f0       	breq	.+2      	; 0x103e <ReflowDwellMenu+0x24>
+    103c:	67 c1       	rjmp	.+718    	; 0x130c <ReflowDwellMenu+0x2f2>
+		{
+			case 'A': //if rotary encoder button is pressed
+			if(reflowDwellScreen[77] == ']') //if start is selected
+    103e:	80 91 4e 02 	lds	r24, 0x024E	; 0x80024e <reflowDwellScreen+0x4d>
+    1042:	8d 35       	cpi	r24, 0x5D	; 93
+    1044:	21 f4       	brne	.+8      	; 0x104e <ReflowDwellMenu+0x34>
+			{
+				DrawMenu(REFLOW_STATUS);
+    1046:	85 e3       	ldi	r24, 0x35	; 53
+    1048:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+    104c:	5f c1       	rjmp	.+702    	; 0x130c <ReflowDwellMenu+0x2f2>
+				//todo write function to start reflow process.
+			}
+			else
+			{
+				if(reflowDwellScreen[67] == ']') //if back is selected
+    104e:	80 91 44 02 	lds	r24, 0x0244	; 0x800244 <reflowDwellScreen+0x43>
+    1052:	8d 35       	cpi	r24, 0x5D	; 93
+    1054:	21 f4       	brne	.+8      	; 0x105e <ReflowDwellMenu+0x44>
+				{
+					DrawMenu(REFLOW_SETUP); //move to reflow setup menu
+    1056:	86 e3       	ldi	r24, 0x36	; 54
+    1058:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+    105c:	57 c1       	rjmp	.+686    	; 0x130c <ReflowDwellMenu+0x2f2>
+				}
+				else
+				{
+					edit = '1'; //enter edit mode
+    105e:	81 e3       	ldi	r24, 0x31	; 49
+    1060:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <edit>
+    1064:	53 c1       	rjmp	.+678    	; 0x130c <ReflowDwellMenu+0x2f2>
+				}
+			}
+			break;
+			
+			case 'L': //if rotary encoder is rotated left (CCW)
+			if(reflowDwellScreen[77] == ']') //if start is selected change selection to back
+    1066:	80 91 4e 02 	lds	r24, 0x024E	; 0x80024e <reflowDwellScreen+0x4d>
+    106a:	8d 35       	cpi	r24, 0x5D	; 93
+    106c:	61 f4       	brne	.+24     	; 0x1086 <ReflowDwellMenu+0x6c>
+			{
+				reflowDwellScreen[77] = ' ';
+    106e:	80 e2       	ldi	r24, 0x20	; 32
+    1070:	80 93 4e 02 	sts	0x024E, r24	; 0x80024e <reflowDwellScreen+0x4d>
+				reflowDwellScreen[71] = ' ';
+    1074:	80 93 48 02 	sts	0x0248, r24	; 0x800248 <reflowDwellScreen+0x47>
+				reflowDwellScreen[67] = ']';
+    1078:	8d e5       	ldi	r24, 0x5D	; 93
+    107a:	80 93 44 02 	sts	0x0244, r24	; 0x800244 <reflowDwellScreen+0x43>
+				reflowDwellScreen[62] = '[';
+    107e:	8b e5       	ldi	r24, 0x5B	; 91
+    1080:	80 93 3f 02 	sts	0x023F, r24	; 0x80023f <reflowDwellScreen+0x3e>
+    1084:	2c c0       	rjmp	.+88     	; 0x10de <ReflowDwellMenu+0xc4>
+			}
+			else
+			{
+				if(reflowDwellScreen[67] == ']') //if back is selected change selection to reflow dwell time
+    1086:	80 91 44 02 	lds	r24, 0x0244	; 0x800244 <reflowDwellScreen+0x43>
+    108a:	8d 35       	cpi	r24, 0x5D	; 93
+    108c:	59 f4       	brne	.+22     	; 0x10a4 <ReflowDwellMenu+0x8a>
+				{
+					reflowDwellScreen[67] = ' ';
+    108e:	e1 e0       	ldi	r30, 0x01	; 1
+    1090:	f2 e0       	ldi	r31, 0x02	; 2
+    1092:	80 e2       	ldi	r24, 0x20	; 32
+    1094:	80 93 44 02 	sts	0x0244, r24	; 0x800244 <reflowDwellScreen+0x43>
+					reflowDwellScreen[62] = ' ';
+    1098:	86 af       	std	Z+62, r24	; 0x3e
+					reflowDwellScreen[36] = ']';
+    109a:	8d e5       	ldi	r24, 0x5D	; 93
+    109c:	84 a3       	std	Z+36, r24	; 0x24
+					reflowDwellScreen[31] = '[';
+    109e:	8b e5       	ldi	r24, 0x5B	; 91
+    10a0:	87 8f       	std	Z+31, r24	; 0x1f
+    10a2:	1d c0       	rjmp	.+58     	; 0x10de <ReflowDwellMenu+0xc4>
+				}
+				else
+				{
+					if(reflowDwellScreen[36] == ']') //if reflow dwell time is selected change selection to soak dwell time
+    10a4:	80 91 25 02 	lds	r24, 0x0225	; 0x800225 <reflowDwellScreen+0x24>
+    10a8:	8d 35       	cpi	r24, 0x5D	; 93
+    10aa:	51 f4       	brne	.+20     	; 0x10c0 <ReflowDwellMenu+0xa6>
+					{
+						reflowDwellScreen[36] = ' ';
+    10ac:	e1 e0       	ldi	r30, 0x01	; 1
+    10ae:	f2 e0       	ldi	r31, 0x02	; 2
+    10b0:	80 e2       	ldi	r24, 0x20	; 32
+    10b2:	84 a3       	std	Z+36, r24	; 0x24
+						reflowDwellScreen[31] = ' ';
+    10b4:	87 8f       	std	Z+31, r24	; 0x1f
+						reflowDwellScreen[27] = ']';
+    10b6:	8d e5       	ldi	r24, 0x5D	; 93
+    10b8:	83 8f       	std	Z+27, r24	; 0x1b
+						reflowDwellScreen[22] = '[';
+    10ba:	8b e5       	ldi	r24, 0x5B	; 91
+    10bc:	86 8b       	std	Z+22, r24	; 0x16
+    10be:	0f c0       	rjmp	.+30     	; 0x10de <ReflowDwellMenu+0xc4>
+					}
+					else
+					{
+						if(reflowDwellScreen[27] == ']') //if soak dwell time is selected change selection to start
+    10c0:	80 91 1c 02 	lds	r24, 0x021C	; 0x80021c <reflowDwellScreen+0x1b>
+    10c4:	8d 35       	cpi	r24, 0x5D	; 93
+    10c6:	59 f4       	brne	.+22     	; 0x10de <ReflowDwellMenu+0xc4>
+						{
+							reflowDwellScreen[27] = ' ';
+    10c8:	e1 e0       	ldi	r30, 0x01	; 1
+    10ca:	f2 e0       	ldi	r31, 0x02	; 2
+    10cc:	80 e2       	ldi	r24, 0x20	; 32
+    10ce:	83 8f       	std	Z+27, r24	; 0x1b
+							reflowDwellScreen[22] = ' ';
+    10d0:	86 8b       	std	Z+22, r24	; 0x16
+							reflowDwellScreen[77] = ']';
+    10d2:	8d e5       	ldi	r24, 0x5D	; 93
+    10d4:	80 93 4e 02 	sts	0x024E, r24	; 0x80024e <reflowDwellScreen+0x4d>
+							reflowDwellScreen[71] = '[';
+    10d8:	8b e5       	ldi	r24, 0x5B	; 91
+    10da:	80 93 48 02 	sts	0x0248, r24	; 0x800248 <reflowDwellScreen+0x47>
+						}
+					}
+				}
+			}
+			DrawMenu(REFLOW_DWELL);//redraw reflow dwell menu
+    10de:	87 e3       	ldi	r24, 0x37	; 55
+    10e0:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+			break;
+    10e4:	13 c1       	rjmp	.+550    	; 0x130c <ReflowDwellMenu+0x2f2>
+			
+			case 'R': //if rotary encoder is rotated right (CW)
+			if(reflowDwellScreen[67] == ']')//if back is selected change selection to start
+    10e6:	80 91 44 02 	lds	r24, 0x0244	; 0x800244 <reflowDwellScreen+0x43>
+    10ea:	8d 35       	cpi	r24, 0x5D	; 93
+    10ec:	61 f4       	brne	.+24     	; 0x1106 <ReflowDwellMenu+0xec>
+			{
+				reflowDwellScreen[67] = ' ';
+    10ee:	80 e2       	ldi	r24, 0x20	; 32
+    10f0:	80 93 44 02 	sts	0x0244, r24	; 0x800244 <reflowDwellScreen+0x43>
+				reflowDwellScreen[62] = ' ';
+    10f4:	80 93 3f 02 	sts	0x023F, r24	; 0x80023f <reflowDwellScreen+0x3e>
+				reflowDwellScreen[77] = ']';
+    10f8:	8d e5       	ldi	r24, 0x5D	; 93
+    10fa:	80 93 4e 02 	sts	0x024E, r24	; 0x80024e <reflowDwellScreen+0x4d>
+				reflowDwellScreen[71] = '[';
+    10fe:	8b e5       	ldi	r24, 0x5B	; 91
+    1100:	80 93 48 02 	sts	0x0248, r24	; 0x800248 <reflowDwellScreen+0x47>
+    1104:	2c c0       	rjmp	.+88     	; 0x115e <ReflowDwellMenu+0x144>
+			}
+			else
+			{
+				if(reflowDwellScreen[36] == ']')//if reflow dwell time is selected change selection to back
+    1106:	80 91 25 02 	lds	r24, 0x0225	; 0x800225 <reflowDwellScreen+0x24>
+    110a:	8d 35       	cpi	r24, 0x5D	; 93
+    110c:	59 f4       	brne	.+22     	; 0x1124 <ReflowDwellMenu+0x10a>
+				{
+					reflowDwellScreen[36] = ' ';
+    110e:	e1 e0       	ldi	r30, 0x01	; 1
+    1110:	f2 e0       	ldi	r31, 0x02	; 2
+    1112:	80 e2       	ldi	r24, 0x20	; 32
+    1114:	84 a3       	std	Z+36, r24	; 0x24
+					reflowDwellScreen[31] = ' ';
+    1116:	87 8f       	std	Z+31, r24	; 0x1f
+					reflowDwellScreen[67] = ']';
+    1118:	8d e5       	ldi	r24, 0x5D	; 93
+    111a:	80 93 44 02 	sts	0x0244, r24	; 0x800244 <reflowDwellScreen+0x43>
+					reflowDwellScreen[62] = '[';
+    111e:	8b e5       	ldi	r24, 0x5B	; 91
+    1120:	86 af       	std	Z+62, r24	; 0x3e
+    1122:	1d c0       	rjmp	.+58     	; 0x115e <ReflowDwellMenu+0x144>
+				}
+				else
+				{
+					if(reflowDwellScreen[27] == ']')//if soak dwell time is selected change selection to reflow dwell time
+    1124:	80 91 1c 02 	lds	r24, 0x021C	; 0x80021c <reflowDwellScreen+0x1b>
+    1128:	8d 35       	cpi	r24, 0x5D	; 93
+    112a:	51 f4       	brne	.+20     	; 0x1140 <ReflowDwellMenu+0x126>
+					{
+						reflowDwellScreen[27] = ' ';
+    112c:	e1 e0       	ldi	r30, 0x01	; 1
+    112e:	f2 e0       	ldi	r31, 0x02	; 2
+    1130:	80 e2       	ldi	r24, 0x20	; 32
+    1132:	83 8f       	std	Z+27, r24	; 0x1b
+						reflowDwellScreen[22] = ' ';
+    1134:	86 8b       	std	Z+22, r24	; 0x16
+						reflowDwellScreen[36] = ']';
+    1136:	8d e5       	ldi	r24, 0x5D	; 93
+    1138:	84 a3       	std	Z+36, r24	; 0x24
+						reflowDwellScreen[31] = '[';
+    113a:	8b e5       	ldi	r24, 0x5B	; 91
+    113c:	87 8f       	std	Z+31, r24	; 0x1f
+    113e:	0f c0       	rjmp	.+30     	; 0x115e <ReflowDwellMenu+0x144>
+					}
+					else
+					{
+						if(reflowDwellScreen[77] == ']') //if start is selected change selection to soak dwell time
+    1140:	80 91 4e 02 	lds	r24, 0x024E	; 0x80024e <reflowDwellScreen+0x4d>
+    1144:	8d 35       	cpi	r24, 0x5D	; 93
+    1146:	59 f4       	brne	.+22     	; 0x115e <ReflowDwellMenu+0x144>
+						{
+							reflowDwellScreen[77] = ' ';
+    1148:	e1 e0       	ldi	r30, 0x01	; 1
+    114a:	f2 e0       	ldi	r31, 0x02	; 2
+    114c:	80 e2       	ldi	r24, 0x20	; 32
+    114e:	80 93 4e 02 	sts	0x024E, r24	; 0x80024e <reflowDwellScreen+0x4d>
+							reflowDwellScreen[71] = ' ';
+    1152:	80 93 48 02 	sts	0x0248, r24	; 0x800248 <reflowDwellScreen+0x47>
+							reflowDwellScreen[27] = ']';
+    1156:	8d e5       	ldi	r24, 0x5D	; 93
+    1158:	83 8f       	std	Z+27, r24	; 0x1b
+							reflowDwellScreen[22] = '[';
+    115a:	8b e5       	ldi	r24, 0x5B	; 91
+    115c:	86 8b       	std	Z+22, r24	; 0x16
+						}
+					}
+				}
+			}
+			DrawMenu(REFLOW_DWELL);//redrawe reflow dwell menu
+    115e:	87 e3       	ldi	r24, 0x37	; 55
+    1160:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+			break;
+    1164:	d3 c0       	rjmp	.+422    	; 0x130c <ReflowDwellMenu+0x2f2>
+		}
+		break;
+		
+		case '1': //if in edit mode
+		switch(action)
+    1166:	8c 34       	cpi	r24, 0x4C	; 76
+    1168:	51 f0       	breq	.+20     	; 0x117e <ReflowDwellMenu+0x164>
+    116a:	82 35       	cpi	r24, 0x52	; 82
+    116c:	09 f4       	brne	.+2      	; 0x1170 <ReflowDwellMenu+0x156>
+    116e:	6c c0       	rjmp	.+216    	; 0x1248 <ReflowDwellMenu+0x22e>
+    1170:	81 34       	cpi	r24, 0x41	; 65
+    1172:	09 f0       	breq	.+2      	; 0x1176 <ReflowDwellMenu+0x15c>
+    1174:	c8 c0       	rjmp	.+400    	; 0x1306 <ReflowDwellMenu+0x2ec>
+		{
+			case 'A': //if rotary encoder button is pressed
+			edit = '0'; //exit edit mode
+    1176:	80 e3       	ldi	r24, 0x30	; 48
+    1178:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <edit>
+			break;
+    117c:	c4 c0       	rjmp	.+392    	; 0x1306 <ReflowDwellMenu+0x2ec>
+			
+			case 'L'://if rotary encoder is rotated left (CCW)
+			if(reflowDwellScreen[36] == ']')//if reflow dwell time is selected
+    117e:	80 91 25 02 	lds	r24, 0x0225	; 0x800225 <reflowDwellScreen+0x24>
+    1182:	8d 35       	cpi	r24, 0x5D	; 93
+    1184:	69 f5       	brne	.+90     	; 0x11e0 <ReflowDwellMenu+0x1c6>
+			{
+				if(reflowDwell == 0)//if reflow dwell = 0
+    1186:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <reflowDwell>
+    118a:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <reflowDwell+0x1>
+    118e:	00 97       	sbiw	r24, 0x00	; 0
+    1190:	39 f4       	brne	.+14     	; 0x11a0 <ReflowDwellMenu+0x186>
+				{
+					reflowDwell = 200;//reset reflow dwell to 200
+    1192:	88 ec       	ldi	r24, 0xC8	; 200
+    1194:	90 e0       	ldi	r25, 0x00	; 0
+    1196:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <reflowDwell+0x1>
+    119a:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <reflowDwell>
+    119e:	50 c0       	rjmp	.+160    	; 0x1240 <ReflowDwellMenu+0x226>
+				}
+				else
+				{
+					reflowDwell--;//decrement reflow dwell
+    11a0:	01 97       	sbiw	r24, 0x01	; 1
+    11a2:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <reflowDwell+0x1>
+    11a6:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <reflowDwell>
+					sprintf(intBuffer, "%d", reflowDwell);//stringify
+    11aa:	9f 93       	push	r25
+    11ac:	8f 93       	push	r24
+    11ae:	8e ee       	ldi	r24, 0xEE	; 238
+    11b0:	93 e0       	ldi	r25, 0x03	; 3
+    11b2:	9f 93       	push	r25
+    11b4:	8f 93       	push	r24
+    11b6:	cb ef       	ldi	r28, 0xFB	; 251
+    11b8:	d3 e0       	ldi	r29, 0x03	; 3
+    11ba:	df 93       	push	r29
+    11bc:	cf 93       	push	r28
+    11be:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+					//replace old value with new one
+					reflowDwellScreen[32] = intBuffer[0];
+    11c2:	e1 e0       	ldi	r30, 0x01	; 1
+    11c4:	f2 e0       	ldi	r31, 0x02	; 2
+    11c6:	88 81       	ld	r24, Y
+    11c8:	80 a3       	std	Z+32, r24	; 0x20
+					reflowDwellScreen[33] = intBuffer[1];
+    11ca:	89 81       	ldd	r24, Y+1	; 0x01
+    11cc:	81 a3       	std	Z+33, r24	; 0x21
+					reflowDwellScreen[34] = intBuffer[2];
+    11ce:	8a 81       	ldd	r24, Y+2	; 0x02
+    11d0:	82 a3       	std	Z+34, r24	; 0x22
+    11d2:	0f 90       	pop	r0
+    11d4:	0f 90       	pop	r0
+    11d6:	0f 90       	pop	r0
+    11d8:	0f 90       	pop	r0
+    11da:	0f 90       	pop	r0
+    11dc:	0f 90       	pop	r0
+    11de:	30 c0       	rjmp	.+96     	; 0x1240 <ReflowDwellMenu+0x226>
+				}
+			}
+			else
+			{
+				if(reflowDwellScreen[27] == ']')//if soak dwell is selected
+    11e0:	80 91 1c 02 	lds	r24, 0x021C	; 0x80021c <reflowDwellScreen+0x1b>
+    11e4:	8d 35       	cpi	r24, 0x5D	; 93
+    11e6:	61 f5       	brne	.+88     	; 0x1240 <ReflowDwellMenu+0x226>
+				{
+					if(soakDwell == 0) //if soak dwell = 0
+    11e8:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <soakDwell>
+    11ec:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <soakDwell+0x1>
+    11f0:	00 97       	sbiw	r24, 0x00	; 0
+    11f2:	39 f4       	brne	.+14     	; 0x1202 <ReflowDwellMenu+0x1e8>
+					{
+						soakDwell = 200;//reset soak dwell to 200
+    11f4:	88 ec       	ldi	r24, 0xC8	; 200
+    11f6:	90 e0       	ldi	r25, 0x00	; 0
+    11f8:	90 93 05 01 	sts	0x0105, r25	; 0x800105 <soakDwell+0x1>
+    11fc:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <soakDwell>
+    1200:	1f c0       	rjmp	.+62     	; 0x1240 <ReflowDwellMenu+0x226>
+					}
+					else
+					{
+						soakDwell--; //decrement soak dwell
+    1202:	01 97       	sbiw	r24, 0x01	; 1
+    1204:	90 93 05 01 	sts	0x0105, r25	; 0x800105 <soakDwell+0x1>
+    1208:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <soakDwell>
+						sprintf(intBuffer, "%d", soakDwell);//stringify
+    120c:	9f 93       	push	r25
+    120e:	8f 93       	push	r24
+    1210:	8e ee       	ldi	r24, 0xEE	; 238
+    1212:	93 e0       	ldi	r25, 0x03	; 3
+    1214:	9f 93       	push	r25
+    1216:	8f 93       	push	r24
+    1218:	cb ef       	ldi	r28, 0xFB	; 251
+    121a:	d3 e0       	ldi	r29, 0x03	; 3
+    121c:	df 93       	push	r29
+    121e:	cf 93       	push	r28
+    1220:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+						//replace old value with new one
+						reflowDwellScreen[23] = intBuffer[0];
+    1224:	e1 e0       	ldi	r30, 0x01	; 1
+    1226:	f2 e0       	ldi	r31, 0x02	; 2
+    1228:	88 81       	ld	r24, Y
+    122a:	87 8b       	std	Z+23, r24	; 0x17
+						reflowDwellScreen[24] = intBuffer[1];
+    122c:	89 81       	ldd	r24, Y+1	; 0x01
+    122e:	80 8f       	std	Z+24, r24	; 0x18
+						reflowDwellScreen[25] = intBuffer[2];
+    1230:	8a 81       	ldd	r24, Y+2	; 0x02
+    1232:	81 8f       	std	Z+25, r24	; 0x19
+    1234:	0f 90       	pop	r0
+    1236:	0f 90       	pop	r0
+    1238:	0f 90       	pop	r0
+    123a:	0f 90       	pop	r0
+    123c:	0f 90       	pop	r0
+    123e:	0f 90       	pop	r0
+					}
+				}
+			}
+			DrawMenu(REFLOW_DWELL);//redraw reflow dwell menu
+    1240:	87 e3       	ldi	r24, 0x37	; 55
+    1242:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+			break;
+    1246:	5f c0       	rjmp	.+190    	; 0x1306 <ReflowDwellMenu+0x2ec>
+			
+			case 'R'://if rotary encoder is rotated right (CW)
+			if(reflowDwellScreen[36] == ']')//if reflow dwell is selected
+    1248:	80 91 25 02 	lds	r24, 0x0225	; 0x800225 <reflowDwellScreen+0x24>
+    124c:	8d 35       	cpi	r24, 0x5D	; 93
+    124e:	61 f5       	brne	.+88     	; 0x12a8 <ReflowDwellMenu+0x28e>
+			{
+				if(reflowDwell == 200)//if reflow dwell = 200
+    1250:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <reflowDwell>
+    1254:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <reflowDwell+0x1>
+    1258:	88 3c       	cpi	r24, 0xC8	; 200
+    125a:	91 05       	cpc	r25, r1
+    125c:	29 f4       	brne	.+10     	; 0x1268 <ReflowDwellMenu+0x24e>
+				{
+					reflowDwell = 0;//reset reflow dwell to 0
+    125e:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <reflowDwell+0x1>
+    1262:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <reflowDwell>
+    1266:	4f c0       	rjmp	.+158    	; 0x1306 <ReflowDwellMenu+0x2ec>
+				}
+				else
+				{
+					reflowDwell++;//increment reflow dwell
+    1268:	01 96       	adiw	r24, 0x01	; 1
+    126a:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <reflowDwell+0x1>
+    126e:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <reflowDwell>
+					sprintf(intBuffer, "%d", reflowDwell);//stringify
+    1272:	9f 93       	push	r25
+    1274:	8f 93       	push	r24
+    1276:	8e ee       	ldi	r24, 0xEE	; 238
+    1278:	93 e0       	ldi	r25, 0x03	; 3
+    127a:	9f 93       	push	r25
+    127c:	8f 93       	push	r24
+    127e:	cb ef       	ldi	r28, 0xFB	; 251
+    1280:	d3 e0       	ldi	r29, 0x03	; 3
+    1282:	df 93       	push	r29
+    1284:	cf 93       	push	r28
+    1286:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+					//replace old value with new one
+					reflowDwellScreen[32] = intBuffer[0];
+    128a:	e1 e0       	ldi	r30, 0x01	; 1
+    128c:	f2 e0       	ldi	r31, 0x02	; 2
+    128e:	88 81       	ld	r24, Y
+    1290:	80 a3       	std	Z+32, r24	; 0x20
+					reflowDwellScreen[33] = intBuffer[1];
+    1292:	89 81       	ldd	r24, Y+1	; 0x01
+    1294:	81 a3       	std	Z+33, r24	; 0x21
+					reflowDwellScreen[34] = intBuffer[2];
+    1296:	8a 81       	ldd	r24, Y+2	; 0x02
+    1298:	82 a3       	std	Z+34, r24	; 0x22
+    129a:	0f 90       	pop	r0
+    129c:	0f 90       	pop	r0
+    129e:	0f 90       	pop	r0
+    12a0:	0f 90       	pop	r0
+    12a2:	0f 90       	pop	r0
+    12a4:	0f 90       	pop	r0
+    12a6:	2f c0       	rjmp	.+94     	; 0x1306 <ReflowDwellMenu+0x2ec>
+				}
+				
+			}
+			else
+			{
+				if(reflowDwellScreen[27] == ']')//if soak dwell is selected
+    12a8:	80 91 1c 02 	lds	r24, 0x021C	; 0x80021c <reflowDwellScreen+0x1b>
+    12ac:	8d 35       	cpi	r24, 0x5D	; 93
+    12ae:	59 f5       	brne	.+86     	; 0x1306 <ReflowDwellMenu+0x2ec>
+				{
+					if(soakDwell == 200)//if soakDwell = 200
+    12b0:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <soakDwell>
+    12b4:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <soakDwell+0x1>
+    12b8:	88 3c       	cpi	r24, 0xC8	; 200
+    12ba:	91 05       	cpc	r25, r1
+    12bc:	29 f4       	brne	.+10     	; 0x12c8 <ReflowDwellMenu+0x2ae>
+					{
+						soakDwell = 0;//reset soakDwell to 0
+    12be:	10 92 05 01 	sts	0x0105, r1	; 0x800105 <soakDwell+0x1>
+    12c2:	10 92 04 01 	sts	0x0104, r1	; 0x800104 <soakDwell>
+    12c6:	1f c0       	rjmp	.+62     	; 0x1306 <ReflowDwellMenu+0x2ec>
+					}
+					else
+					{
+						soakDwell++;//increment soak dwell
+    12c8:	01 96       	adiw	r24, 0x01	; 1
+    12ca:	90 93 05 01 	sts	0x0105, r25	; 0x800105 <soakDwell+0x1>
+    12ce:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <soakDwell>
+						sprintf(intBuffer, "%d", soakDwell);//stringify
+    12d2:	9f 93       	push	r25
+    12d4:	8f 93       	push	r24
+    12d6:	8e ee       	ldi	r24, 0xEE	; 238
+    12d8:	93 e0       	ldi	r25, 0x03	; 3
+    12da:	9f 93       	push	r25
+    12dc:	8f 93       	push	r24
+    12de:	cb ef       	ldi	r28, 0xFB	; 251
+    12e0:	d3 e0       	ldi	r29, 0x03	; 3
+    12e2:	df 93       	push	r29
+    12e4:	cf 93       	push	r28
+    12e6:	0e 94 e6 0a 	call	0x15cc	; 0x15cc <sprintf>
+						//replace old value with new one
+						reflowDwellScreen[23] = intBuffer[0];
+    12ea:	e1 e0       	ldi	r30, 0x01	; 1
+    12ec:	f2 e0       	ldi	r31, 0x02	; 2
+    12ee:	88 81       	ld	r24, Y
+    12f0:	87 8b       	std	Z+23, r24	; 0x17
+						reflowDwellScreen[24] = intBuffer[1];
+    12f2:	89 81       	ldd	r24, Y+1	; 0x01
+    12f4:	80 8f       	std	Z+24, r24	; 0x18
+						reflowDwellScreen[25] = intBuffer[2];	
+    12f6:	8a 81       	ldd	r24, Y+2	; 0x02
+    12f8:	81 8f       	std	Z+25, r24	; 0x19
+    12fa:	0f 90       	pop	r0
+    12fc:	0f 90       	pop	r0
+    12fe:	0f 90       	pop	r0
+    1300:	0f 90       	pop	r0
+    1302:	0f 90       	pop	r0
+    1304:	0f 90       	pop	r0
+					}
+				}
+			}
+			break;
+		}
+		DrawMenu(REFLOW_DWELL);//redraw reflow dwell screen
+    1306:	87 e3       	ldi	r24, 0x37	; 55
+    1308:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+		break;
+	}
+}
+    130c:	df 91       	pop	r29
+    130e:	cf 91       	pop	r28
+    1310:	08 95       	ret
+
+00001312 <ReflowStatusMenu>:
+Accepts: char
+returns: nothing
+***********************************************************************************/
+void ReflowStatusMenu(char action)
+{
+	switch(action) //determine input action
+    1312:	81 34       	cpi	r24, 0x41	; 65
+    1314:	19 f4       	brne	.+6      	; 0x131c <ReflowStatusMenu+0xa>
+	{
+		case'A'://if rotary encoder button is pressed.
+		DrawMenu(HOME); //move to home menu
+    1316:	80 e3       	ldi	r24, 0x30	; 48
+    1318:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+    131c:	08 95       	ret
+
+0000131e <ReflowCalibrateMenu>:
+Accepts: char
+returns: nothing
+***********************************************************************************/
+void ReflowCalibrateMenu(char action)
+{
+	switch(action)
+    131e:	8c 34       	cpi	r24, 0x4C	; 76
+    1320:	b1 f0       	breq	.+44     	; 0x134e <ReflowCalibrateMenu+0x30>
+    1322:	82 35       	cpi	r24, 0x52	; 82
+    1324:	b9 f1       	breq	.+110    	; 0x1394 <ReflowCalibrateMenu+0x76>
+    1326:	81 34       	cpi	r24, 0x41	; 65
+    1328:	09 f0       	breq	.+2      	; 0x132c <ReflowCalibrateMenu+0xe>
+    132a:	56 c0       	rjmp	.+172    	; 0x13d8 <ReflowCalibrateMenu+0xba>
+	{
+		case 'A':
+		if(calibrateScreen[78] == ']')
+    132c:	80 91 ff 01 	lds	r24, 0x01FF	; 0x8001ff <calibrateScreen+0x4e>
+    1330:	8d 35       	cpi	r24, 0x5D	; 93
+    1332:	21 f4       	brne	.+8      	; 0x133c <ReflowCalibrateMenu+0x1e>
+		{
+			DrawMenu(CALIBRATE_PROBES);
+    1334:	89 e3       	ldi	r24, 0x39	; 57
+    1336:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+    133a:	08 95       	ret
+		}
+		else
+		{
+			if(calibrateScreen[67] == ']')
+    133c:	80 91 f4 01 	lds	r24, 0x01F4	; 0x8001f4 <calibrateScreen+0x43>
+    1340:	8d 35       	cpi	r24, 0x5D	; 93
+    1342:	09 f0       	breq	.+2      	; 0x1346 <ReflowCalibrateMenu+0x28>
+    1344:	49 c0       	rjmp	.+146    	; 0x13d8 <ReflowCalibrateMenu+0xba>
+			{
+				DrawMenu(CALIBRATE_REFLOW);
+    1346:	82 e4       	ldi	r24, 0x42	; 66
+    1348:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+    134c:	08 95       	ret
+			}
+		}
+		break;
+		
+		case 'L':
+		if(calibrateScreen[78] == ']')
+    134e:	80 91 ff 01 	lds	r24, 0x01FF	; 0x8001ff <calibrateScreen+0x4e>
+    1352:	8d 35       	cpi	r24, 0x5D	; 93
+    1354:	61 f4       	brne	.+24     	; 0x136e <ReflowCalibrateMenu+0x50>
+		{
+			calibrateScreen[78] = ' ';
+    1356:	80 e2       	ldi	r24, 0x20	; 32
+    1358:	80 93 ff 01 	sts	0x01FF, r24	; 0x8001ff <calibrateScreen+0x4e>
+			calibrateScreen[71] = ' ';
+    135c:	80 93 f8 01 	sts	0x01F8, r24	; 0x8001f8 <calibrateScreen+0x47>
+			calibrateScreen[67] = ']';
+    1360:	8d e5       	ldi	r24, 0x5D	; 93
+    1362:	80 93 f4 01 	sts	0x01F4, r24	; 0x8001f4 <calibrateScreen+0x43>
+			calibrateScreen[62] = '[';
+    1366:	8b e5       	ldi	r24, 0x5B	; 91
+    1368:	80 93 ef 01 	sts	0x01EF, r24	; 0x8001ef <calibrateScreen+0x3e>
+    136c:	0f c0       	rjmp	.+30     	; 0x138c <ReflowCalibrateMenu+0x6e>
+		}
+		else
+		{
+			if(calibrateScreen[67] == ']')
+    136e:	80 91 f4 01 	lds	r24, 0x01F4	; 0x8001f4 <calibrateScreen+0x43>
+    1372:	8d 35       	cpi	r24, 0x5D	; 93
+    1374:	59 f4       	brne	.+22     	; 0x138c <ReflowCalibrateMenu+0x6e>
+			{
+				calibrateScreen[67] = ' ';
+    1376:	80 e2       	ldi	r24, 0x20	; 32
+    1378:	80 93 f4 01 	sts	0x01F4, r24	; 0x8001f4 <calibrateScreen+0x43>
+				calibrateScreen[62] = ' ';
+    137c:	80 93 ef 01 	sts	0x01EF, r24	; 0x8001ef <calibrateScreen+0x3e>
+				calibrateScreen[78] = ']';
+    1380:	8d e5       	ldi	r24, 0x5D	; 93
+    1382:	80 93 ff 01 	sts	0x01FF, r24	; 0x8001ff <calibrateScreen+0x4e>
+				calibrateScreen[71] = '[';
+    1386:	8b e5       	ldi	r24, 0x5B	; 91
+    1388:	80 93 f8 01 	sts	0x01F8, r24	; 0x8001f8 <calibrateScreen+0x47>
+			}
+		}
+		DrawMenu(REFLOW_CALIBRATE);
+    138c:	88 e3       	ldi	r24, 0x38	; 56
+    138e:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+		break;
+    1392:	08 95       	ret
+		
+		case 'R':
+		if(calibrateScreen[78] == ']')
+    1394:	80 91 ff 01 	lds	r24, 0x01FF	; 0x8001ff <calibrateScreen+0x4e>
+    1398:	8d 35       	cpi	r24, 0x5D	; 93
+    139a:	61 f4       	brne	.+24     	; 0x13b4 <ReflowCalibrateMenu+0x96>
+		{
+			calibrateScreen[78] = ' ';
+    139c:	80 e2       	ldi	r24, 0x20	; 32
+    139e:	80 93 ff 01 	sts	0x01FF, r24	; 0x8001ff <calibrateScreen+0x4e>
+			calibrateScreen[71] = ' ';
+    13a2:	80 93 f8 01 	sts	0x01F8, r24	; 0x8001f8 <calibrateScreen+0x47>
+			calibrateScreen[67] = ']';
+    13a6:	8d e5       	ldi	r24, 0x5D	; 93
+    13a8:	80 93 f4 01 	sts	0x01F4, r24	; 0x8001f4 <calibrateScreen+0x43>
+			calibrateScreen[62] = '[';
+    13ac:	8b e5       	ldi	r24, 0x5B	; 91
+    13ae:	80 93 ef 01 	sts	0x01EF, r24	; 0x8001ef <calibrateScreen+0x3e>
+    13b2:	0f c0       	rjmp	.+30     	; 0x13d2 <ReflowCalibrateMenu+0xb4>
+		}
+		else
+		{
+			if(calibrateScreen[67] == ']')
+    13b4:	80 91 f4 01 	lds	r24, 0x01F4	; 0x8001f4 <calibrateScreen+0x43>
+    13b8:	8d 35       	cpi	r24, 0x5D	; 93
+    13ba:	59 f4       	brne	.+22     	; 0x13d2 <ReflowCalibrateMenu+0xb4>
+			{
+				calibrateScreen[67] = ' ';
+    13bc:	80 e2       	ldi	r24, 0x20	; 32
+    13be:	80 93 f4 01 	sts	0x01F4, r24	; 0x8001f4 <calibrateScreen+0x43>
+				calibrateScreen[62] = ' ';
+    13c2:	80 93 ef 01 	sts	0x01EF, r24	; 0x8001ef <calibrateScreen+0x3e>
+				calibrateScreen[78] = ']';
+    13c6:	8d e5       	ldi	r24, 0x5D	; 93
+    13c8:	80 93 ff 01 	sts	0x01FF, r24	; 0x8001ff <calibrateScreen+0x4e>
+				calibrateScreen[71] = '[';
+    13cc:	8b e5       	ldi	r24, 0x5B	; 91
+    13ce:	80 93 f8 01 	sts	0x01F8, r24	; 0x8001f8 <calibrateScreen+0x47>
+			}
+		}
+		DrawMenu(REFLOW_CALIBRATE);
+    13d2:	88 e3       	ldi	r24, 0x38	; 56
+    13d4:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+    13d8:	08 95       	ret
+
+000013da <CalibrateProbesMenu>:
+Accepts: char
+returns: nothing
+***********************************************************************************/
+void CalibrateProbesMenu(char action)
+{
+	switch(action)
+    13da:	8c 34       	cpi	r24, 0x4C	; 76
+    13dc:	09 f4       	brne	.+2      	; 0x13e0 <CalibrateProbesMenu+0x6>
+    13de:	6d c0       	rjmp	.+218    	; 0x14ba <CalibrateProbesMenu+0xe0>
+    13e0:	82 35       	cpi	r24, 0x52	; 82
+    13e2:	09 f4       	brne	.+2      	; 0x13e6 <CalibrateProbesMenu+0xc>
+    13e4:	8d c0       	rjmp	.+282    	; 0x1500 <CalibrateProbesMenu+0x126>
+    13e6:	81 34       	cpi	r24, 0x41	; 65
+    13e8:	09 f0       	breq	.+2      	; 0x13ec <CalibrateProbesMenu+0x12>
+    13ea:	ac c0       	rjmp	.+344    	; 0x1544 <CalibrateProbesMenu+0x16a>
+	{
+		case 'A':
+		if(calibrateProbeScreen[76] == ']')
+    13ec:	80 91 5d 01 	lds	r24, 0x015D	; 0x80015d <calibrateProbeScreen+0x4c>
+    13f0:	8d 35       	cpi	r24, 0x5D	; 93
+    13f2:	79 f5       	brne	.+94     	; 0x1452 <CalibrateProbesMenu+0x78>
+		{
+			switch(calibrateProbeScreen[52])
+    13f4:	80 91 45 01 	lds	r24, 0x0145	; 0x800145 <calibrateProbeScreen+0x34>
+    13f8:	83 33       	cpi	r24, 0x33	; 51
+    13fa:	c9 f0       	breq	.+50     	; 0x142e <CalibrateProbesMenu+0x54>
+    13fc:	28 f4       	brcc	.+10     	; 0x1408 <CalibrateProbesMenu+0x2e>
+    13fe:	81 33       	cpi	r24, 0x31	; 49
+    1400:	41 f0       	breq	.+16     	; 0x1412 <CalibrateProbesMenu+0x38>
+    1402:	82 33       	cpi	r24, 0x32	; 50
+    1404:	69 f0       	breq	.+26     	; 0x1420 <CalibrateProbesMenu+0x46>
+    1406:	08 95       	ret
+    1408:	84 33       	cpi	r24, 0x34	; 52
+    140a:	c1 f0       	breq	.+48     	; 0x143c <CalibrateProbesMenu+0x62>
+    140c:	85 33       	cpi	r24, 0x35	; 53
+    140e:	e9 f0       	breq	.+58     	; 0x144a <CalibrateProbesMenu+0x70>
+    1410:	08 95       	ret
+			{
+				case '1':
+				calibrateProbeScreen[52] = '2';
+    1412:	82 e3       	ldi	r24, 0x32	; 50
+    1414:	80 93 45 01 	sts	0x0145, r24	; 0x800145 <calibrateProbeScreen+0x34>
+				//todo assign adc value to probe 1 0C for algorithm use later.
+				DrawMenu(CALIBRATE_PROBES);
+    1418:	89 e3       	ldi	r24, 0x39	; 57
+    141a:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+				break;
+    141e:	08 95       	ret
+
+				case '2':
+				calibrateProbeScreen[52] = '3';
+    1420:	83 e3       	ldi	r24, 0x33	; 51
+    1422:	80 93 45 01 	sts	0x0145, r24	; 0x800145 <calibrateProbeScreen+0x34>
+				//todo assign adc value to probe 2 0C for algorithm use later.
+				DrawMenu(CALIBRATE_PROBES);
+    1426:	89 e3       	ldi	r24, 0x39	; 57
+    1428:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+				break;
+    142c:	08 95       	ret
+
+				case '3':
+				calibrateProbeScreen[52] = '4';
+    142e:	84 e3       	ldi	r24, 0x34	; 52
+    1430:	80 93 45 01 	sts	0x0145, r24	; 0x800145 <calibrateProbeScreen+0x34>
+				//todo assign adc value to probe 3 0C for algorithm use later.
+				DrawMenu(CALIBRATE_PROBES);
+    1434:	89 e3       	ldi	r24, 0x39	; 57
+    1436:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+				break;
+    143a:	08 95       	ret
+
+				case '4':
+				calibrateProbeScreen[52] = '5';
+    143c:	85 e3       	ldi	r24, 0x35	; 53
+    143e:	80 93 45 01 	sts	0x0145, r24	; 0x800145 <calibrateProbeScreen+0x34>
+				//todo assign adc value to probe 4 0C for algorithm use later.
+				DrawMenu(CALIBRATE_PROBES);
+    1442:	89 e3       	ldi	r24, 0x39	; 57
+    1444:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+				break;
+    1448:	08 95       	ret
+
+				case '5':
+				//todo assign adc value to probe 5 0C for algorithm use later
+				DrawMenu(REFLOW_SETUP);
+    144a:	86 e3       	ldi	r24, 0x36	; 54
+    144c:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+				break;
+    1450:	08 95       	ret
+			}
+		}
+		else
+		{
+			if(calibrateProbeScreen[67] == ']')
+    1452:	80 91 54 01 	lds	r24, 0x0154	; 0x800154 <calibrateProbeScreen+0x43>
+    1456:	8d 35       	cpi	r24, 0x5D	; 93
+    1458:	09 f0       	breq	.+2      	; 0x145c <CalibrateProbesMenu+0x82>
+    145a:	74 c0       	rjmp	.+232    	; 0x1544 <CalibrateProbesMenu+0x16a>
+			{
+				switch(calibrateProbeScreen[52])
+    145c:	80 91 45 01 	lds	r24, 0x0145	; 0x800145 <calibrateProbeScreen+0x34>
+    1460:	83 33       	cpi	r24, 0x33	; 51
+    1462:	c9 f0       	breq	.+50     	; 0x1496 <CalibrateProbesMenu+0xbc>
+    1464:	28 f4       	brcc	.+10     	; 0x1470 <CalibrateProbesMenu+0x96>
+    1466:	81 33       	cpi	r24, 0x31	; 49
+    1468:	21 f1       	breq	.+72     	; 0x14b2 <CalibrateProbesMenu+0xd8>
+    146a:	82 33       	cpi	r24, 0x32	; 50
+    146c:	d9 f0       	breq	.+54     	; 0x14a4 <CalibrateProbesMenu+0xca>
+    146e:	08 95       	ret
+    1470:	84 33       	cpi	r24, 0x34	; 52
+    1472:	51 f0       	breq	.+20     	; 0x1488 <CalibrateProbesMenu+0xae>
+    1474:	85 33       	cpi	r24, 0x35	; 53
+    1476:	09 f0       	breq	.+2      	; 0x147a <CalibrateProbesMenu+0xa0>
+    1478:	65 c0       	rjmp	.+202    	; 0x1544 <CalibrateProbesMenu+0x16a>
+				{
+					case '5':
+					calibrateProbeScreen[52] = '4';
+    147a:	84 e3       	ldi	r24, 0x34	; 52
+    147c:	80 93 45 01 	sts	0x0145, r24	; 0x800145 <calibrateProbeScreen+0x34>
+					DrawMenu(CALIBRATE_PROBES);
+    1480:	89 e3       	ldi	r24, 0x39	; 57
+    1482:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+					break;
+    1486:	08 95       	ret
+
+					case '4':
+					calibrateProbeScreen[52] = '3';
+    1488:	83 e3       	ldi	r24, 0x33	; 51
+    148a:	80 93 45 01 	sts	0x0145, r24	; 0x800145 <calibrateProbeScreen+0x34>
+					DrawMenu(CALIBRATE_PROBES);
+    148e:	89 e3       	ldi	r24, 0x39	; 57
+    1490:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+					break;
+    1494:	08 95       	ret
+
+					case '3':
+					calibrateProbeScreen[52] = '2';
+    1496:	82 e3       	ldi	r24, 0x32	; 50
+    1498:	80 93 45 01 	sts	0x0145, r24	; 0x800145 <calibrateProbeScreen+0x34>
+					DrawMenu(CALIBRATE_PROBES);
+    149c:	89 e3       	ldi	r24, 0x39	; 57
+    149e:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+					break;
+    14a2:	08 95       	ret
+
+					case '2':
+					calibrateProbeScreen[52] = '1';
+    14a4:	81 e3       	ldi	r24, 0x31	; 49
+    14a6:	80 93 45 01 	sts	0x0145, r24	; 0x800145 <calibrateProbeScreen+0x34>
+					DrawMenu(CALIBRATE_PROBES);
+    14aa:	89 e3       	ldi	r24, 0x39	; 57
+    14ac:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+					break;
+    14b0:	08 95       	ret
+
+					case '1':
+					DrawMenu(REFLOW_CALIBRATE);
+    14b2:	88 e3       	ldi	r24, 0x38	; 56
+    14b4:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+					break;
+    14b8:	08 95       	ret
+			}
+		}
+		break;
+		
+		case 'L':
+		if(calibrateProbeScreen[76] == ']')
+    14ba:	80 91 5d 01 	lds	r24, 0x015D	; 0x80015d <calibrateProbeScreen+0x4c>
+    14be:	8d 35       	cpi	r24, 0x5D	; 93
+    14c0:	61 f4       	brne	.+24     	; 0x14da <CalibrateProbesMenu+0x100>
+		{
+			calibrateProbeScreen[76] = ' ';
+    14c2:	80 e2       	ldi	r24, 0x20	; 32
+    14c4:	80 93 5d 01 	sts	0x015D, r24	; 0x80015d <calibrateProbeScreen+0x4c>
+			calibrateProbeScreen[71] = ' ';
+    14c8:	80 93 58 01 	sts	0x0158, r24	; 0x800158 <calibrateProbeScreen+0x47>
+			calibrateProbeScreen[67] = ']';
+    14cc:	8d e5       	ldi	r24, 0x5D	; 93
+    14ce:	80 93 54 01 	sts	0x0154, r24	; 0x800154 <calibrateProbeScreen+0x43>
+			calibrateProbeScreen[62] = '[';
+    14d2:	8b e5       	ldi	r24, 0x5B	; 91
+    14d4:	80 93 4f 01 	sts	0x014F, r24	; 0x80014f <calibrateProbeScreen+0x3e>
+    14d8:	0f c0       	rjmp	.+30     	; 0x14f8 <CalibrateProbesMenu+0x11e>
+		}
+		else
+		{
+			if(calibrateProbeScreen[67] == ']')
+    14da:	80 91 54 01 	lds	r24, 0x0154	; 0x800154 <calibrateProbeScreen+0x43>
+    14de:	8d 35       	cpi	r24, 0x5D	; 93
+    14e0:	59 f4       	brne	.+22     	; 0x14f8 <CalibrateProbesMenu+0x11e>
+			{
+				calibrateProbeScreen[67] = ' ';
+    14e2:	80 e2       	ldi	r24, 0x20	; 32
+    14e4:	80 93 54 01 	sts	0x0154, r24	; 0x800154 <calibrateProbeScreen+0x43>
+				calibrateProbeScreen[62] = ' ';
+    14e8:	80 93 4f 01 	sts	0x014F, r24	; 0x80014f <calibrateProbeScreen+0x3e>
+				calibrateProbeScreen[76] = ']';
+    14ec:	8d e5       	ldi	r24, 0x5D	; 93
+    14ee:	80 93 5d 01 	sts	0x015D, r24	; 0x80015d <calibrateProbeScreen+0x4c>
+				calibrateProbeScreen[71] = '[';
+    14f2:	8b e5       	ldi	r24, 0x5B	; 91
+    14f4:	80 93 58 01 	sts	0x0158, r24	; 0x800158 <calibrateProbeScreen+0x47>
+			}
+		}
+		DrawMenu(CALIBRATE_PROBES);
+    14f8:	89 e3       	ldi	r24, 0x39	; 57
+    14fa:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+		break;
+    14fe:	08 95       	ret
+		
+		case 'R':
+		if(calibrateProbeScreen[76] == ']')
+    1500:	80 91 5d 01 	lds	r24, 0x015D	; 0x80015d <calibrateProbeScreen+0x4c>
+    1504:	8d 35       	cpi	r24, 0x5D	; 93
+    1506:	61 f4       	brne	.+24     	; 0x1520 <CalibrateProbesMenu+0x146>
+		{
+			calibrateProbeScreen[76] = ' ';
+    1508:	80 e2       	ldi	r24, 0x20	; 32
+    150a:	80 93 5d 01 	sts	0x015D, r24	; 0x80015d <calibrateProbeScreen+0x4c>
+			calibrateProbeScreen[71] = ' ';
+    150e:	80 93 58 01 	sts	0x0158, r24	; 0x800158 <calibrateProbeScreen+0x47>
+			calibrateProbeScreen[67] = ']';
+    1512:	8d e5       	ldi	r24, 0x5D	; 93
+    1514:	80 93 54 01 	sts	0x0154, r24	; 0x800154 <calibrateProbeScreen+0x43>
+			calibrateProbeScreen[62] = '[';
+    1518:	8b e5       	ldi	r24, 0x5B	; 91
+    151a:	80 93 4f 01 	sts	0x014F, r24	; 0x80014f <calibrateProbeScreen+0x3e>
+    151e:	0f c0       	rjmp	.+30     	; 0x153e <CalibrateProbesMenu+0x164>
+		}
+		else
+		{
+			if(calibrateProbeScreen[67] == ']')
+    1520:	80 91 54 01 	lds	r24, 0x0154	; 0x800154 <calibrateProbeScreen+0x43>
+    1524:	8d 35       	cpi	r24, 0x5D	; 93
+    1526:	59 f4       	brne	.+22     	; 0x153e <CalibrateProbesMenu+0x164>
+			{
+				calibrateProbeScreen[67] = ' ';
+    1528:	80 e2       	ldi	r24, 0x20	; 32
+    152a:	80 93 54 01 	sts	0x0154, r24	; 0x800154 <calibrateProbeScreen+0x43>
+				calibrateProbeScreen[62] = ' ';
+    152e:	80 93 4f 01 	sts	0x014F, r24	; 0x80014f <calibrateProbeScreen+0x3e>
+				calibrateProbeScreen[76] = ']';
+    1532:	8d e5       	ldi	r24, 0x5D	; 93
+    1534:	80 93 5d 01 	sts	0x015D, r24	; 0x80015d <calibrateProbeScreen+0x4c>
+				calibrateProbeScreen[71] = '[';
+    1538:	8b e5       	ldi	r24, 0x5B	; 91
+    153a:	80 93 58 01 	sts	0x0158, r24	; 0x800158 <calibrateProbeScreen+0x47>
+			}
+		}
+		DrawMenu(CALIBRATE_PROBES);
+    153e:	89 e3       	ldi	r24, 0x39	; 57
+    1540:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+    1544:	08 95       	ret
+
+00001546 <CalibrateOvenMenu>:
+Description:  This function runs the oven learning page
+Accepts: char
+returns: nothing
+***********************************************************************************/
+void CalibrateOvenMenu(char action)
+{
+    1546:	08 95       	ret
+
+00001548 <LcdInit>:
+ }
+ 
+//initializes the LCD 
+void LcdInit()
+{
+	HomeCursor();
+    1548:	0e 94 2f 01 	call	0x25e	; 0x25e <HomeCursor>
+	SendMessage(LCD_MODULE, COMMAND, enableFourBitMode, sizeof(enableFourBitMode));
+    154c:	22 e0       	ldi	r18, 0x02	; 2
+    154e:	44 ee       	ldi	r20, 0xE4	; 228
+    1550:	53 e0       	ldi	r21, 0x03	; 3
+    1552:	60 e0       	ldi	r22, 0x00	; 0
+    1554:	8f e3       	ldi	r24, 0x3F	; 63
+    1556:	0e 94 52 01 	call	0x2a4	; 0x2a4 <SendMessage>
+	SendMessage(LCD_MODULE, COMMAND, initLCD, sizeof(initLCD));
+    155a:	23 e0       	ldi	r18, 0x03	; 3
+    155c:	41 ee       	ldi	r20, 0xE1	; 225
+    155e:	53 e0       	ldi	r21, 0x03	; 3
+    1560:	60 e0       	ldi	r22, 0x00	; 0
+    1562:	8f e3       	ldi	r24, 0x3F	; 63
+    1564:	0e 94 52 01 	call	0x2a4	; 0x2a4 <SendMessage>
+	DrawMenu(HOME);
+    1568:	80 e3       	ldi	r24, 0x30	; 48
+    156a:	0e 94 a7 01 	call	0x34e	; 0x34e <DrawMenu>
+	HomeCursor();
+    156e:	0e 94 2f 01 	call	0x25e	; 0x25e <HomeCursor>
+    1572:	08 95       	ret
+
+00001574 <TwiInit>:
+
+
+//initializes the Two Wire Interface (I2C)
+void TwiInit()
+{
+	TWCR = 0x04;  //Enables Two wire interface and enable interrupts
+    1574:	84 e0       	ldi	r24, 0x04	; 4
+    1576:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+	TWBR = 0x80;  //Division factor of TWo after prescale
+    157a:	80 e8       	ldi	r24, 0x80	; 128
+    157c:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <__TEXT_REGION_LENGTH__+0x7e00b8>
+	TWSR = 0x00; //prescaler
+    1580:	10 92 b9 00 	sts	0x00B9, r1	; 0x8000b9 <__TEXT_REGION_LENGTH__+0x7e00b9>
+    1584:	08 95       	ret
+
+00001586 <InterruptInit>:
+
+
+//Initializes interrupts
+void InterruptInit()
+{
+	PCICR = 0x01;  //Enable Pin Change interrupt from PCIE(0:1)
+    1586:	81 e0       	ldi	r24, 0x01	; 1
+    1588:	80 93 68 00 	sts	0x0068, r24	; 0x800068 <__TEXT_REGION_LENGTH__+0x7e0068>
+	PORTA |= 0x07;  //set pull-up resistors
+    158c:	82 b1       	in	r24, 0x02	; 2
+    158e:	87 60       	ori	r24, 0x07	; 7
+    1590:	82 b9       	out	0x02, r24	; 2
+	PCMSK0 = 0x07;  //Allow Pin(39:40) to trigger an interrupt on its vector
+    1592:	87 e0       	ldi	r24, 0x07	; 7
+    1594:	80 93 6b 00 	sts	0x006B, r24	; 0x80006b <__TEXT_REGION_LENGTH__+0x7e006b>
+    1598:	08 95       	ret
+
+0000159a <PortInit>:
+
+
+//Initializes Port-Pins
+void PortInit()
+{
+	DDRB |= 0x01;  //attached to LED for testing
+    159a:	20 9a       	sbi	0x04, 0	; 4
+    159c:	08 95       	ret
+
+0000159e <InitializeDevice>:
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+    159e:	8f e2       	ldi	r24, 0x2F	; 47
+    15a0:	95 e7       	ldi	r25, 0x75	; 117
+    15a2:	01 97       	sbiw	r24, 0x01	; 1
+    15a4:	f1 f7       	brne	.-4      	; 0x15a2 <InitializeDevice+0x4>
+    15a6:	00 c0       	rjmp	.+0      	; 0x15a8 <InitializeDevice+0xa>
+    15a8:	00 00       	nop
+
+//Startup routine
+ void InitializeDevice(void)
+ {
+	_delay_ms(15);  //wait for devices to power on
+	cli();  //disable global interrupts
+    15aa:	f8 94       	cli
+	PortInit(); //Setup Port-Pins
+    15ac:	0e 94 cd 0a 	call	0x159a	; 0x159a <PortInit>
+	TwiInit(); //Initialize the Two Wire Interface for I2C
+    15b0:	0e 94 ba 0a 	call	0x1574	; 0x1574 <TwiInit>
+	InterruptInit(); //setup interrupts
+    15b4:	0e 94 c3 0a 	call	0x1586	; 0x1586 <InterruptInit>
+	LcdInit(); 	//Initialize LCD
+    15b8:	0e 94 a4 0a 	call	0x1548	; 0x1548 <LcdInit>
+	sei(); //enable global interrupts
+    15bc:	78 94       	sei
+    15be:	08 95       	ret
+
+000015c0 <__tablejump2__>:
+    15c0:	ee 0f       	add	r30, r30
+    15c2:	ff 1f       	adc	r31, r31
+    15c4:	05 90       	lpm	r0, Z+
+    15c6:	f4 91       	lpm	r31, Z
+    15c8:	e0 2d       	mov	r30, r0
+    15ca:	09 94       	ijmp
+
+000015cc <sprintf>:
+    15cc:	ae e0       	ldi	r26, 0x0E	; 14
+    15ce:	b0 e0       	ldi	r27, 0x00	; 0
+    15d0:	ec ee       	ldi	r30, 0xEC	; 236
+    15d2:	fa e0       	ldi	r31, 0x0A	; 10
+    15d4:	0c 94 a7 0d 	jmp	0x1b4e	; 0x1b4e <__prologue_saves__+0x1c>
+    15d8:	0d 89       	ldd	r16, Y+21	; 0x15
+    15da:	1e 89       	ldd	r17, Y+22	; 0x16
+    15dc:	86 e0       	ldi	r24, 0x06	; 6
+    15de:	8c 83       	std	Y+4, r24	; 0x04
+    15e0:	1a 83       	std	Y+2, r17	; 0x02
+    15e2:	09 83       	std	Y+1, r16	; 0x01
+    15e4:	8f ef       	ldi	r24, 0xFF	; 255
+    15e6:	9f e7       	ldi	r25, 0x7F	; 127
+    15e8:	9e 83       	std	Y+6, r25	; 0x06
+    15ea:	8d 83       	std	Y+5, r24	; 0x05
+    15ec:	ae 01       	movw	r20, r28
+    15ee:	47 5e       	subi	r20, 0xE7	; 231
+    15f0:	5f 4f       	sbci	r21, 0xFF	; 255
+    15f2:	6f 89       	ldd	r22, Y+23	; 0x17
+    15f4:	78 8d       	ldd	r23, Y+24	; 0x18
+    15f6:	ce 01       	movw	r24, r28
+    15f8:	01 96       	adiw	r24, 0x01	; 1
+    15fa:	0e 94 08 0b 	call	0x1610	; 0x1610 <vfprintf>
+    15fe:	ef 81       	ldd	r30, Y+7	; 0x07
+    1600:	f8 85       	ldd	r31, Y+8	; 0x08
+    1602:	e0 0f       	add	r30, r16
+    1604:	f1 1f       	adc	r31, r17
+    1606:	10 82       	st	Z, r1
+    1608:	2e 96       	adiw	r28, 0x0e	; 14
+    160a:	e4 e0       	ldi	r30, 0x04	; 4
+    160c:	0c 94 c3 0d 	jmp	0x1b86	; 0x1b86 <__epilogue_restores__+0x1c>
+
+00001610 <vfprintf>:
+    1610:	ab e0       	ldi	r26, 0x0B	; 11
+    1612:	b0 e0       	ldi	r27, 0x00	; 0
+    1614:	ee e0       	ldi	r30, 0x0E	; 14
+    1616:	fb e0       	ldi	r31, 0x0B	; 11
+    1618:	0c 94 99 0d 	jmp	0x1b32	; 0x1b32 <__prologue_saves__>
+    161c:	6c 01       	movw	r12, r24
+    161e:	7b 01       	movw	r14, r22
+    1620:	8a 01       	movw	r16, r20
+    1622:	fc 01       	movw	r30, r24
+    1624:	17 82       	std	Z+7, r1	; 0x07
+    1626:	16 82       	std	Z+6, r1	; 0x06
+    1628:	83 81       	ldd	r24, Z+3	; 0x03
+    162a:	81 ff       	sbrs	r24, 1
+    162c:	cc c1       	rjmp	.+920    	; 0x19c6 <vfprintf+0x3b6>
+    162e:	ce 01       	movw	r24, r28
+    1630:	01 96       	adiw	r24, 0x01	; 1
+    1632:	3c 01       	movw	r6, r24
+    1634:	f6 01       	movw	r30, r12
+    1636:	93 81       	ldd	r25, Z+3	; 0x03
+    1638:	f7 01       	movw	r30, r14
+    163a:	93 fd       	sbrc	r25, 3
+    163c:	85 91       	lpm	r24, Z+
+    163e:	93 ff       	sbrs	r25, 3
+    1640:	81 91       	ld	r24, Z+
+    1642:	7f 01       	movw	r14, r30
+    1644:	88 23       	and	r24, r24
+    1646:	09 f4       	brne	.+2      	; 0x164a <vfprintf+0x3a>
+    1648:	ba c1       	rjmp	.+884    	; 0x19be <vfprintf+0x3ae>
+    164a:	85 32       	cpi	r24, 0x25	; 37
+    164c:	39 f4       	brne	.+14     	; 0x165c <vfprintf+0x4c>
+    164e:	93 fd       	sbrc	r25, 3
+    1650:	85 91       	lpm	r24, Z+
+    1652:	93 ff       	sbrs	r25, 3
+    1654:	81 91       	ld	r24, Z+
+    1656:	7f 01       	movw	r14, r30
+    1658:	85 32       	cpi	r24, 0x25	; 37
+    165a:	29 f4       	brne	.+10     	; 0x1666 <vfprintf+0x56>
+    165c:	b6 01       	movw	r22, r12
+    165e:	90 e0       	ldi	r25, 0x00	; 0
+    1660:	0e 94 ff 0c 	call	0x19fe	; 0x19fe <fputc>
+    1664:	e7 cf       	rjmp	.-50     	; 0x1634 <vfprintf+0x24>
+    1666:	91 2c       	mov	r9, r1
+    1668:	21 2c       	mov	r2, r1
+    166a:	31 2c       	mov	r3, r1
+    166c:	ff e1       	ldi	r31, 0x1F	; 31
+    166e:	f3 15       	cp	r31, r3
+    1670:	d8 f0       	brcs	.+54     	; 0x16a8 <vfprintf+0x98>
+    1672:	8b 32       	cpi	r24, 0x2B	; 43
+    1674:	79 f0       	breq	.+30     	; 0x1694 <vfprintf+0x84>
+    1676:	38 f4       	brcc	.+14     	; 0x1686 <vfprintf+0x76>
+    1678:	80 32       	cpi	r24, 0x20	; 32
+    167a:	79 f0       	breq	.+30     	; 0x169a <vfprintf+0x8a>
+    167c:	83 32       	cpi	r24, 0x23	; 35
+    167e:	a1 f4       	brne	.+40     	; 0x16a8 <vfprintf+0x98>
+    1680:	23 2d       	mov	r18, r3
+    1682:	20 61       	ori	r18, 0x10	; 16
+    1684:	1d c0       	rjmp	.+58     	; 0x16c0 <vfprintf+0xb0>
+    1686:	8d 32       	cpi	r24, 0x2D	; 45
+    1688:	61 f0       	breq	.+24     	; 0x16a2 <vfprintf+0x92>
+    168a:	80 33       	cpi	r24, 0x30	; 48
+    168c:	69 f4       	brne	.+26     	; 0x16a8 <vfprintf+0x98>
+    168e:	23 2d       	mov	r18, r3
+    1690:	21 60       	ori	r18, 0x01	; 1
+    1692:	16 c0       	rjmp	.+44     	; 0x16c0 <vfprintf+0xb0>
+    1694:	83 2d       	mov	r24, r3
+    1696:	82 60       	ori	r24, 0x02	; 2
+    1698:	38 2e       	mov	r3, r24
+    169a:	e3 2d       	mov	r30, r3
+    169c:	e4 60       	ori	r30, 0x04	; 4
+    169e:	3e 2e       	mov	r3, r30
+    16a0:	2a c0       	rjmp	.+84     	; 0x16f6 <vfprintf+0xe6>
+    16a2:	f3 2d       	mov	r31, r3
+    16a4:	f8 60       	ori	r31, 0x08	; 8
+    16a6:	1d c0       	rjmp	.+58     	; 0x16e2 <vfprintf+0xd2>
+    16a8:	37 fc       	sbrc	r3, 7
+    16aa:	2d c0       	rjmp	.+90     	; 0x1706 <vfprintf+0xf6>
+    16ac:	20 ed       	ldi	r18, 0xD0	; 208
+    16ae:	28 0f       	add	r18, r24
+    16b0:	2a 30       	cpi	r18, 0x0A	; 10
+    16b2:	40 f0       	brcs	.+16     	; 0x16c4 <vfprintf+0xb4>
+    16b4:	8e 32       	cpi	r24, 0x2E	; 46
+    16b6:	b9 f4       	brne	.+46     	; 0x16e6 <vfprintf+0xd6>
+    16b8:	36 fc       	sbrc	r3, 6
+    16ba:	81 c1       	rjmp	.+770    	; 0x19be <vfprintf+0x3ae>
+    16bc:	23 2d       	mov	r18, r3
+    16be:	20 64       	ori	r18, 0x40	; 64
+    16c0:	32 2e       	mov	r3, r18
+    16c2:	19 c0       	rjmp	.+50     	; 0x16f6 <vfprintf+0xe6>
+    16c4:	36 fe       	sbrs	r3, 6
+    16c6:	06 c0       	rjmp	.+12     	; 0x16d4 <vfprintf+0xc4>
+    16c8:	8a e0       	ldi	r24, 0x0A	; 10
+    16ca:	98 9e       	mul	r9, r24
+    16cc:	20 0d       	add	r18, r0
+    16ce:	11 24       	eor	r1, r1
+    16d0:	92 2e       	mov	r9, r18
+    16d2:	11 c0       	rjmp	.+34     	; 0x16f6 <vfprintf+0xe6>
+    16d4:	ea e0       	ldi	r30, 0x0A	; 10
+    16d6:	2e 9e       	mul	r2, r30
+    16d8:	20 0d       	add	r18, r0
+    16da:	11 24       	eor	r1, r1
+    16dc:	22 2e       	mov	r2, r18
+    16de:	f3 2d       	mov	r31, r3
+    16e0:	f0 62       	ori	r31, 0x20	; 32
+    16e2:	3f 2e       	mov	r3, r31
+    16e4:	08 c0       	rjmp	.+16     	; 0x16f6 <vfprintf+0xe6>
+    16e6:	8c 36       	cpi	r24, 0x6C	; 108
+    16e8:	21 f4       	brne	.+8      	; 0x16f2 <vfprintf+0xe2>
+    16ea:	83 2d       	mov	r24, r3
+    16ec:	80 68       	ori	r24, 0x80	; 128
+    16ee:	38 2e       	mov	r3, r24
+    16f0:	02 c0       	rjmp	.+4      	; 0x16f6 <vfprintf+0xe6>
+    16f2:	88 36       	cpi	r24, 0x68	; 104
+    16f4:	41 f4       	brne	.+16     	; 0x1706 <vfprintf+0xf6>
+    16f6:	f7 01       	movw	r30, r14
+    16f8:	93 fd       	sbrc	r25, 3
+    16fa:	85 91       	lpm	r24, Z+
+    16fc:	93 ff       	sbrs	r25, 3
+    16fe:	81 91       	ld	r24, Z+
+    1700:	7f 01       	movw	r14, r30
+    1702:	81 11       	cpse	r24, r1
+    1704:	b3 cf       	rjmp	.-154    	; 0x166c <vfprintf+0x5c>
+    1706:	98 2f       	mov	r25, r24
+    1708:	9f 7d       	andi	r25, 0xDF	; 223
+    170a:	95 54       	subi	r25, 0x45	; 69
+    170c:	93 30       	cpi	r25, 0x03	; 3
+    170e:	28 f4       	brcc	.+10     	; 0x171a <vfprintf+0x10a>
+    1710:	0c 5f       	subi	r16, 0xFC	; 252
+    1712:	1f 4f       	sbci	r17, 0xFF	; 255
+    1714:	9f e3       	ldi	r25, 0x3F	; 63
+    1716:	99 83       	std	Y+1, r25	; 0x01
+    1718:	0d c0       	rjmp	.+26     	; 0x1734 <vfprintf+0x124>
+    171a:	83 36       	cpi	r24, 0x63	; 99
+    171c:	31 f0       	breq	.+12     	; 0x172a <vfprintf+0x11a>
+    171e:	83 37       	cpi	r24, 0x73	; 115
+    1720:	71 f0       	breq	.+28     	; 0x173e <vfprintf+0x12e>
+    1722:	83 35       	cpi	r24, 0x53	; 83
+    1724:	09 f0       	breq	.+2      	; 0x1728 <vfprintf+0x118>
+    1726:	59 c0       	rjmp	.+178    	; 0x17da <vfprintf+0x1ca>
+    1728:	21 c0       	rjmp	.+66     	; 0x176c <vfprintf+0x15c>
+    172a:	f8 01       	movw	r30, r16
+    172c:	80 81       	ld	r24, Z
+    172e:	89 83       	std	Y+1, r24	; 0x01
+    1730:	0e 5f       	subi	r16, 0xFE	; 254
+    1732:	1f 4f       	sbci	r17, 0xFF	; 255
+    1734:	88 24       	eor	r8, r8
+    1736:	83 94       	inc	r8
+    1738:	91 2c       	mov	r9, r1
+    173a:	53 01       	movw	r10, r6
+    173c:	13 c0       	rjmp	.+38     	; 0x1764 <vfprintf+0x154>
+    173e:	28 01       	movw	r4, r16
+    1740:	f2 e0       	ldi	r31, 0x02	; 2
+    1742:	4f 0e       	add	r4, r31
+    1744:	51 1c       	adc	r5, r1
+    1746:	f8 01       	movw	r30, r16
+    1748:	a0 80       	ld	r10, Z
+    174a:	b1 80       	ldd	r11, Z+1	; 0x01
+    174c:	36 fe       	sbrs	r3, 6
+    174e:	03 c0       	rjmp	.+6      	; 0x1756 <vfprintf+0x146>
+    1750:	69 2d       	mov	r22, r9
+    1752:	70 e0       	ldi	r23, 0x00	; 0
+    1754:	02 c0       	rjmp	.+4      	; 0x175a <vfprintf+0x14a>
+    1756:	6f ef       	ldi	r22, 0xFF	; 255
+    1758:	7f ef       	ldi	r23, 0xFF	; 255
+    175a:	c5 01       	movw	r24, r10
+    175c:	0e 94 f4 0c 	call	0x19e8	; 0x19e8 <strnlen>
+    1760:	4c 01       	movw	r8, r24
+    1762:	82 01       	movw	r16, r4
+    1764:	f3 2d       	mov	r31, r3
+    1766:	ff 77       	andi	r31, 0x7F	; 127
+    1768:	3f 2e       	mov	r3, r31
+    176a:	16 c0       	rjmp	.+44     	; 0x1798 <vfprintf+0x188>
+    176c:	28 01       	movw	r4, r16
+    176e:	22 e0       	ldi	r18, 0x02	; 2
+    1770:	42 0e       	add	r4, r18
+    1772:	51 1c       	adc	r5, r1
+    1774:	f8 01       	movw	r30, r16
+    1776:	a0 80       	ld	r10, Z
+    1778:	b1 80       	ldd	r11, Z+1	; 0x01
+    177a:	36 fe       	sbrs	r3, 6
+    177c:	03 c0       	rjmp	.+6      	; 0x1784 <vfprintf+0x174>
+    177e:	69 2d       	mov	r22, r9
+    1780:	70 e0       	ldi	r23, 0x00	; 0
+    1782:	02 c0       	rjmp	.+4      	; 0x1788 <vfprintf+0x178>
+    1784:	6f ef       	ldi	r22, 0xFF	; 255
+    1786:	7f ef       	ldi	r23, 0xFF	; 255
+    1788:	c5 01       	movw	r24, r10
+    178a:	0e 94 e9 0c 	call	0x19d2	; 0x19d2 <strnlen_P>
+    178e:	4c 01       	movw	r8, r24
+    1790:	f3 2d       	mov	r31, r3
+    1792:	f0 68       	ori	r31, 0x80	; 128
+    1794:	3f 2e       	mov	r3, r31
+    1796:	82 01       	movw	r16, r4
+    1798:	33 fc       	sbrc	r3, 3
+    179a:	1b c0       	rjmp	.+54     	; 0x17d2 <vfprintf+0x1c2>
+    179c:	82 2d       	mov	r24, r2
+    179e:	90 e0       	ldi	r25, 0x00	; 0
+    17a0:	88 16       	cp	r8, r24
+    17a2:	99 06       	cpc	r9, r25
+    17a4:	b0 f4       	brcc	.+44     	; 0x17d2 <vfprintf+0x1c2>
+    17a6:	b6 01       	movw	r22, r12
+    17a8:	80 e2       	ldi	r24, 0x20	; 32
+    17aa:	90 e0       	ldi	r25, 0x00	; 0
+    17ac:	0e 94 ff 0c 	call	0x19fe	; 0x19fe <fputc>
+    17b0:	2a 94       	dec	r2
+    17b2:	f4 cf       	rjmp	.-24     	; 0x179c <vfprintf+0x18c>
+    17b4:	f5 01       	movw	r30, r10
+    17b6:	37 fc       	sbrc	r3, 7
+    17b8:	85 91       	lpm	r24, Z+
+    17ba:	37 fe       	sbrs	r3, 7
+    17bc:	81 91       	ld	r24, Z+
+    17be:	5f 01       	movw	r10, r30
+    17c0:	b6 01       	movw	r22, r12
+    17c2:	90 e0       	ldi	r25, 0x00	; 0
+    17c4:	0e 94 ff 0c 	call	0x19fe	; 0x19fe <fputc>
+    17c8:	21 10       	cpse	r2, r1
+    17ca:	2a 94       	dec	r2
+    17cc:	21 e0       	ldi	r18, 0x01	; 1
+    17ce:	82 1a       	sub	r8, r18
+    17d0:	91 08       	sbc	r9, r1
+    17d2:	81 14       	cp	r8, r1
+    17d4:	91 04       	cpc	r9, r1
+    17d6:	71 f7       	brne	.-36     	; 0x17b4 <vfprintf+0x1a4>
+    17d8:	e8 c0       	rjmp	.+464    	; 0x19aa <vfprintf+0x39a>
+    17da:	84 36       	cpi	r24, 0x64	; 100
+    17dc:	11 f0       	breq	.+4      	; 0x17e2 <vfprintf+0x1d2>
+    17de:	89 36       	cpi	r24, 0x69	; 105
+    17e0:	41 f5       	brne	.+80     	; 0x1832 <vfprintf+0x222>
+    17e2:	f8 01       	movw	r30, r16
+    17e4:	37 fe       	sbrs	r3, 7
+    17e6:	07 c0       	rjmp	.+14     	; 0x17f6 <vfprintf+0x1e6>
+    17e8:	60 81       	ld	r22, Z
+    17ea:	71 81       	ldd	r23, Z+1	; 0x01
+    17ec:	82 81       	ldd	r24, Z+2	; 0x02
+    17ee:	93 81       	ldd	r25, Z+3	; 0x03
+    17f0:	0c 5f       	subi	r16, 0xFC	; 252
+    17f2:	1f 4f       	sbci	r17, 0xFF	; 255
+    17f4:	08 c0       	rjmp	.+16     	; 0x1806 <vfprintf+0x1f6>
+    17f6:	60 81       	ld	r22, Z
+    17f8:	71 81       	ldd	r23, Z+1	; 0x01
+    17fa:	07 2e       	mov	r0, r23
+    17fc:	00 0c       	add	r0, r0
+    17fe:	88 0b       	sbc	r24, r24
+    1800:	99 0b       	sbc	r25, r25
+    1802:	0e 5f       	subi	r16, 0xFE	; 254
+    1804:	1f 4f       	sbci	r17, 0xFF	; 255
+    1806:	f3 2d       	mov	r31, r3
+    1808:	ff 76       	andi	r31, 0x6F	; 111
+    180a:	3f 2e       	mov	r3, r31
+    180c:	97 ff       	sbrs	r25, 7
+    180e:	09 c0       	rjmp	.+18     	; 0x1822 <vfprintf+0x212>
+    1810:	90 95       	com	r25
+    1812:	80 95       	com	r24
+    1814:	70 95       	com	r23
+    1816:	61 95       	neg	r22
+    1818:	7f 4f       	sbci	r23, 0xFF	; 255
+    181a:	8f 4f       	sbci	r24, 0xFF	; 255
+    181c:	9f 4f       	sbci	r25, 0xFF	; 255
+    181e:	f0 68       	ori	r31, 0x80	; 128
+    1820:	3f 2e       	mov	r3, r31
+    1822:	2a e0       	ldi	r18, 0x0A	; 10
+    1824:	30 e0       	ldi	r19, 0x00	; 0
+    1826:	a3 01       	movw	r20, r6
+    1828:	0e 94 3b 0d 	call	0x1a76	; 0x1a76 <__ultoa_invert>
+    182c:	88 2e       	mov	r8, r24
+    182e:	86 18       	sub	r8, r6
+    1830:	45 c0       	rjmp	.+138    	; 0x18bc <vfprintf+0x2ac>
+    1832:	85 37       	cpi	r24, 0x75	; 117
+    1834:	31 f4       	brne	.+12     	; 0x1842 <vfprintf+0x232>
+    1836:	23 2d       	mov	r18, r3
+    1838:	2f 7e       	andi	r18, 0xEF	; 239
+    183a:	b2 2e       	mov	r11, r18
+    183c:	2a e0       	ldi	r18, 0x0A	; 10
+    183e:	30 e0       	ldi	r19, 0x00	; 0
+    1840:	25 c0       	rjmp	.+74     	; 0x188c <vfprintf+0x27c>
+    1842:	93 2d       	mov	r25, r3
+    1844:	99 7f       	andi	r25, 0xF9	; 249
+    1846:	b9 2e       	mov	r11, r25
+    1848:	8f 36       	cpi	r24, 0x6F	; 111
+    184a:	c1 f0       	breq	.+48     	; 0x187c <vfprintf+0x26c>
+    184c:	18 f4       	brcc	.+6      	; 0x1854 <vfprintf+0x244>
+    184e:	88 35       	cpi	r24, 0x58	; 88
+    1850:	79 f0       	breq	.+30     	; 0x1870 <vfprintf+0x260>
+    1852:	b5 c0       	rjmp	.+362    	; 0x19be <vfprintf+0x3ae>
+    1854:	80 37       	cpi	r24, 0x70	; 112
+    1856:	19 f0       	breq	.+6      	; 0x185e <vfprintf+0x24e>
+    1858:	88 37       	cpi	r24, 0x78	; 120
+    185a:	21 f0       	breq	.+8      	; 0x1864 <vfprintf+0x254>
+    185c:	b0 c0       	rjmp	.+352    	; 0x19be <vfprintf+0x3ae>
+    185e:	e9 2f       	mov	r30, r25
+    1860:	e0 61       	ori	r30, 0x10	; 16
+    1862:	be 2e       	mov	r11, r30
+    1864:	b4 fe       	sbrs	r11, 4
+    1866:	0d c0       	rjmp	.+26     	; 0x1882 <vfprintf+0x272>
+    1868:	fb 2d       	mov	r31, r11
+    186a:	f4 60       	ori	r31, 0x04	; 4
+    186c:	bf 2e       	mov	r11, r31
+    186e:	09 c0       	rjmp	.+18     	; 0x1882 <vfprintf+0x272>
+    1870:	34 fe       	sbrs	r3, 4
+    1872:	0a c0       	rjmp	.+20     	; 0x1888 <vfprintf+0x278>
+    1874:	29 2f       	mov	r18, r25
+    1876:	26 60       	ori	r18, 0x06	; 6
+    1878:	b2 2e       	mov	r11, r18
+    187a:	06 c0       	rjmp	.+12     	; 0x1888 <vfprintf+0x278>
+    187c:	28 e0       	ldi	r18, 0x08	; 8
+    187e:	30 e0       	ldi	r19, 0x00	; 0
+    1880:	05 c0       	rjmp	.+10     	; 0x188c <vfprintf+0x27c>
+    1882:	20 e1       	ldi	r18, 0x10	; 16
+    1884:	30 e0       	ldi	r19, 0x00	; 0
+    1886:	02 c0       	rjmp	.+4      	; 0x188c <vfprintf+0x27c>
+    1888:	20 e1       	ldi	r18, 0x10	; 16
+    188a:	32 e0       	ldi	r19, 0x02	; 2
+    188c:	f8 01       	movw	r30, r16
+    188e:	b7 fe       	sbrs	r11, 7
+    1890:	07 c0       	rjmp	.+14     	; 0x18a0 <vfprintf+0x290>
+    1892:	60 81       	ld	r22, Z
+    1894:	71 81       	ldd	r23, Z+1	; 0x01
+    1896:	82 81       	ldd	r24, Z+2	; 0x02
+    1898:	93 81       	ldd	r25, Z+3	; 0x03
+    189a:	0c 5f       	subi	r16, 0xFC	; 252
+    189c:	1f 4f       	sbci	r17, 0xFF	; 255
+    189e:	06 c0       	rjmp	.+12     	; 0x18ac <vfprintf+0x29c>
+    18a0:	60 81       	ld	r22, Z
+    18a2:	71 81       	ldd	r23, Z+1	; 0x01
+    18a4:	80 e0       	ldi	r24, 0x00	; 0
+    18a6:	90 e0       	ldi	r25, 0x00	; 0
+    18a8:	0e 5f       	subi	r16, 0xFE	; 254
+    18aa:	1f 4f       	sbci	r17, 0xFF	; 255
+    18ac:	a3 01       	movw	r20, r6
+    18ae:	0e 94 3b 0d 	call	0x1a76	; 0x1a76 <__ultoa_invert>
+    18b2:	88 2e       	mov	r8, r24
+    18b4:	86 18       	sub	r8, r6
+    18b6:	fb 2d       	mov	r31, r11
+    18b8:	ff 77       	andi	r31, 0x7F	; 127
+    18ba:	3f 2e       	mov	r3, r31
+    18bc:	36 fe       	sbrs	r3, 6
+    18be:	0d c0       	rjmp	.+26     	; 0x18da <vfprintf+0x2ca>
+    18c0:	23 2d       	mov	r18, r3
+    18c2:	2e 7f       	andi	r18, 0xFE	; 254
+    18c4:	a2 2e       	mov	r10, r18
+    18c6:	89 14       	cp	r8, r9
+    18c8:	58 f4       	brcc	.+22     	; 0x18e0 <vfprintf+0x2d0>
+    18ca:	34 fe       	sbrs	r3, 4
+    18cc:	0b c0       	rjmp	.+22     	; 0x18e4 <vfprintf+0x2d4>
+    18ce:	32 fc       	sbrc	r3, 2
+    18d0:	09 c0       	rjmp	.+18     	; 0x18e4 <vfprintf+0x2d4>
+    18d2:	83 2d       	mov	r24, r3
+    18d4:	8e 7e       	andi	r24, 0xEE	; 238
+    18d6:	a8 2e       	mov	r10, r24
+    18d8:	05 c0       	rjmp	.+10     	; 0x18e4 <vfprintf+0x2d4>
+    18da:	b8 2c       	mov	r11, r8
+    18dc:	a3 2c       	mov	r10, r3
+    18de:	03 c0       	rjmp	.+6      	; 0x18e6 <vfprintf+0x2d6>
+    18e0:	b8 2c       	mov	r11, r8
+    18e2:	01 c0       	rjmp	.+2      	; 0x18e6 <vfprintf+0x2d6>
+    18e4:	b9 2c       	mov	r11, r9
+    18e6:	a4 fe       	sbrs	r10, 4
+    18e8:	0f c0       	rjmp	.+30     	; 0x1908 <vfprintf+0x2f8>
+    18ea:	fe 01       	movw	r30, r28
+    18ec:	e8 0d       	add	r30, r8
+    18ee:	f1 1d       	adc	r31, r1
+    18f0:	80 81       	ld	r24, Z
+    18f2:	80 33       	cpi	r24, 0x30	; 48
+    18f4:	21 f4       	brne	.+8      	; 0x18fe <vfprintf+0x2ee>
+    18f6:	9a 2d       	mov	r25, r10
+    18f8:	99 7e       	andi	r25, 0xE9	; 233
+    18fa:	a9 2e       	mov	r10, r25
+    18fc:	09 c0       	rjmp	.+18     	; 0x1910 <vfprintf+0x300>
+    18fe:	a2 fe       	sbrs	r10, 2
+    1900:	06 c0       	rjmp	.+12     	; 0x190e <vfprintf+0x2fe>
+    1902:	b3 94       	inc	r11
+    1904:	b3 94       	inc	r11
+    1906:	04 c0       	rjmp	.+8      	; 0x1910 <vfprintf+0x300>
+    1908:	8a 2d       	mov	r24, r10
+    190a:	86 78       	andi	r24, 0x86	; 134
+    190c:	09 f0       	breq	.+2      	; 0x1910 <vfprintf+0x300>
+    190e:	b3 94       	inc	r11
+    1910:	a3 fc       	sbrc	r10, 3
+    1912:	11 c0       	rjmp	.+34     	; 0x1936 <vfprintf+0x326>
+    1914:	a0 fe       	sbrs	r10, 0
+    1916:	06 c0       	rjmp	.+12     	; 0x1924 <vfprintf+0x314>
+    1918:	b2 14       	cp	r11, r2
+    191a:	88 f4       	brcc	.+34     	; 0x193e <vfprintf+0x32e>
+    191c:	28 0c       	add	r2, r8
+    191e:	92 2c       	mov	r9, r2
+    1920:	9b 18       	sub	r9, r11
+    1922:	0e c0       	rjmp	.+28     	; 0x1940 <vfprintf+0x330>
+    1924:	b2 14       	cp	r11, r2
+    1926:	60 f4       	brcc	.+24     	; 0x1940 <vfprintf+0x330>
+    1928:	b6 01       	movw	r22, r12
+    192a:	80 e2       	ldi	r24, 0x20	; 32
+    192c:	90 e0       	ldi	r25, 0x00	; 0
+    192e:	0e 94 ff 0c 	call	0x19fe	; 0x19fe <fputc>
+    1932:	b3 94       	inc	r11
+    1934:	f7 cf       	rjmp	.-18     	; 0x1924 <vfprintf+0x314>
+    1936:	b2 14       	cp	r11, r2
+    1938:	18 f4       	brcc	.+6      	; 0x1940 <vfprintf+0x330>
+    193a:	2b 18       	sub	r2, r11
+    193c:	02 c0       	rjmp	.+4      	; 0x1942 <vfprintf+0x332>
+    193e:	98 2c       	mov	r9, r8
+    1940:	21 2c       	mov	r2, r1
+    1942:	a4 fe       	sbrs	r10, 4
+    1944:	10 c0       	rjmp	.+32     	; 0x1966 <vfprintf+0x356>
+    1946:	b6 01       	movw	r22, r12
+    1948:	80 e3       	ldi	r24, 0x30	; 48
+    194a:	90 e0       	ldi	r25, 0x00	; 0
+    194c:	0e 94 ff 0c 	call	0x19fe	; 0x19fe <fputc>
+    1950:	a2 fe       	sbrs	r10, 2
+    1952:	17 c0       	rjmp	.+46     	; 0x1982 <vfprintf+0x372>
+    1954:	a1 fc       	sbrc	r10, 1
+    1956:	03 c0       	rjmp	.+6      	; 0x195e <vfprintf+0x34e>
+    1958:	88 e7       	ldi	r24, 0x78	; 120
+    195a:	90 e0       	ldi	r25, 0x00	; 0
+    195c:	02 c0       	rjmp	.+4      	; 0x1962 <vfprintf+0x352>
+    195e:	88 e5       	ldi	r24, 0x58	; 88
+    1960:	90 e0       	ldi	r25, 0x00	; 0
+    1962:	b6 01       	movw	r22, r12
+    1964:	0c c0       	rjmp	.+24     	; 0x197e <vfprintf+0x36e>
+    1966:	8a 2d       	mov	r24, r10
+    1968:	86 78       	andi	r24, 0x86	; 134
+    196a:	59 f0       	breq	.+22     	; 0x1982 <vfprintf+0x372>
+    196c:	a1 fe       	sbrs	r10, 1
+    196e:	02 c0       	rjmp	.+4      	; 0x1974 <vfprintf+0x364>
+    1970:	8b e2       	ldi	r24, 0x2B	; 43
+    1972:	01 c0       	rjmp	.+2      	; 0x1976 <vfprintf+0x366>
+    1974:	80 e2       	ldi	r24, 0x20	; 32
+    1976:	a7 fc       	sbrc	r10, 7
+    1978:	8d e2       	ldi	r24, 0x2D	; 45
+    197a:	b6 01       	movw	r22, r12
+    197c:	90 e0       	ldi	r25, 0x00	; 0
+    197e:	0e 94 ff 0c 	call	0x19fe	; 0x19fe <fputc>
+    1982:	89 14       	cp	r8, r9
+    1984:	38 f4       	brcc	.+14     	; 0x1994 <vfprintf+0x384>
+    1986:	b6 01       	movw	r22, r12
+    1988:	80 e3       	ldi	r24, 0x30	; 48
+    198a:	90 e0       	ldi	r25, 0x00	; 0
+    198c:	0e 94 ff 0c 	call	0x19fe	; 0x19fe <fputc>
+    1990:	9a 94       	dec	r9
+    1992:	f7 cf       	rjmp	.-18     	; 0x1982 <vfprintf+0x372>
+    1994:	8a 94       	dec	r8
+    1996:	f3 01       	movw	r30, r6
+    1998:	e8 0d       	add	r30, r8
+    199a:	f1 1d       	adc	r31, r1
+    199c:	80 81       	ld	r24, Z
+    199e:	b6 01       	movw	r22, r12
+    19a0:	90 e0       	ldi	r25, 0x00	; 0
+    19a2:	0e 94 ff 0c 	call	0x19fe	; 0x19fe <fputc>
+    19a6:	81 10       	cpse	r8, r1
+    19a8:	f5 cf       	rjmp	.-22     	; 0x1994 <vfprintf+0x384>
+    19aa:	22 20       	and	r2, r2
+    19ac:	09 f4       	brne	.+2      	; 0x19b0 <vfprintf+0x3a0>
+    19ae:	42 ce       	rjmp	.-892    	; 0x1634 <vfprintf+0x24>
+    19b0:	b6 01       	movw	r22, r12
+    19b2:	80 e2       	ldi	r24, 0x20	; 32
+    19b4:	90 e0       	ldi	r25, 0x00	; 0
+    19b6:	0e 94 ff 0c 	call	0x19fe	; 0x19fe <fputc>
+    19ba:	2a 94       	dec	r2
+    19bc:	f6 cf       	rjmp	.-20     	; 0x19aa <vfprintf+0x39a>
+    19be:	f6 01       	movw	r30, r12
+    19c0:	86 81       	ldd	r24, Z+6	; 0x06
+    19c2:	97 81       	ldd	r25, Z+7	; 0x07
+    19c4:	02 c0       	rjmp	.+4      	; 0x19ca <vfprintf+0x3ba>
+    19c6:	8f ef       	ldi	r24, 0xFF	; 255
+    19c8:	9f ef       	ldi	r25, 0xFF	; 255
+    19ca:	2b 96       	adiw	r28, 0x0b	; 11
+    19cc:	e2 e1       	ldi	r30, 0x12	; 18
+    19ce:	0c 94 b5 0d 	jmp	0x1b6a	; 0x1b6a <__epilogue_restores__>
+
+000019d2 <strnlen_P>:
+    19d2:	fc 01       	movw	r30, r24
+    19d4:	05 90       	lpm	r0, Z+
+    19d6:	61 50       	subi	r22, 0x01	; 1
+    19d8:	70 40       	sbci	r23, 0x00	; 0
+    19da:	01 10       	cpse	r0, r1
+    19dc:	d8 f7       	brcc	.-10     	; 0x19d4 <strnlen_P+0x2>
+    19de:	80 95       	com	r24
+    19e0:	90 95       	com	r25
+    19e2:	8e 0f       	add	r24, r30
+    19e4:	9f 1f       	adc	r25, r31
+    19e6:	08 95       	ret
+
+000019e8 <strnlen>:
+    19e8:	fc 01       	movw	r30, r24
+    19ea:	61 50       	subi	r22, 0x01	; 1
+    19ec:	70 40       	sbci	r23, 0x00	; 0
+    19ee:	01 90       	ld	r0, Z+
+    19f0:	01 10       	cpse	r0, r1
+    19f2:	d8 f7       	brcc	.-10     	; 0x19ea <strnlen+0x2>
+    19f4:	80 95       	com	r24
+    19f6:	90 95       	com	r25
+    19f8:	8e 0f       	add	r24, r30
+    19fa:	9f 1f       	adc	r25, r31
+    19fc:	08 95       	ret
+
+000019fe <fputc>:
+    19fe:	0f 93       	push	r16
+    1a00:	1f 93       	push	r17
+    1a02:	cf 93       	push	r28
+    1a04:	df 93       	push	r29
+    1a06:	fb 01       	movw	r30, r22
+    1a08:	23 81       	ldd	r18, Z+3	; 0x03
+    1a0a:	21 fd       	sbrc	r18, 1
+    1a0c:	03 c0       	rjmp	.+6      	; 0x1a14 <fputc+0x16>
+    1a0e:	8f ef       	ldi	r24, 0xFF	; 255
+    1a10:	9f ef       	ldi	r25, 0xFF	; 255
+    1a12:	2c c0       	rjmp	.+88     	; 0x1a6c <fputc+0x6e>
+    1a14:	22 ff       	sbrs	r18, 2
+    1a16:	16 c0       	rjmp	.+44     	; 0x1a44 <fputc+0x46>
+    1a18:	46 81       	ldd	r20, Z+6	; 0x06
+    1a1a:	57 81       	ldd	r21, Z+7	; 0x07
+    1a1c:	24 81       	ldd	r18, Z+4	; 0x04
+    1a1e:	35 81       	ldd	r19, Z+5	; 0x05
+    1a20:	42 17       	cp	r20, r18
+    1a22:	53 07       	cpc	r21, r19
+    1a24:	44 f4       	brge	.+16     	; 0x1a36 <fputc+0x38>
+    1a26:	a0 81       	ld	r26, Z
+    1a28:	b1 81       	ldd	r27, Z+1	; 0x01
+    1a2a:	9d 01       	movw	r18, r26
+    1a2c:	2f 5f       	subi	r18, 0xFF	; 255
+    1a2e:	3f 4f       	sbci	r19, 0xFF	; 255
+    1a30:	31 83       	std	Z+1, r19	; 0x01
+    1a32:	20 83       	st	Z, r18
+    1a34:	8c 93       	st	X, r24
+    1a36:	26 81       	ldd	r18, Z+6	; 0x06
+    1a38:	37 81       	ldd	r19, Z+7	; 0x07
+    1a3a:	2f 5f       	subi	r18, 0xFF	; 255
+    1a3c:	3f 4f       	sbci	r19, 0xFF	; 255
+    1a3e:	37 83       	std	Z+7, r19	; 0x07
+    1a40:	26 83       	std	Z+6, r18	; 0x06
+    1a42:	14 c0       	rjmp	.+40     	; 0x1a6c <fputc+0x6e>
+    1a44:	8b 01       	movw	r16, r22
+    1a46:	ec 01       	movw	r28, r24
+    1a48:	fb 01       	movw	r30, r22
+    1a4a:	00 84       	ldd	r0, Z+8	; 0x08
+    1a4c:	f1 85       	ldd	r31, Z+9	; 0x09
+    1a4e:	e0 2d       	mov	r30, r0
+    1a50:	09 95       	icall
+    1a52:	89 2b       	or	r24, r25
+    1a54:	e1 f6       	brne	.-72     	; 0x1a0e <fputc+0x10>
+    1a56:	d8 01       	movw	r26, r16
+    1a58:	16 96       	adiw	r26, 0x06	; 6
+    1a5a:	8d 91       	ld	r24, X+
+    1a5c:	9c 91       	ld	r25, X
+    1a5e:	17 97       	sbiw	r26, 0x07	; 7
+    1a60:	01 96       	adiw	r24, 0x01	; 1
+    1a62:	17 96       	adiw	r26, 0x07	; 7
+    1a64:	9c 93       	st	X, r25
+    1a66:	8e 93       	st	-X, r24
+    1a68:	16 97       	sbiw	r26, 0x06	; 6
+    1a6a:	ce 01       	movw	r24, r28
+    1a6c:	df 91       	pop	r29
+    1a6e:	cf 91       	pop	r28
+    1a70:	1f 91       	pop	r17
+    1a72:	0f 91       	pop	r16
+    1a74:	08 95       	ret
+
+00001a76 <__ultoa_invert>:
+    1a76:	fa 01       	movw	r30, r20
+    1a78:	aa 27       	eor	r26, r26
+    1a7a:	28 30       	cpi	r18, 0x08	; 8
+    1a7c:	51 f1       	breq	.+84     	; 0x1ad2 <__ultoa_invert+0x5c>
+    1a7e:	20 31       	cpi	r18, 0x10	; 16
+    1a80:	81 f1       	breq	.+96     	; 0x1ae2 <__ultoa_invert+0x6c>
+    1a82:	e8 94       	clt
+    1a84:	6f 93       	push	r22
+    1a86:	6e 7f       	andi	r22, 0xFE	; 254
+    1a88:	6e 5f       	subi	r22, 0xFE	; 254
+    1a8a:	7f 4f       	sbci	r23, 0xFF	; 255
+    1a8c:	8f 4f       	sbci	r24, 0xFF	; 255
+    1a8e:	9f 4f       	sbci	r25, 0xFF	; 255
+    1a90:	af 4f       	sbci	r26, 0xFF	; 255
+    1a92:	b1 e0       	ldi	r27, 0x01	; 1
+    1a94:	3e d0       	rcall	.+124    	; 0x1b12 <__ultoa_invert+0x9c>
+    1a96:	b4 e0       	ldi	r27, 0x04	; 4
+    1a98:	3c d0       	rcall	.+120    	; 0x1b12 <__ultoa_invert+0x9c>
+    1a9a:	67 0f       	add	r22, r23
+    1a9c:	78 1f       	adc	r23, r24
+    1a9e:	89 1f       	adc	r24, r25
+    1aa0:	9a 1f       	adc	r25, r26
+    1aa2:	a1 1d       	adc	r26, r1
+    1aa4:	68 0f       	add	r22, r24
+    1aa6:	79 1f       	adc	r23, r25
+    1aa8:	8a 1f       	adc	r24, r26
+    1aaa:	91 1d       	adc	r25, r1
+    1aac:	a1 1d       	adc	r26, r1
+    1aae:	6a 0f       	add	r22, r26
+    1ab0:	71 1d       	adc	r23, r1
+    1ab2:	81 1d       	adc	r24, r1
+    1ab4:	91 1d       	adc	r25, r1
+    1ab6:	a1 1d       	adc	r26, r1
+    1ab8:	20 d0       	rcall	.+64     	; 0x1afa <__ultoa_invert+0x84>
+    1aba:	09 f4       	brne	.+2      	; 0x1abe <__ultoa_invert+0x48>
+    1abc:	68 94       	set
+    1abe:	3f 91       	pop	r19
+    1ac0:	2a e0       	ldi	r18, 0x0A	; 10
+    1ac2:	26 9f       	mul	r18, r22
+    1ac4:	11 24       	eor	r1, r1
+    1ac6:	30 19       	sub	r19, r0
+    1ac8:	30 5d       	subi	r19, 0xD0	; 208
+    1aca:	31 93       	st	Z+, r19
+    1acc:	de f6       	brtc	.-74     	; 0x1a84 <__ultoa_invert+0xe>
+    1ace:	cf 01       	movw	r24, r30
+    1ad0:	08 95       	ret
+    1ad2:	46 2f       	mov	r20, r22
+    1ad4:	47 70       	andi	r20, 0x07	; 7
+    1ad6:	40 5d       	subi	r20, 0xD0	; 208
+    1ad8:	41 93       	st	Z+, r20
+    1ada:	b3 e0       	ldi	r27, 0x03	; 3
+    1adc:	0f d0       	rcall	.+30     	; 0x1afc <__ultoa_invert+0x86>
+    1ade:	c9 f7       	brne	.-14     	; 0x1ad2 <__ultoa_invert+0x5c>
+    1ae0:	f6 cf       	rjmp	.-20     	; 0x1ace <__ultoa_invert+0x58>
+    1ae2:	46 2f       	mov	r20, r22
+    1ae4:	4f 70       	andi	r20, 0x0F	; 15
+    1ae6:	40 5d       	subi	r20, 0xD0	; 208
+    1ae8:	4a 33       	cpi	r20, 0x3A	; 58
+    1aea:	18 f0       	brcs	.+6      	; 0x1af2 <__ultoa_invert+0x7c>
+    1aec:	49 5d       	subi	r20, 0xD9	; 217
+    1aee:	31 fd       	sbrc	r19, 1
+    1af0:	40 52       	subi	r20, 0x20	; 32
+    1af2:	41 93       	st	Z+, r20
+    1af4:	02 d0       	rcall	.+4      	; 0x1afa <__ultoa_invert+0x84>
+    1af6:	a9 f7       	brne	.-22     	; 0x1ae2 <__ultoa_invert+0x6c>
+    1af8:	ea cf       	rjmp	.-44     	; 0x1ace <__ultoa_invert+0x58>
+    1afa:	b4 e0       	ldi	r27, 0x04	; 4
+    1afc:	a6 95       	lsr	r26
+    1afe:	97 95       	ror	r25
+    1b00:	87 95       	ror	r24
+    1b02:	77 95       	ror	r23
+    1b04:	67 95       	ror	r22
+    1b06:	ba 95       	dec	r27
+    1b08:	c9 f7       	brne	.-14     	; 0x1afc <__ultoa_invert+0x86>
+    1b0a:	00 97       	sbiw	r24, 0x00	; 0
+    1b0c:	61 05       	cpc	r22, r1
+    1b0e:	71 05       	cpc	r23, r1
+    1b10:	08 95       	ret
+    1b12:	9b 01       	movw	r18, r22
+    1b14:	ac 01       	movw	r20, r24
+    1b16:	0a 2e       	mov	r0, r26
+    1b18:	06 94       	lsr	r0
+    1b1a:	57 95       	ror	r21
+    1b1c:	47 95       	ror	r20
+    1b1e:	37 95       	ror	r19
+    1b20:	27 95       	ror	r18
+    1b22:	ba 95       	dec	r27
+    1b24:	c9 f7       	brne	.-14     	; 0x1b18 <__ultoa_invert+0xa2>
+    1b26:	62 0f       	add	r22, r18
+    1b28:	73 1f       	adc	r23, r19
+    1b2a:	84 1f       	adc	r24, r20
+    1b2c:	95 1f       	adc	r25, r21
+    1b2e:	a0 1d       	adc	r26, r0
+    1b30:	08 95       	ret
+
+00001b32 <__prologue_saves__>:
+    1b32:	2f 92       	push	r2
+    1b34:	3f 92       	push	r3
+    1b36:	4f 92       	push	r4
+    1b38:	5f 92       	push	r5
+    1b3a:	6f 92       	push	r6
+    1b3c:	7f 92       	push	r7
+    1b3e:	8f 92       	push	r8
+    1b40:	9f 92       	push	r9
+    1b42:	af 92       	push	r10
+    1b44:	bf 92       	push	r11
+    1b46:	cf 92       	push	r12
+    1b48:	df 92       	push	r13
+    1b4a:	ef 92       	push	r14
+    1b4c:	ff 92       	push	r15
+    1b4e:	0f 93       	push	r16
+    1b50:	1f 93       	push	r17
+    1b52:	cf 93       	push	r28
+    1b54:	df 93       	push	r29
+    1b56:	cd b7       	in	r28, 0x3d	; 61
+    1b58:	de b7       	in	r29, 0x3e	; 62
+    1b5a:	ca 1b       	sub	r28, r26
+    1b5c:	db 0b       	sbc	r29, r27
+    1b5e:	0f b6       	in	r0, 0x3f	; 63
+    1b60:	f8 94       	cli
+    1b62:	de bf       	out	0x3e, r29	; 62
+    1b64:	0f be       	out	0x3f, r0	; 63
+    1b66:	cd bf       	out	0x3d, r28	; 61
+    1b68:	09 94       	ijmp
+
+00001b6a <__epilogue_restores__>:
+    1b6a:	2a 88       	ldd	r2, Y+18	; 0x12
+    1b6c:	39 88       	ldd	r3, Y+17	; 0x11
+    1b6e:	48 88       	ldd	r4, Y+16	; 0x10
+    1b70:	5f 84       	ldd	r5, Y+15	; 0x0f
+    1b72:	6e 84       	ldd	r6, Y+14	; 0x0e
+    1b74:	7d 84       	ldd	r7, Y+13	; 0x0d
+    1b76:	8c 84       	ldd	r8, Y+12	; 0x0c
+    1b78:	9b 84       	ldd	r9, Y+11	; 0x0b
+    1b7a:	aa 84       	ldd	r10, Y+10	; 0x0a
+    1b7c:	b9 84       	ldd	r11, Y+9	; 0x09
+    1b7e:	c8 84       	ldd	r12, Y+8	; 0x08
+    1b80:	df 80       	ldd	r13, Y+7	; 0x07
+    1b82:	ee 80       	ldd	r14, Y+6	; 0x06
+    1b84:	fd 80       	ldd	r15, Y+5	; 0x05
+    1b86:	0c 81       	ldd	r16, Y+4	; 0x04
+    1b88:	1b 81       	ldd	r17, Y+3	; 0x03
+    1b8a:	aa 81       	ldd	r26, Y+2	; 0x02
+    1b8c:	b9 81       	ldd	r27, Y+1	; 0x01
+    1b8e:	ce 0f       	add	r28, r30
+    1b90:	d1 1d       	adc	r29, r1
+    1b92:	0f b6       	in	r0, 0x3f	; 63
+    1b94:	f8 94       	cli
+    1b96:	de bf       	out	0x3e, r29	; 62
+    1b98:	0f be       	out	0x3f, r0	; 63
+    1b9a:	cd bf       	out	0x3d, r28	; 61
+    1b9c:	ed 01       	movw	r28, r26
+    1b9e:	08 95       	ret
+
+00001ba0 <_exit>:
+    1ba0:	f8 94       	cli
+
+00001ba2 <__stop_program>:
+    1ba2:	ff cf       	rjmp	.-2      	; 0x1ba2 <__stop_program>

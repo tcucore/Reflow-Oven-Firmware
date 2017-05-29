@@ -25,6 +25,9 @@ void ReflowSetupMenu(char);
 void ReflowDwellMenu(char);
 void ReflowStatusMenu(char);
 void ExposureMenu(char);
+void ReflowCalibrateMenu(char);
+void CalibrateProbesMenu(char);
+void CalibrateOvenMenu(char);
 
 
 //TWI Control Functions
